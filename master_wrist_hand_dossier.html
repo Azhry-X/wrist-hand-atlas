@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wrist &amp; Hand Master Dossier</title>
+<meta name="description" content="9-page A4 master clinical assessment and rehabilitation dossier for the wrist and hand: triage and red flags, differential diagnosis and prognosis, objective examination, special tests and PROMs, post-surgical and fracture rehab, orthoses, injections and electrophysical agents, manual therapy, exercise and return to activity, and flowsheet. Companion Test Atlas: https://azhry-x.github.io/wrist-hand-atlas">
+<style>
+/* =====================================================================
+   HIP COMPLEX MASTER DOSSIER — design system
+   Mirrors the Knee Complex and Ankle & Foot dossiers so all read as one series.
+   Fonts are bundled locally; no CDN, no emoji fonts (icons are inline SVG).
+   ===================================================================== */
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: block; }
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Semibold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: block; }
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: block; }
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Bold.ttf") format("truetype"); font-weight: 800; font-style: normal; font-display: block; }
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Bold.ttf") format("truetype"); font-weight: 900; font-style: normal; font-display: block; }
+
+:root{
+  --ink:#0f172a; --navy:#1e3a8a; --crimson:#991b1b; --emerald:#065f46; --paper:#f8fafc;
+  --line:#cbd5e1; --line2:#e2e8f0; --mut:#475569;
+}
+
+/* ================= PRINT GEOMETRY ================= */
+@page { size: A4 portrait; margin: 0; }
+@media print {
+  html, body { width: 210mm; margin: 0; padding: 0; background: #FFFFFF !important; }
+  .clinical-page { page-break-after: always; break-after: page; margin: 0 !important; box-shadow: none !important; }
+  .clinical-page:last-child { page-break-after: auto; break-after: auto; }
+}
+
+*{ box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: "Source Sans 3", sans-serif;
+  color:var(--ink); font-size:9px; line-height:1.26;
+  font-variant-numeric: tabular-nums;
+  background:linear-gradient(160deg,#0f172a 0%,#1e293b 45%,#1e3a8a 100%);
+  background-attachment:fixed;
+}
+@media screen { body{ padding:10mm 0; } }
+
+/* ================= PAGE SHELL ================= */
+.clinical-page{
+  width:210mm; height:297mm; max-height:297mm; box-sizing:border-box; padding:5mm 7mm;
+  overflow:hidden; display:flex; flex-direction:column; justify-content:space-between;
+  background-color:#F8FAFC; position:relative; gap:1.5mm;
+  margin:0 auto 12mm auto; box-shadow:0 20px 60px rgba(2,6,23,.55);
+}
+.clinical-page:last-child{ margin-bottom:0; }
+.clinical-page{ --accent:#1E3A8A; --accent-soft:#eef2ff; --accent-line:#bfdbfe; }
+.clinical-page[data-accent="red"]{    --accent:#B42318; --accent-soft:#fef2f2; --accent-line:#fecaca; }
+.clinical-page[data-accent="blue"]{   --accent:#1E3A8A; --accent-soft:#eef2ff; --accent-line:#bfdbfe; }
+.clinical-page[data-accent="purple"]{ --accent:#6B21A8; --accent-soft:#faf5ff; --accent-line:#e9d5ff; }
+.clinical-page[data-accent="orange"]{ --accent:#C2410C; --accent-soft:#fff7ed; --accent-line:#fed7aa; }
+.clinical-page[data-accent="teal"]{   --accent:#0F766E; --accent-soft:#f0fdfa; --accent-line:#99f6e4; }
+.clinical-page[data-accent="green"]{  --accent:#15803D; --accent-soft:#f0fdf4; --accent-line:#bbf7d0; }
+.clinical-page[data-accent="slate"]{  --accent:#334155; --accent-soft:#f1f5f9; --accent-line:#cbd5e1; }
+.pg-body{ flex:1 1 auto; min-height:0; display:flex; flex-direction:column; gap:1.5mm; }
+
+/* ================= HEADER / FOOTER ================= */
+.pg-hdr{ display:flex; justify-content:space-between; align-items:flex-end; gap:3mm; border-bottom:2px solid var(--accent); padding-bottom:1.3mm; }
+.brand{ display:flex; align-items:center; gap:2mm; min-width:0; }
+.logo{ width:9.5mm; height:9.5mm; border-radius:2mm; flex:0 0 auto; background:linear-gradient(135deg,#1e3a8a 0%,#0f172a 100%); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-weight:900; font-size:9.5px; letter-spacing:.02em; box-shadow:inset 0 0 0 1px rgba(255,255,255,.15); }
+.kicker{ font-size:6.8px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#64748b; }
+.pg-title{ font-size:12.5px; font-weight:900; letter-spacing:-.01em; color:var(--ink); line-height:1.1; margin:0; }
+.hdr-right{ display:flex; align-items:flex-end; gap:2.5mm; font-size:8px; white-space:nowrap; }
+.pgno{ background:var(--accent); color:#fff; font-weight:800; font-size:9px; padding:1mm 2.2mm; border-radius:1.4mm; letter-spacing:.06em; }
+
+.pg-ftr{ display:flex; flex-direction:column; align-items:stretch; gap:1mm;
+  border-top:1px solid var(--line); padding-top:1mm; font-size:7.2px; color:var(--mut); min-height:22px; }
+.ftr-top{ display:flex; justify-content:space-between; align-items:center; gap:2mm; white-space:nowrap; }
+.pg-ftr b{ color:var(--ink); }
+.pnav-wrap{ display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+.pnav{ display:flex; align-items:center; justify-content:center; gap:1.5pt; min-height:34pt; width:100%; padding:0;
+  background:#F1F5F9; border:1px solid #CBD5E1; border-radius:1.5mm; }
+.pnav .nl{ font-size:6.8px; font-weight:800; letter-spacing:.08em; color:#475569; text-transform:uppercase; margin-right:.8mm; line-height:1; }
+.ptab{ position:relative; display:inline-flex; align-items:center; justify-content:center;
+  width:34pt; height:34pt; min-width:34pt; border-radius:1mm; border:1px solid var(--line);
+  background:#fff; color:var(--navy); font-weight:800; font-size:11pt; text-decoration:none; line-height:1; }
+.ptab.on{ background:var(--accent); color:#fff; border-color:var(--accent); }
+
+/* ================= LINK BADGES & EVIDENCE MARKERS ================= */
+.ref-badge, .calc-badge, .guide-badge, .find-badge {
+  position: relative; display: inline-flex; align-items: center; gap: 2px;
+  font-size: 6.8pt; line-height: 1; padding: 1.5px 4px; border-radius: 3px;
+  text-decoration: none; font-weight: 700; white-space: nowrap; vertical-align: middle; letter-spacing: .02em;
+}
+.calc-badge { background-color: #ECFDF5; border: 1px solid #A7F3D0; color: #047857; }
+.guide-badge { background-color: #FFFBEB; border: 1px solid #FDE68A; color: #B45309; }
+.ref-badge { background-color: #F0F9FF; border: 1px solid #BAE6FD; color: #0369A1; }
+.badge-ico{ width:7.5px; height:7.5px; flex:0 0 auto; display:inline-block; }
+.card-h .calc-badge, .card-h .guide-badge{ font-size:6.4pt; text-transform:none; letter-spacing:.01em; }
+
+.eb{ font-size:6.2px; font-weight:800; padding:0.2px 1.8px; border-radius:1.5px; vertical-align:super; line-height:1; display:inline-block; margin-left:1px; text-transform:none; letter-spacing:0; }
+.eb-h{ color:#047857; background:#ecfdf5; border:0.6px solid #a7f3d0; }
+.eb-m{ color:#b45309; background:#fffbeb; border:0.6px solid #fde68a; }
+.eb-l{ color:#b91c1c; background:#fef2f2; border:0.6px solid #fecaca; }
+.eb-e{ color:#4338ca; background:#eef2ff; border:0.6px solid #c7d2fe; }
+
+/* Atlas test-name link (underline = Atlas card; ▸ = verified video) */
+.test-link{ color:inherit; text-decoration:underline; text-decoration-color:rgba(30,58,138,0.45); text-underline-offset:1.6px; font-weight:inherit; }
+.test-link.has-video::after{ content:"\00a0\25B8"; font-size:0.82em; color:#1e3a8a; text-decoration:none; font-weight:700; }
+.card-h .test-link, .card.red > .card-h .test-link{ text-decoration-color:rgba(255,255,255,0.7); }
+.card-h .test-link.has-video::after{ color:#fff; }
+
+/* Atlas info icon */
+.info-icon{ display:inline-flex; align-items:center; justify-content:center; width:3.8mm; height:3.8mm; min-width:3.8mm; text-decoration:none; vertical-align:middle; margin:0 0.2mm; color:var(--accent); }
+.card-h .info-icon{ color:#ffffff; }
+.sh.r .info-icon, .crit .info-icon{ color:var(--crimson); }
+.info-svg{ width:3.3mm; height:3.3mm; display:inline-block; pointer-events:none; }
+
+/* ================= CARDS ================= */
+.card{ border:1px solid var(--line); border-radius:1.6mm; overflow:hidden; background:#fff; }
+.card-h{ background:var(--accent); color:#fff; font-weight:800; font-size:8.4px; letter-spacing:.07em; text-transform:uppercase;
+  padding:1mm 2mm; display:flex; justify-content:space-between; align-items:center; gap:2mm; }
+.card-h > span:first-child{ display:inline-flex; align-items:center; gap:1.2mm; flex-wrap:wrap; }
+.card-b{ padding:1.2mm 2mm; }
+.card.red{ border:2px solid var(--crimson); }
+.card.red > .card-h{ background:linear-gradient(90deg,#991b1b,#7f1d1d); }
+.card.green{ border:2px solid var(--emerald); }
+.card.ink > .card-h{ background:var(--ink); }
+.card.soft{ background:var(--paper); }
+.tag{ font-size:6.8px; font-weight:800; letter-spacing:.08em; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.35);
+  padding:.2mm 1.5mm; border-radius:3mm; white-space:nowrap; }
+
+.sh{ font-weight:800; font-size:8px; text-transform:uppercase; letter-spacing:.05em; color:var(--accent); display:flex; justify-content:space-between;
+  align-items:center; gap:2mm; border-bottom:1px dashed var(--accent-line); padding-bottom:.4mm; margin:.8mm 0 .5mm; }
+.sh > span:first-child{ display:inline-flex; align-items:center; gap:1mm; flex-wrap:wrap; }
+.sh:first-child{ margin-top:0; }
+.sh.r{ color:var(--crimson); border-bottom-color:#fecaca; }
+.sh.g{ color:var(--emerald); border-bottom-color:#a7f3d0; }
+.sh.n{ color:var(--navy); border-bottom-color:#bfdbfe; }
+
+/* Pathway router */
+.router-row{ display:grid; grid-template-columns:minmax(0,25fr) minmax(0,45fr) minmax(0,30fr); gap:1.2mm; min-height:9.0mm; align-items:center; }
+.router-col{ display:flex; align-items:center; flex-wrap:nowrap; gap:0.4mm; min-height:9.0mm; white-space:nowrap; }
+.rchip{ display:inline-flex; align-items:center; justify-content:center; width:4.8mm; min-width:4.8mm; height:9.0mm; min-height:9.0mm;
+  position:relative; background:transparent; color:var(--navy); font-weight:800; font-size:7.4px; text-decoration:none; line-height:1;
+  isolation:isolate; z-index:1; }
+.rchip::before{ content:""; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:4.4mm; height:4.4mm; border-radius:1mm; border:1px solid #94a3b8; background:#fff; z-index:-1; box-sizing:border-box; }
+.router-col > span{ font-size:7.0px; color:#64748b; font-weight:700; }
+
+/* ================= FORM PRIMITIVES ================= */
+.cb{ display:inline-block; width:12px; height:12px; min-width:12px; border:1.5px solid #334155; border-radius:2.5px; background:#fff; vertical-align:middle; flex:0 0 auto; }
+.cb.sm{ width:9px; height:9px; min-width:9px; border-width:1.3px; border-radius:2px; }
+.cb.r{ border-color:var(--crimson); } .cb.g{ border-color:var(--emerald); } .cb.n{ border-color:var(--navy); } .cb.w{ border-color:#fff; background:transparent; }
+.ci{ display:flex; align-items:flex-start; gap:1.3mm; padding:.25mm 0; }
+.ci > .cb{ margin-top:-0.5px; }
+.cio{ display:inline-flex; align-items:center; gap:.8mm; margin-right:1.8mm; white-space:nowrap; }
+.row{ display:flex; align-items:flex-end; gap:3mm; }
+.fr{ display:flex; align-items:flex-end; gap:1.2mm; white-space:nowrap; min-height:14px; }
+.fr .fl{ flex:1 1 auto; }
+.fl{ display:inline-block; border-bottom:1px solid #94a3b8; min-width:9mm; height:12px; vertical-align:bottom; }
+.fl.s{ min-width:7mm; width:7mm; flex:0 0 auto; } .fl.m{ min-width:12mm; width:12mm; flex:0 0 auto; } .fl.l{ min-width:20mm; width:20mm; flex:0 0 auto; }
+.lb{ font-weight:700; color:#334155; font-size:8px; }
+.mut{ color:var(--mut); } .xs{ font-size:7.4px; } .xxs{ font-size:6.8px; } .b{ font-weight:700; }
+.crim{ color:var(--crimson); } .emer{ color:var(--emerald); } .nav{ color:var(--navy); } .acc{ color:var(--accent); }
+.stat{ display:inline-block; font-size:7px; font-weight:800; padding:.2mm 1.2mm; border-radius:2mm; background:#eff6ff; color:var(--navy); border:1px solid #bfdbfe; white-space:nowrap; text-transform:none; letter-spacing:0; }
+.stat.r{ background:#fef2f2; color:var(--crimson); border-color:#fecaca; }
+.stat.g{ background:#ecfdf5; color:var(--emerald); border-color:#a7f3d0; }
+.stat.w{ background:rgba(255,255,255,.14); color:#fff; border-color:rgba(255,255,255,.4); }
+.lr{ display:inline-flex; align-items:flex-end; gap:.8mm; white-space:nowrap; font-weight:700; color:#64748b; font-size:7.4px; }
+.circ{ display:inline-flex; gap:1.2mm; font-weight:700; color:#334155; font-size:7.8px; }
+.circ span{ border:1px solid var(--line); border-radius:3mm; padding:0 1.3mm; background:#fff; }
+.nprs{ display:inline-flex; gap:2px; }
+.nprs span{ width:14px; height:14px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:7.4px; font-weight:800; border:1.3px solid; background:#fff; }
+.mini{ border:1px solid var(--line2); border-radius:1.2mm; padding:.7mm 1.3mm; background:#fff; }
+.box{ border:1.2px solid var(--line); border-radius:1.2mm; padding:.6mm 1.2mm; background:#fff; }
+.box.r{ border-color:#b91c1c; background:#fff5f5; }
+.box.n{ border-color:#93c5fd; background:#f8fbff; }
+.box.g{ border-color:#10b981; background:#f0fdf4; }
+.box.a{ border-color:var(--accent-line); background:var(--accent-soft); }
+
+/* ================= TABLES ================= */
+.t{ width:100%; border-collapse:collapse; font-size:8.6px; font-variant-numeric:tabular-nums; }
+.t th{ background:var(--accent-soft); color:var(--accent); font-weight:800; text-align:left; padding:.7mm 1.1mm; border:1px solid var(--line); font-size:7.1px; text-transform:uppercase; letter-spacing:.04em; line-height:1.15; }
+.t td{ border:1px solid var(--line); padding:.55mm 1.1mm; vertical-align:middle; background:#fff; line-height:1.18; }
+.t tr:nth-child(even) td{ background:#fbfdff; }
+.t td.k{ font-weight:700; } .t td.w{ background:#fff !important; }
+.t.dense td{ font-size:8.2px; padding:.45mm 1mm; }
+.t.red th{ background:#fef2f2; color:var(--crimson); }
+.t.green th{ background:#ecfdf5; color:var(--emerald); }
+.t.navy th{ background:#eef2ff; color:var(--navy); }
+.t td.c, .t th.c{ text-align:center; }
+.t.ink th{ background:var(--ink); color:#fff; border-color:#334155; }
+.t.slate th{ background:#e2e8f0; color:#334155; border-color:#cbd5e1; }
+.t tr.sub td{ background:var(--accent-soft) !important; color:var(--accent); font-weight:800; font-size:7.4px; text-transform:uppercase; letter-spacing:.05em; padding:.4mm 1.1mm; }
+.t tr.redrow td:first-child{ border-left:3px solid #991b1b; }
+
+/* ================= HANDWRITING ZONES ================= */
+.dots{ position:relative; border:1px solid var(--line); border-radius:1.6mm; background-color:#fff;
+  background-image:radial-gradient(circle, #64748b 0.85px, transparent 1.05px); background-size:5mm 5mm; background-position:2.5mm 2.5mm; }
+.dots-l{ position:absolute; top:1mm; left:1.6mm; font-size:7.2px; font-weight:800; color:var(--accent); background:#fff; padding:.2mm 1.2mm;
+  text-transform:uppercase; letter-spacing:.07em; border-radius:1mm; border:1px solid var(--line2); }
+.fill{ flex:1 1 auto; min-height:10mm; }
+
+.crit{ display:flex; align-items:center; gap:1.4mm; border:2px solid var(--crimson); background:repeating-linear-gradient(135deg,#fef2f2 0 6px,#fff 6px 12px);
+  border-radius:1.4mm; padding:.6mm 1.6mm; color:var(--crimson); font-weight:800; font-size:8px; line-height:1.15; }
+.crit svg.stop{ width:10px; height:10px; flex:0 0 auto; }
+.ok{ border:1.5px solid var(--emerald); background:#ecfdf5; border-radius:1.4mm; padding:.6mm 1.6mm; color:var(--emerald); font-weight:700; }
+.note{ border-left:3px solid var(--accent); background:#fff; padding:.7mm 2mm; border-radius:0 1.2mm 1.2mm 0; }
+.divider-v{ border-left:1px dashed #fecaca; padding-left:2mm; }
+
+/* ================= ANATOMICAL WIREFRAMES ================= */
+.bm{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.4mm; }
+.bm figure{ margin:0; border:1px solid var(--line2); border-radius:1.2mm; background:#fff; padding:.8mm .8mm .4mm; display:flex; flex-direction:column; align-items:center; }
+.bm svg{ width:100%; height:auto; display:block; }
+.bm figcaption{ font-size:6.8px; font-weight:800; letter-spacing:.12em; color:var(--navy); text-transform:uppercase; margin-top:.3mm; }
+.bm .o{ fill:#F8FAFC; stroke:#64748B; stroke-width:1.1; stroke-linejoin:round; stroke-linecap:round; }
+.bm .b{ fill:#eef2ff; stroke:#64748B; stroke-width:.9; }
+.bm .d{ fill:none; stroke:#94a3b8; stroke-width:.7; stroke-dasharray:2 1.6; }
+.bm .lm{ fill:none; stroke:#1e3a8a; stroke-width:.85; stroke-dasharray:2 1.3; }
+.bm .pt{ fill:#1e3a8a; }
+.bm text{ font-family:"Source Sans 3", sans-serif; font-size:5.2px; font-weight:700; fill:#64748B; }
+.bm text.k{ fill:#1e3a8a; }
+
+/* ================= FLOWSHEET ================= */
+.flow td{ vertical-align:top; }
+.flow .p{ font-size:5.6pt; color:#64748b; font-weight:600; line-height:1.05; white-space:nowrap; }
+.vnum{ font-size:10px; font-weight:800; color:var(--navy); text-align:center; vertical-align:middle !important; background:#f8fafc; }
+.bm .mk circle{ fill:#1e3a8a; }
+.bm .mk text{ fill:#fff; font-size:5.4px; font-weight:800; }
+.bm text.s{ font-size:5px; font-weight:800; fill:#94a3b8; letter-spacing:.04em; }
+.sh .calc-badge, .sh .guide-badge{ text-transform:none; letter-spacing:.01em; }
+.t tr.sub .calc-badge, .t tr.sub .guide-badge{ text-transform:none; letter-spacing:.01em; }
+
+/* ---- compiled utility classes (Tailwind v3, generated at build) ---- */
+.col-span-2{grid-column:span 2/span 2}.mt-\[1px\]{margin-top:1px}.flex{display:flex}.table{display:table}.grid{display:grid}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-3{gap:.75rem}.gap-\[1\.5px\]{gap:1.5px}.gap-\[1px\]{gap:1px}.gap-x-1{-moz-column-gap:.25rem;column-gap:.25rem}.gap-x-2{-moz-column-gap:.5rem;column-gap:.5rem}.border-l{border-left-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.pl-2{padding-left:.5rem}.pt-\[1px\]{padding-top:1px}.ring{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 ===================== -->
+<div class="clinical-page" id="page-1" data-accent="red">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">WRH</div>
+      <div>
+        <div class="kicker">Wrist &amp; Hand &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Emergency Triage, Red Flags, Scaphoid / CRPS Clearance &amp; Body Chart</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">MRN</span><span class="fl l"></span></div>
+      <div class="pgno">01 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <section class="card" id="p1-demographics">
+<div class="card-h"><span>A · Patient Demographics &amp; Wrist / Hand Presentation Profile</span><span class="tag">INTAKE</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<div class="row">
+<div class="fr" style="flex:3.2"><span class="lb">Patient Name</span><span class="fl"></span></div>
+<div class="fr" style="flex:.8"><span class="lb">Age</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Sex</span><span class="cio"><span class="cb"></span>M</span><span class="cio"><span class="cb"></span>F</span></div>
+<div class="fr" style="flex:1.4"><span class="lb">Date</span><span class="fl"></span></div>
+</div>
+<div class="row">
+<div class="fr" style="flex:2"><span class="lb">Occupation / Hand-Intensive Work / Sport</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Dominant Hand</span><span class="cio"><span class="cb"></span>R</span><span class="cio"><span class="cb"></span>L</span></div>
+<div class="fr"><span class="lb">Affected Side</span><span class="cio"><span class="cb"></span>R</span><span class="cio"><span class="cb"></span>L</span><span class="cio"><span class="cb"></span>Bilat</span></div>
+<div class="fr"><span class="lb">Onset</span><span class="cio"><span class="cb"></span>Traumatic / FOOSH</span><span class="cio"><span class="cb"></span>Overuse / Insidious</span></div>
+</div>
+<div class="row">
+<div class="fr"><span class="lb"><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#nprs" rel="noopener" target="_blank">NPRS</a> Now (circle)</span>
+<span class="nprs"><span style="border-color:var(--emerald);color:var(--emerald)">0</span><span style="border-color:var(--emerald);color:var(--emerald)">1</span><span style="border-color:var(--emerald);color:var(--emerald)">2</span><span style="border-color:var(--emerald);color:var(--emerald)">3</span><span style="border-color:var(--navy);color:var(--navy)">4</span><span style="border-color:var(--navy);color:var(--navy)">5</span><span style="border-color:var(--navy);color:var(--navy)">6</span><span style="border-color:var(--crimson);color:var(--crimson)">7</span><span style="border-color:var(--crimson);color:var(--crimson)">8</span><span style="border-color:var(--crimson);color:var(--crimson)">9</span><span style="border-color:var(--crimson);color:var(--crimson)">10</span></span>
+</div>
+<div class="fr" style="flex:1"><span class="lb">Region</span><span class="cio"><span class="cb sm"></span>Radial</span><span class="cio"><span class="cb sm"></span>Ulnar</span><span class="cio"><span class="cb sm"></span>Dorsal</span><span class="cio"><span class="cb sm"></span>Palmar</span><span class="cio"><span class="cb sm"></span>Digits</span><span class="lb">Worst</span><span class="fl"></span></div>
+</div>
+</div>
+</section>
+<section class="card red" id="p1-redflags">
+<div class="card-h"><span>B · Suspected Scaphoid Fracture, Acute Carpal Tunnel Syndrome, CRPS &amp; Red-Flag Triage</span><span class="tag">TRIAGE GATE</span></div>
+<div class="card-b grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh r" style="margin:0 0 .5px;"><span>Suspected Scaphoid Fracture — Anatomical Snuffbox, Rule &amp; Imaging</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7109163/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Mallee 2020</a></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#suspected-scaphoid-fracture" rel="noopener" target="_blank"><b>Epidemiology &amp; exam (SR/MA, 75 studies)</b></a> (Carpenter 2014 Acad Emerg Med) <span class="eb eb-m">M</span>: <b class="crim">scaphoid = 70% of carpal fractures; occult fracture prevalence 12% to 57%, point estimate 25% pretest probability with non-diagnostic X-ray; only the absence of snuffbox tenderness helps (LR− 0.15)</b></div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#anatomical-snuffbox-tenderness" rel="noopener" target="_blank"><b>Anatomical snuffbox &amp; single signs</b></a> (Mallee 2014 J Hand Surg Am · Parvizi 1998 J Hand Surg Br) <span class="eb eb-m">M</span>: <b class="crim">snuffbox tenderness the most sensitive test; low specificity → many overtreated; combining tests improved post-test probability · pain on thumb movement Sn 69%, Sp 66% (L)</b></div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#suspected-scaphoid-fracture" rel="noopener" target="_blank"><b>Clinical decision rule (n = 893, 7.6% fractures)</b></a> (Mallee 2020 Arch Orthop Trauma Surg) <span class="eb eb-m">M</span>: <b class="crim">sex, snuffbox swelling, snuffbox tenderness, painful ulnar deviation, painful axial thumb compression; internal validation Sn 97%, Sp 20%; 15% fewer unnecessary immobilisations and imaging, 50% lower risk of missing a fracture (not externally validated)</b></div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#suspected-scaphoid-fracture" rel="noopener" target="_blank"><b>Advanced imaging</b></a> (Bäcker 2020 J Wrist Surg · Mallee 2015 Cochrane) <span class="eb eb-m">M</span>: <b class="crim">X-ray + exam may miss up to 16%; MRI Sn 94.2%, Sp 97.7%; CT 81.5%, 96.0%; ultrasound 81.5%, 77.4% · Cochrane: CT Sn 0.72 (0.36–0.92), Sp 0.99 (0.71–1.00); MRI 0.88 (0.64–0.97), 1.00 (0.38–1.00); bone scan 0.99 (0.69–1.00), 0.86 (0.73–0.94)</b></div></div>
+</div>
+<div class="divider-v">
+<div class="sh r" style="margin:0 0 .5px;"><span>Acute CTS, CRPS &amp; Same-Day Red Flags</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2914601/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Harden 2010</a></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#acute-cts-after-drf" rel="noopener" target="_blank"><b>Acute carpal tunnel syndrome after DRF (n = 1,189)</b></a> (Leow 2021 Eur J Orthop Surg Traumatol) <span class="eb eb-l">L</span>: <b class="crim">51 (4.3%) developed acute CTS; median onset one week (range 1–12); pain out of proportion 13.7%, reduced power 9.8%; 10 of 51 (20%) resolved without intervention; 5 (10%) developed CRPS; type C fractures at higher risk</b></div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#crps-budapest-criteria" rel="noopener" target="_blank"><b>CRPS — Budapest criteria (113 CRPS vs 47 neuropathic pain)</b></a> (Harden 2010 Pain) <span class="eb eb-m">M</span>: <b class="crim">IASP criteria Sn 1.00, Sp 0.41; Budapest clinical criteria Sn 0.99, Sp 0.68; Budapest research criteria Sp 0.79</b></div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#pyogenic-flexor-tenosynovitis-kanavel" rel="noopener" target="_blank"><b>Pyogenic flexor tenosynovitis — Kanavel signs</b></a> <span class="eb eb-e">E</span>: <b class="crim">fusiform swelling of the digit, flexed resting posture, tenderness along the flexor sheath, pain on passive extension → same-day surgical referral</b></div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#pyogenic-flexor-tenosynovitis-kanavel" rel="noopener" target="_blank"><b>Poor-outcome factors</b></a> (Pang 2007 J Bone Joint Surg Am) <span class="eb eb-l">L</span>: <b class="crim">age &gt; 43 years; diabetes, peripheral vascular disease or renal failure; subcutaneous purulence; digital ischaemia; polymicrobial infection</b></div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#wrist-hand-red-flags-triage" rel="noopener" target="_blank"><b>Other emergencies</b></a> <span class="eb eb-e">E</span>: <b class="crim">compartment syndrome; septic arthritis; high-pressure injection injury; fight bite (clenched-fist knuckle wound); acute CTS after fracture → same-day surgical referral</b></div></div>
+</div>
+<div class="col-span-2 flex flex-wrap items-center gap-x-1 mt-[1px] pt-[1px] border-t border-dashed" style="border-color:var(--accent-line)">
+<span class="lb crim">TRIAGE DISPOSITION:</span>
+<span class="cio"><span class="cb g"></span><b class="emer">Cleared — proceed</b></span>
+<span class="cio"><span class="cb r"></span>Imaging required (suspected scaphoid / fracture)</span>
+<span class="cio"><span class="cb r"></span>Urgent referral (acute CTS after fracture / suspected CRPS)</span>
+<span class="cio"><span class="cb r"></span><b class="crim">Same-day surgical referral (Kanavel / compartment / septic / injection / fight bite)</b></span>
+</div>
+</div>
+</section>
+<section class="card green" id="p1-fasttrack">
+<div class="card-h"><span>C · Clinical Pathway Router &amp; Wrist / Hand Subgroup Navigation</span><span class="tag">RAPID</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<div class="box g" style="padding:.3mm 1.2mm;">
+<div class="flex items-center justify-between" style="font-size:6.8px; font-weight:bold; color:var(--emerald); text-transform:uppercase;">
+<span>Clinical Pathway Router</span>
+<span class="mut" style="font-weight:bold; text-transform:none; font-size:6.6px;">Tick route → jump to matching pages</span>
+</div>
+<div class="router-row" style="grid-template-columns: 31fr 39fr 30fr;">
+<div class="router-col">
+<span class="cb sm g"></span>
+<b class="emer" style="font-size:6.8px;">A · NERVE (CTS):</b>
+<a class="rchip" href="#page-1">1</a><span>→</span><a class="rchip" href="#page-2">2</a><span>→</span><a class="rchip" href="#page-4">4</a><span>→</span><a class="rchip" href="#page-6">6</a><span>→</span><a class="rchip" href="#page-7">7</a>
+</div>
+<div class="router-col">
+<span class="cb sm g"></span>
+<b class="nav" style="font-size:6.8px;">B · TENDON / OA / INSTABILITY:</b>
+<a class="rchip" href="#page-1">1</a><span>→</span><a class="rchip" href="#page-2">2</a><span>→</span><a class="rchip" href="#page-3">3</a><span>→</span><a class="rchip" href="#page-4">4</a><span>→</span><a class="rchip" href="#page-8">8</a>
+</div>
+<div class="router-col">
+<span class="cb sm g"></span>
+<b class="crim" style="font-size:6.8px;">C · FRACTURE / POST-OP:</b>
+<a class="rchip" href="#page-1">1</a><span>→</span><a class="rchip" href="#page-3">3</a><span>→</span><a class="rchip" href="#page-5">5</a><span>→</span><a class="rchip" href="#page-8">8</a><span>→</span><a class="rchip" href="#page-9">9</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="card flex flex-col" id="p1-subjective">
+<div class="card-h"><span>D · Subjective History, Symptom Behaviour &amp; Wrist / Hand Body Chart</span><span class="tag">SUBJECTIVE</span></div>
+<div class="card-b" style="padding:.4mm 1.2mm;">
+<div class="grid grid-cols-2 gap-3">
+<div class="flex flex-col gap-[1px]">
+<div class="sh" style="margin:0 0 .5px;"><span>Symptom Location &amp; Clinical Pattern</span><span class="stat">Clinical Signpost</span></div>
+<div class="ci"><span class="cb"></span><div><b>Night paraesthesia thumb–index–middle, shaking relieves:</b> <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#flick-sign" rel="noopener" target="_blank">Flick sign</a> / <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#wainner-cts-cpr" rel="noopener" target="_blank">Wainner</a> → <span class="nav b">Carpal tunnel syndrome (p2/p4/p6)</span></div></div>
+<div class="ci"><span class="cb"></span><div><b>Radial styloid pain with thumb use:</b> <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#what-test" rel="noopener" target="_blank">WHAT test</a> → <span class="nav b">De Quervain (p2/p4/p6)</span></div></div>
+<div class="ci"><span class="cb"></span><div><b>Thumb-base pain on pinch / jar opening:</b> <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#cmc-grind-test" rel="noopener" target="_blank">Grind test</a> → <span class="nav b">Thumb CMC OA (p2/p4/p6)</span></div></div>
+<div class="ci"><span class="cb"></span><div><b>Ulnar wrist pain on rotation / grip:</b> <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#ulnar-fovea-sign" rel="noopener" target="_blank">Fovea sign</a> / <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#druj-ballottement-test" rel="noopener" target="_blank">DRUJ test</a> → <span class="nav b">TFCC / DRUJ (p2/p4)</span></div></div>
+</div>
+<div class="flex flex-col gap-[1px] border-l pl-2" style="border-color:var(--line)">
+<div class="sh" style="margin:0 0 .5px;"><span>Aggravating, Easing &amp; Irritability Profile</span><span class="stat">Behaviour</span></div>
+<div class="row xs">
+<div class="fr" style="flex:1"><span class="lb">Aggravating</span><span class="fl"></span></div>
+<div class="fr" style="flex:1"><span class="lb">Easing</span><span class="fl"></span></div>
+</div>
+<div class="fr flex-wrap xs">
+<span class="lb">Irritability:</span>
+<span class="cio"><span class="cb sm g"></span>Low</span><span class="cio"><span class="cb sm"></span>Moderate</span><span class="cio"><span class="cb sm r"></span>High (rest/night pain)</span>
+</div>
+<div class="sh" style="margin:.4mm 0 .5px;"><span>Mechanism &amp; Occupational / Sport Risk</span><span class="stat">History</span></div>
+<div class="fr flex-wrap xs">
+<span class="lb">Mechanism:</span>
+<span class="cio"><span class="cb sm"></span>FOOSH / fall</span><span class="cio"><span class="cb sm"></span>Repetitive gripping / keyboard</span><span class="cio"><span class="cb sm"></span>Crush / laceration</span><span class="cio"><span class="cb sm"></span>Pregnancy / postpartum</span>
+</div>
+<div class="fr flex-wrap xs">
+<span class="lb">Factors:</span>
+<span class="cio"><span class="cb sm"></span>Diabetes</span><span class="cio"><span class="cb sm"></span>Prior cast / fixation</span><span class="cio"><span class="cb sm"></span>Locking / triggering</span><span class="cio"><span class="cb sm r"></span>Colour / temperature change</span>
+</div>
+</div>
+</div>
+<div class="sh" style="margin:.4mm 0 .2mm;"><span>Body Chart — where is the pain?</span><span class="stat">Clinical signposts <span class="eb eb-e">E</span></span></div>
+<svg font-family="Source Sans 3, Arial, sans-serif" style="width:100%;max-height:56mm;height:56mm;display:block" viewbox="0 0 880 338" xmlns="http://www.w3.org/2000/svg" xmlns:c2pa="http://c2pa.org/manifest"><g>
+<rect fill="#f4dccb" height="96" rx="12.5" stroke="#b88a6e" stroke-width="1.1" transform="rotate(32 276.0 182)" width="25" x="264.0" y="98"></rect>
+<rect fill="#7c3aed" fill-opacity=".22" height="96" rx="12.5" transform="rotate(32 276.0 182)" width="25" x="264.0" y="98"></rect>
+<path d="M 177 330 C 176 290 174 255 172 232 C 164 222 158 200 158 170 L 160 118 L 282 118 L 282 165 C 284 190 278 220 268 232 C 266 255 264 290 263 330 Z" fill="#f4dccb" stroke="#b88a6e" stroke-linejoin="round" stroke-width="1.1"></path>
+<rect fill="#f4dccb" height="70" rx="9.5" stroke="#b88a6e" stroke-width="1.1" width="19" x="164.5" y="62"></rect>
+<path d="M 167.5 83.0 L 180.5 83.0" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 167.5 105.4 L 180.5 105.4" stroke="#c9997c" stroke-width=".7"></path>
+<rect fill="#f4dccb" height="100" rx="11.0" stroke="#b88a6e" stroke-width="1.1" width="22" x="192.0" y="32"></rect>
+<path d="M 195.0 62.0 L 211.0 62.0" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 195.0 94.0 L 211.0 94.0" stroke="#c9997c" stroke-width=".7"></path>
+<rect fill="#f4dccb" height="112" rx="11.5" stroke="#b88a6e" stroke-width="1.1" width="23" x="221.5" y="20"></rect>
+<path d="M 224.5 53.6 L 241.5 53.6" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 224.5 89.4 L 241.5 89.4" stroke="#c9997c" stroke-width=".7"></path>
+<rect fill="#f4dccb" height="96" rx="11.0" stroke="#b88a6e" stroke-width="1.1" width="22" x="252.0" y="36"></rect>
+<path d="M 255.0 64.8 L 271.0 64.8" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 255.0 95.5 L 271.0 95.5" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 161 120 L 281 120 L 281 132 L 161 132 Z" fill="#f4dccb"></path>
+<path d="M 160 132 L 160 118" stroke="#b88a6e" stroke-width="1.1"></path>
+<path d="M 172 232 L 268 232" stroke="#c9997c" stroke-width=".8"></path>
+<path d="M 272 160 C 270 185 250 205 230 228" fill="none" opacity=".7" stroke="#d9a888" stroke-width="1"></path>
+<path d="M 162 150 C 190 146 230 150 260 140" fill="none" stroke="#c9997c" stroke-width=".8"></path>
+<path d="M 162 170 C 200 170 230 165 250 150" fill="none" stroke="#c9997c" stroke-width=".8"></path>
+<path d="M 176 226 C 210 230 240 230 264 226" fill="none" stroke="#c9997c" stroke-width=".8"></path>
+<rect fill="#7c3aed" fill-opacity=".22" height="96" rx="11.0" width="22" x="252.0" y="36"></rect>
+<rect fill="#7c3aed" fill-opacity=".22" height="112" rx="11.5" width="23" x="221.5" y="20"></rect>
+<path d="M 203 32 A 11 11 0 0 1 214 43 L 214 132 L 203 132 Z" fill="#7c3aed" fill-opacity=".22"></path>
+<rect fill="#ca8a04" fill-opacity=".26" height="70" rx="9.5" width="19" x="164.5" y="62"></rect>
+<path d="M 203 32 A 11 11 0 0 0 192 43 L 192 132 L 203 132 Z" fill="#ca8a04" fill-opacity=".26"></path>
+<ellipse cx="224.0" cy="222.0" fill="#ea580c" fill-opacity="0.45" rx="15" ry="9" stroke="#ea580c" stroke-width="1.1" transform="rotate(0 224.0 222.0)"></ellipse>
+<ellipse cx="260.0" cy="178.0" fill="#2563eb" fill-opacity="0.32" rx="14" ry="20" stroke="#2563eb" stroke-width="1.1" transform="rotate(-20 260.0 178.0)"></ellipse>
+<ellipse cx="275.0" cy="214.0" fill="#16a34a" fill-opacity="0.5" rx="8" ry="8" stroke="#16a34a" stroke-width="1.1" transform="rotate(0 275.0 214.0)"></ellipse>
+<ellipse cx="233.0" cy="126.0" fill="#0d9488" fill-opacity="0.55" rx="6" ry="6" stroke="#0d9488" stroke-width="1.1" transform="rotate(0 233.0 126.0)"></ellipse>
+<ellipse cx="178.0" cy="220.0" fill="#a16207" fill-opacity="0.45" rx="9" ry="9" stroke="#a16207" stroke-width="1.1" transform="rotate(0 178.0 220.0)"></ellipse>
+<rect fill="none" height="98" rx="12" stroke="#dc2626" stroke-dasharray="3 2" stroke-width="1.4" width="24" x="251.0" y="35"></rect>
+<text fill="#6d28d9" font-size="11.2" font-weight="800" text-anchor="end" x="432" y="30.0">Thumb–index–middle</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="432" y="40.6">median nerve (CTS)</text><path d="M 319.0 26.4 L 233.0 70.0" fill="none" stroke="#6d28d9" stroke-width=".9"></path><circle cx="319.0" cy="26.4" fill="#6d28d9" r="1.5"></circle><circle cx="233.0" cy="70.0" fill="#fff" r="2" stroke="#6d28d9" stroke-width="1.2"></circle>
+<text fill="#1d4ed8" font-size="11.2" font-weight="800" text-anchor="end" x="432" y="110.0">Thenar eminence</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="432" y="120.6">APB weakness / wasting</text><path d="M 319.2 106.4 L 262.0 176.0" fill="none" stroke="#1d4ed8" stroke-width=".9"></path><circle cx="319.2" cy="106.4" fill="#1d4ed8" r="1.5"></circle><circle cx="262.0" cy="176.0" fill="#fff" r="2" stroke="#1d4ed8" stroke-width="1.2"></circle>
+<text fill="#15803d" font-size="11.2" font-weight="800" text-anchor="end" x="432" y="178.0">Thumb base (CMC)</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="432" y="188.6">OA — grind test</text><path d="M 331.0 174.4 L 276.0 214.0" fill="none" stroke="#15803d" stroke-width=".9"></path><circle cx="331.0" cy="174.4" fill="#15803d" r="1.5"></circle><circle cx="276.0" cy="214.0" fill="#fff" r="2" stroke="#15803d" stroke-width="1.2"></circle>
+<text fill="#c2410c" font-size="11.2" font-weight="800" text-anchor="end" x="432" y="244.0">Carpal tunnel</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="432" y="254.6">Phalen · Tinel · compression</text><path d="M 289.8 240.4 L 228.0 224.0" fill="none" stroke="#c2410c" stroke-width=".9"></path><circle cx="289.8" cy="240.4" fill="#c2410c" r="1.5"></circle><circle cx="228.0" cy="224.0" fill="#fff" r="2" stroke="#c2410c" stroke-width="1.2"></circle>
+<text fill="#b91c1c" font-size="11.2" font-weight="800" text-anchor="start" x="8" y="26.0">Flexor sheath (swollen, flexed)</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="8" y="36.6">Kanavel signs — RED FLAG</text><path d="M 199.0 22.4 L 263.0 60.0" fill="none" stroke="#b91c1c" stroke-width=".9"></path><circle cx="199.0" cy="22.4" fill="#b91c1c" r="1.5"></circle><circle cx="263.0" cy="60.0" fill="#fff" r="2" stroke="#b91c1c" stroke-width="1.2"></circle>
+<text fill="#0f766e" font-size="11.2" font-weight="800" text-anchor="start" x="8" y="88.0">A1 pulley</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="8" y="98.6">trigger finger</text><path d="M 81.6 84.4 L 233.0 126.0" fill="none" stroke="#0f766e" stroke-width=".9"></path><circle cx="81.6" cy="84.4" fill="#0f766e" r="1.5"></circle><circle cx="233.0" cy="126.0" fill="#fff" r="2" stroke="#0f766e" stroke-width="1.2"></circle>
+<text fill="#a16207" font-size="11.2" font-weight="800" text-anchor="start" x="8" y="150.0">Little + ½ ring finger</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="8" y="160.6">ulnar nerve</text><path d="M 145.0 146.4 L 174.0 100.0" fill="none" stroke="#a16207" stroke-width=".9"></path><circle cx="145.0" cy="146.4" fill="#a16207" r="1.5"></circle><circle cx="174.0" cy="100.0" fill="#fff" r="2" stroke="#a16207" stroke-width="1.2"></circle>
+<text fill="#a16207" font-size="11.2" font-weight="800" text-anchor="start" x="8" y="212.0">Guyon’s canal</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="8" y="222.6">ulnar nerve at wrist</text><path d="M 111.0 208.4 L 178.0 220.0" fill="none" stroke="#a16207" stroke-width=".9"></path><circle cx="111.0" cy="208.4" fill="#a16207" r="1.5"></circle><circle cx="178.0" cy="220.0" fill="#fff" r="2" stroke="#a16207" stroke-width="1.2"></circle>
+</g><g>
+<rect fill="#f4dccb" height="96" rx="12.5" stroke="#b88a6e" stroke-width="1.1" transform="rotate(-32 604.0 182)" width="25" x="592.0" y="98"></rect>
+<path d="M 703 330 C 704 290 706 255 708 232 C 716 222 722 200 722 170 L 720 118 L 598 118 L 598 165 C 596 190 602 220 612 232 C 614 255 616 290 617 330 Z" fill="#f4dccb" stroke="#b88a6e" stroke-linejoin="round" stroke-width="1.1"></path>
+<rect fill="#f4dccb" height="70" rx="9.5" stroke="#b88a6e" stroke-width="1.1" width="19" x="696.5" y="62"></rect>
+<path d="M 699.5 83.0 L 712.5 83.0" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 699.5 105.4 L 712.5 105.4" stroke="#c9997c" stroke-width=".7"></path>
+<rect fill="#f4dccb" height="100" rx="11.0" stroke="#b88a6e" stroke-width="1.1" width="22" x="666.0" y="32"></rect>
+<path d="M 669.0 62.0 L 685.0 62.0" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 669.0 94.0 L 685.0 94.0" stroke="#c9997c" stroke-width=".7"></path>
+<rect fill="#f4dccb" height="112" rx="11.5" stroke="#b88a6e" stroke-width="1.1" width="23" x="635.5" y="20"></rect>
+<path d="M 638.5 53.6 L 655.5 53.6" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 638.5 89.4 L 655.5 89.4" stroke="#c9997c" stroke-width=".7"></path>
+<rect fill="#f4dccb" height="96" rx="11.0" stroke="#b88a6e" stroke-width="1.1" width="22" x="606.0" y="36"></rect>
+<path d="M 609.0 64.8 L 625.0 64.8" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 609.0 95.5 L 625.0 95.5" stroke="#c9997c" stroke-width=".7"></path>
+<path d="M 719 120 L 599 120 L 599 132 L 719 132 Z" fill="#f4dccb"></path>
+<path d="M 720 132 L 720 118" stroke="#b88a6e" stroke-width="1.1"></path>
+<path d="M 708 232 L 612 232" stroke="#c9997c" stroke-width=".8"></path>
+<path d="M 608 160 C 610 185 630 205 650 228" fill="none" opacity=".7" stroke="#d9a888" stroke-width="1"></path>
+<ellipse cx="617" cy="122" fill="none" rx="7" ry="4" stroke="#c9997c" stroke-width=".8"></ellipse>
+<ellipse cx="647" cy="122" fill="none" rx="7" ry="4" stroke="#c9997c" stroke-width=".8"></ellipse>
+<ellipse cx="677" cy="122" fill="none" rx="7" ry="4" stroke="#c9997c" stroke-width=".8"></ellipse>
+<ellipse cx="706" cy="122" fill="none" rx="7" ry="4" stroke="#c9997c" stroke-width=".8"></ellipse>
+<path d="M 642.0 220 L 624 130" opacity=".7" stroke="#c9997c" stroke-width=".6"></path>
+<path d="M 654.0 220 L 648 130" opacity=".7" stroke="#c9997c" stroke-width=".6"></path>
+<path d="M 666.0 220 L 672 130" opacity=".7" stroke="#c9997c" stroke-width=".6"></path>
+<path d="M 678.0 220 L 696 130" opacity=".7" stroke="#c9997c" stroke-width=".6"></path>
+<ellipse cx="660.0" cy="170.0" fill="#7c3aed" fill-opacity="0.1" rx="58" ry="44" stroke="#7c3aed" stroke-dasharray="3 2" stroke-width="1.1" transform="rotate(0 660.0 170.0)"></ellipse>
+<ellipse cx="606.0" cy="218.0" fill="#dc2626" fill-opacity="0.42" rx="8" ry="10" stroke="#dc2626" stroke-width="1.1" transform="rotate(0 606.0 218.0)"></ellipse>
+<ellipse cx="614.0" cy="242.0" fill="#16a34a" fill-opacity="0.42" rx="7" ry="11" stroke="#16a34a" stroke-width="1.1" transform="rotate(0 614.0 242.0)"></ellipse>
+<ellipse cx="646.0" cy="222.0" fill="#2563eb" fill-opacity="0.45" rx="8" ry="7" stroke="#2563eb" stroke-width="1.1" transform="rotate(0 646.0 222.0)"></ellipse>
+<ellipse cx="648.0" cy="252.0" fill="#dc2626" fill-opacity="0.18" rx="22" ry="8" stroke="#dc2626" stroke-dasharray="3 2" stroke-width="1.1" transform="rotate(0 648.0 252.0)"></ellipse>
+<ellipse cx="704.0" cy="228.0" fill="#0d9488" fill-opacity="0.48" rx="8" ry="8" stroke="#0d9488" stroke-width="1.1" transform="rotate(0 704.0 228.0)"></ellipse>
+<ellipse cx="698.0" cy="248.0" fill="#0891b2" fill-opacity="0.45" rx="7" ry="7" stroke="#0891b2" stroke-width="1.1" transform="rotate(0 698.0 248.0)"></ellipse>
+<ellipse cx="677.0" cy="122.0" fill="#dc2626" fill-opacity="0.4" rx="9" ry="7" stroke="#dc2626" stroke-width="1.1" transform="rotate(0 677.0 122.0)"></ellipse>
+<text fill="#b91c1c" font-size="11.2" font-weight="800" text-anchor="end" x="872" y="30.0">Knuckle wound</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="872" y="40.6">fight bite — RED FLAG</text><path d="M 764.1 26.4 L 677.0 122.0" fill="none" stroke="#b91c1c" stroke-width=".9"></path><circle cx="764.1" cy="26.4" fill="#b91c1c" r="1.5"></circle><circle cx="677.0" cy="122.0" fill="#fff" r="2" stroke="#b91c1c" stroke-width="1.2"></circle>
+<text fill="#6d28d9" font-size="11.2" font-weight="800" text-anchor="end" x="872" y="96.0">Whole hand: swelling,</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="872" y="106.6">colour / temperature change</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="872" y="117.2">CRPS — Budapest</text><path d="M 734.7 92.4 L 690.0 160.0" fill="none" stroke="#6d28d9" stroke-width=".9"></path><circle cx="734.7" cy="92.4" fill="#6d28d9" r="1.5"></circle><circle cx="690.0" cy="160.0" fill="#fff" r="2" stroke="#6d28d9" stroke-width="1.2"></circle>
+<text fill="#0f766e" font-size="11.2" font-weight="800" text-anchor="end" x="872" y="196.0">Ulnar fovea / TFCC</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="872" y="206.6">fovea sign</text><path d="M 759.0 192.4 L 706.0 228.0" fill="none" stroke="#0f766e" stroke-width=".9"></path><circle cx="759.0" cy="192.4" fill="#0f766e" r="1.5"></circle><circle cx="706.0" cy="228.0" fill="#fff" r="2" stroke="#0f766e" stroke-width="1.2"></circle>
+<text fill="#0e7490" font-size="11.2" font-weight="800" text-anchor="end" x="872" y="244.0">DRUJ</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="872" y="254.6">piano key · DRUJ test</text><path d="M 764.1 240.4 L 700.0 248.0" fill="none" stroke="#0e7490" stroke-width=".9"></path><circle cx="764.1" cy="240.4" fill="#0e7490" r="1.5"></circle><circle cx="700.0" cy="248.0" fill="#fff" r="2" stroke="#0e7490" stroke-width="1.2"></circle>
+<text fill="#b91c1c" font-size="11.2" font-weight="800" text-anchor="start" x="448" y="70.0">Anatomical snuffbox</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="448" y="80.6">occult scaphoid # — RED FLAG</text><path d="M 590.2 66.4 L 606.0 216.0" fill="none" stroke="#b91c1c" stroke-width=".9"></path><circle cx="590.2" cy="66.4" fill="#b91c1c" r="1.5"></circle><circle cx="606.0" cy="216.0" fill="#fff" r="2" stroke="#b91c1c" stroke-width="1.2"></circle>
+<text fill="#1d4ed8" font-size="11.2" font-weight="800" text-anchor="start" x="448" y="150.0">Scapholunate interval</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="448" y="160.6">Watson test</text><path d="M 579.0 146.4 L 646.0 222.0" fill="none" stroke="#1d4ed8" stroke-width=".9"></path><circle cx="579.0" cy="146.4" fill="#1d4ed8" r="1.5"></circle><circle cx="646.0" cy="222.0" fill="#fff" r="2" stroke="#1d4ed8" stroke-width="1.2"></circle>
+<text fill="#15803d" font-size="11.2" font-weight="800" text-anchor="start" x="448" y="214.0">1st dorsal compartment</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="448" y="224.6">de Quervain — WHAT test</text><path d="M 585.0 210.4 L 614.0 244.0" fill="none" stroke="#15803d" stroke-width=".9"></path><circle cx="585.0" cy="210.4" fill="#15803d" r="1.5"></circle><circle cx="614.0" cy="244.0" fill="#fff" r="2" stroke="#15803d" stroke-width="1.2"></circle>
+<text fill="#b91c1c" font-size="11.2" font-weight="800" text-anchor="start" x="448" y="276.0">Distal radius</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="448" y="286.6">fracture after FOOSH</text><path d="M 551.0 272.4 L 636.0 254.0" fill="none" stroke="#b91c1c" stroke-width=".9"></path><circle cx="551.0" cy="272.4" fill="#b91c1c" r="1.5"></circle><circle cx="636.0" cy="254.0" fill="#fff" r="2" stroke="#b91c1c" stroke-width="1.2"></circle>
+</g><rect fill="#fff" fill-opacity=".18" height="48" width="100" x="170" y="280"></rect><rect fill="#fff" fill-opacity=".18" height="48" width="100" x="610" y="280"></rect><rect fill="#fff" fill-opacity=".18" height="42" width="100" x="170" y="286"></rect><rect fill="#fff" fill-opacity=".18" height="42" width="100" x="610" y="286"></rect><rect fill="#fff" fill-opacity=".18" height="36" width="100" x="170" y="292"></rect><rect fill="#fff" fill-opacity=".18" height="36" width="100" x="610" y="292"></rect><rect fill="#fff" fill-opacity=".18" height="30" width="100" x="170" y="298"></rect><rect fill="#fff" fill-opacity=".18" height="30" width="100" x="610" y="298"></rect><rect fill="#fff" fill-opacity=".18" height="24" width="100" x="170" y="304"></rect><rect fill="#fff" fill-opacity=".18" height="24" width="100" x="610" y="304"></rect><rect fill="#fff" fill-opacity=".18" height="18" width="100" x="170" y="310"></rect><rect fill="#fff" fill-opacity=".18" height="18" width="100" x="610" y="310"></rect><text fill="#475569" font-size="10.5" font-weight="800" letter-spacing="1" text-anchor="middle" x="220" y="334">PALMAR · RIGHT HAND</text><text fill="#64748b" font-size="9" font-weight="800" text-anchor="middle" x="142" y="318">ULNAR</text><text fill="#64748b" font-size="9" font-weight="800" text-anchor="middle" x="298" y="318">RADIAL</text><text fill="#475569" font-size="10.5" font-weight="800" letter-spacing="1" text-anchor="middle" x="660" y="334">DORSAL · RIGHT HAND</text><text fill="#64748b" font-size="9" font-weight="800" text-anchor="middle" x="582" y="318">RADIAL</text><text fill="#64748b" font-size="9" font-weight="800" text-anchor="middle" x="738" y="318">ULNAR</text><line stroke="#e2e8f0" stroke-width="1" x1="440" x2="440" y1="6" y2="320"></line></svg>
+<div class="row xs" style="gap:2mm;margin-top:.2mm;align-items:flex-start">
+<div style="flex:1;color:var(--mut)"><b style="color:var(--ink)">Mark on the chart:</b> shade = pain · //// = pins &amp; needles · ×× = numbness · → = radiation · write 0–10 beside each area</div>
+<div style="flex:1.25;padding:.2mm 1mm;border-radius:1mm;background:#fff7ed;color:#7c2d12;line-height:1.15"><b>Anatomical snuffbox tenderness after FOOSH</b> → <a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#suspected-scaphoid-fracture" rel="noopener" target="_blank">suspected scaphoid pathway</a> (imaging). <b>Swollen, flexed digit</b> → <a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#pyogenic-flexor-tenosynovitis-kanavel" rel="noopener" target="_blank">Kanavel signs</a> (same day).</div>
+</div>
+</div>
+</section>
+<div class="dots fill" id="p1-notes"><span class="dots-l">Subjective History · Mechanism · Patient Goals (PSFS)</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab on" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 2 ===================== -->
+<div class="clinical-page" id="page-2" data-accent="blue">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">WRH</div>
+      <div>
+        <div class="kicker">Wrist &amp; Hand &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Differential Diagnosis, Epidemiology &amp; Prognostic Trajectories</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">02 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <section class="card" id="p2-diff-matrix">
+<div class="card-h"><span>A · Wrist &amp; Hand Differential Diagnosis Matrix (Neural, Radial, Ulnar, Carpal &amp; Digital)</span><span class="tag">DIFFERENTIAL</span></div>
+<div class="card-b">
+<table class="t">
+<thead>
+<tr>
+<th style="width:19%">Condition</th>
+<th style="width:29%">Hallmark History &amp; Pain Location</th>
+<th style="width:34%">Key Physical Findings &amp; Provocation</th>
+<th style="width:18%">Evidence &amp; Atlas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-epidemiology-prognosis" rel="noopener" target="_blank">Carpal tunnel syndrome</a></b></td>
+<td>Night paraesthesia in thumb, index, middle; shaking the hand relieves symptoms</td>
+<td><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#wainner-cts-cpr" rel="noopener" target="_blank">Wainner cluster</a>, <a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#darcy-cts-rational-exam" rel="noopener" target="_blank">Katz diagram / median hypalgesia</a>, <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#phalens-test" rel="noopener" target="_blank">Phalen</a> / <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#tinel-sign-wrist" rel="noopener" target="_blank">Tinel</a> / <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#carpal-compression-test" rel="noopener" target="_blank">compression</a></td>
+<td><span class="eb eb-h">H</span> Confirmed 2.7% (2.1–3.4) (Atroshi 1999)</td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#what-test" rel="noopener" target="_blank">De Quervain tenosynovitis</a></b></td>
+<td>Radial styloid pain with thumb use, lifting and gripping</td>
+<td><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#what-test" rel="noopener" target="_blank">WHAT test</a> (Sn 0.99, Sp 0.29), <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#finkelstein-test" rel="noopener" target="_blank">Finkelstein</a>, <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#eichhoffs-test" rel="noopener" target="_blank">Eichhoff</a></td>
+<td><span class="eb eb-l">L</span> Goubau 2014</td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#cmc-grind-test" rel="noopener" target="_blank">Thumb CMC OA</a></b></td>
+<td>Thumb-base pain on pinch, key turning and jar opening</td>
+<td><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#cmc-grind-test" rel="noopener" target="_blank">Grind test</a> (LR+ 2.65 and 6.00); a negative test does not exclude</td>
+<td><span class="eb eb-l">L</span> Merritt 2010</td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#wrist-hand-differential-pathologies" rel="noopener" target="_blank">Trigger finger</a></b></td>
+<td>Catching or locking of a digit, worse in the morning</td>
+<td>Tender nodule at the A1 pulley; triggering on active composite flexion</td>
+<td><span class="eb eb-e">E</span> Clinical differentiation</td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#ulnar-fovea-sign" rel="noopener" target="_blank">TFCC / ulnar-sided pain</a></b></td>
+<td>Ulnar wrist pain with rotation, grip and ulnar deviation</td>
+<td><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#ulnar-fovea-sign" rel="noopener" target="_blank">Fovea sign</a> (Sn 95.2%, Sp 86.5%), <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#tfcc-compression-test" rel="noopener" target="_blank">TFCC compression</a>, <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#ulnar-grinding-test" rel="noopener" target="_blank">ulnar grinding</a></td>
+<td><span class="eb eb-m">M</span> Tay 2007</td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#druj-ballottement-test" rel="noopener" target="_blank">DRUJ instability</a></b></td>
+<td>Painful clunk or weakness with forearm rotation after a fall or DRF</td>
+<td><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#druj-ballottement-test" rel="noopener" target="_blank">DRUJ test</a>: dorso-palmar laxity vs the other side</td>
+<td><span class="eb eb-e">E</span> Clinical differentiation</td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#watson-scaphoid-shift-test" rel="noopener" target="_blank">Scapholunate instability</a></b></td>
+<td>Dorsal central wrist pain after FOOSH; clunk with loaded movement</td>
+<td><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#watson-scaphoid-shift-test" rel="noopener" target="_blank">Watson scaphoid shift test</a>; <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#midcarpal-shift-test" rel="noopener" target="_blank">midcarpal test</a></td>
+<td><span class="eb eb-e">E</span> Clinical differentiation</td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#suspected-scaphoid-fracture" rel="noopener" target="_blank">Scaphoid fracture / non-union</a></b></td>
+<td>FOOSH with radial wrist pain; persisting pain after a normal X-ray</td>
+<td><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#anatomical-snuffbox-tenderness" rel="noopener" target="_blank">Snuffbox tenderness</a> (absence LR− 0.15); Mallee 2020 rule; MRI</td>
+<td><span class="eb eb-m">M</span> Carpenter 2014</td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-surgical-fixation-rehab" rel="noopener" target="_blank">Distal radius fracture</a></b></td>
+<td>FOOSH with deformity, swelling and pain over the distal radius</td>
+<td>X-ray; monitor median nerve (<a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#acute-cts-after-drf" rel="noopener" target="_blank">acute CTS 4.3%</a>)</td>
+<td><span class="eb eb-l">L</span> Leow 2021</td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#crps-budapest-criteria" rel="noopener" target="_blank">CRPS</a></b></td>
+<td>Pain out of proportion; colour, temperature, sweating or swelling change</td>
+<td><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#crps-budapest-criteria" rel="noopener" target="_blank">Budapest clinical criteria</a> (Sn 0.99, Sp 0.68)</td>
+<td><span class="eb eb-m">M</span> Harden 2010</td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#hand-oa-ra-exercise" rel="noopener" target="_blank">Hand OA</a></b></td>
+<td>Aching and stiffness of DIP / PIP / thumb-base joints</td>
+<td>Nodal swelling, reduced grip; track with <a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#auscan-index" rel="noopener" target="_blank">AUSCAN</a></td>
+<td><span class="eb eb-e">E</span> Clinical differentiation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="card" id="p2-prognosis">
+<div class="card-h"><span>B · Carpal Tunnel Prevalence &amp; Natural History + Radial / Ulnar Test Accuracy</span><span class="tag">PROGNOSIS</span></div>
+<div class="card-b">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>CTS Prevalence &amp; Natural History</span><a class="guide-badge" href="https://doi.org/10.1001/jama.282.2.153" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Atroshi 1999</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-epidemiology-prognosis" rel="noopener" target="_blank"><b>General population (n = 2,466)</b></a> (Atroshi 1999 JAMA) <span class="eb eb-h">H</span>: <b class="nav">median-territory symptoms 14.4% (13.0–15.8); clinically certain CTS 3.8% (3.1–4.6); electrophysiological median neuropathy 4.9% (4.1–5.8); clinically + electrophysiologically confirmed 2.7% (2.1–3.4); 1 in 5 symptomatic people have CTS; blue-collar 3.5% vs white-collar 1.7%; median neuropathy in 18.4% of asymptomatic controls</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-epidemiology-prognosis" rel="noopener" target="_blank"><b>Untreated CTS (n = 80)</b></a> (Padua 1998 Ital J Neurol Sci) <span class="eb eb-l">L</span>: <b class="nav">worsening inversely related to severity; about one-third of mild and moderate cases improved; extreme cases never improved</b></div></div>
+</div>
+<div class="divider-v">
+<div class="sh" style="margin:0 0 .5px;"><span>De Quervain, CMC &amp; TFCC Accuracy</span><span class="stat">Radial / Ulnar</span></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#what-test" rel="noopener" target="_blank"><b>WHAT vs Eichhoff (n = 100, ultrasound reference)</b></a> (Goubau 2014 J Hand Surg Eur) <span class="eb eb-l">L</span>: <b class="nav">WHAT test Sn 0.99, Sp 0.29, PPV 0.95, NPV 0.67 — more accurate than Eichhoff's test (often wrongly called Finkelstein's)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#cmc-grind-test" rel="noopener" target="_blank"><b>Thumb CMC grind test</b></a> (Merritt 2010 J Hand Ther) <span class="eb eb-l">L</span>: <b class="nav">κ 0.48; Sn 42% and 53%, Sp 80% and 93% (two testers); LR+ 2.65 and 6.00; LR− 0.59 and 0.62 — confirms but a negative test does not exclude</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#ulnar-fovea-sign" rel="noopener" target="_blank"><b>Ulnar fovea sign</b></a> (Tay 2007 J Hand Surg Am · Chang 2019 J Hand Surg Asian Pac) <span class="eb eb-m">M</span>: <b class="nav">Sn 95.2%, Sp 86.5% for foveal disruption and / or ulnotriquetral ligament injury · outcomes (L): non-surgical care 54% improved pain; surgery 83%</b></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="p2-persistent">
+<div class="card-h"><span>C · Persistent Wrist Pain Prognosis &amp; Post-DRF Psychological Screen</span><span class="tag">PROGNOSIS</span></div>
+<div class="card-b">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>Persistent Wrist Pain (Prosser 2012)</span><span class="stat">Arthroscopy Cohort</span></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#persistent-wrist-pain-prognosis" rel="noopener" target="_blank"><b>Persistent wrist pain</b></a> (Prosser 2012 J Hand Ther) <span class="eb eb-l">L</span>: <b class="nav">improved on average by approximately 50% at one year, but most had some pain and disability; duration of pain and baseline PRWHE explained 24% of 1-year PRWHE</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#persistent-wrist-pain-prognosis" rel="noopener" target="_blank"><b>DRF — psychological screen</b></a> (Mahdavi 2022 Musculoskelet Sci Pract) <span class="eb eb-l">L</span>: <b class="nav">PRWE pain or function ≥ 18/50 at 6 months screens for pain catastrophizing, distress and fear (AUC ≥ 0.88)</b></div></div>
+</div>
+<div class="divider-v">
+<div class="box" style="padding:.6mm 1.2mm;">
+<div class="row xs"><span class="lb">Primary Working Diagnosis:</span><span class="fl"></span></div>
+<div class="row xs" style="margin-top:.6mm;"><span class="lb">Secondary / Contributing Factors:</span><span class="fl"></span></div>
+<div class="row xs" style="margin-top:.6mm;"><span class="lb">Yellow Flags / Fear / Catastrophizing:</span><span class="fl"></span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="dots fill" id="p2-notes"><span class="dots-l">Differential Reasoning · Prognostic Counselling · Risk-Factor Notes</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab on" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 3 ===================== -->
+<div class="clinical-page" id="page-3" data-accent="blue">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">WRH</div>
+      <div>
+        <div class="kicker">Wrist &amp; Hand &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Objective Examination, Goniometry, Grip / Pinch &amp; Neuro Screen</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">03 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <section class="card" id="p3-rom">
+<div class="card-h"><span>A · Wrist, Forearm, Thumb &amp; Finger Range of Motion Write-In Table</span><span class="tag">GONIOMETRY</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<table class="t">
+<thead>
+<tr>
+<th style="width:30%">Motion (<a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#wrist-hand-active-rom" rel="noopener" target="_blank">AROM</a> / <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#wrist-passive-rom" rel="noopener" target="_blank">PROM</a>)</th>
+<th class="c" style="width:15%">Affected AROM</th>
+<th class="c" style="width:15%">Affected PROM</th>
+<th class="c" style="width:15%">Unaffected</th>
+<th style="width:25%">End-Feel / Pain</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><b>Wrist Flexion</b></td><td></td><td></td><td></td><td><span class="cio"><span class="cb sm"></span>Firm</span><span class="cio"><span class="cb sm"></span>Caps</span><span class="cio"><span class="cb sm r"></span>Pain</span></td></tr>
+<tr><td><b>Wrist Extension</b></td><td></td><td></td><td></td><td><span class="cio"><span class="cb sm"></span>Firm</span><span class="cio"><span class="cb sm"></span>Bony</span><span class="cio"><span class="cb sm r"></span>Pain</span></td></tr>
+<tr><td><b>Radial Deviation</b></td><td></td><td></td><td></td><td><span class="cio"><span class="cb sm"></span>Firm</span><span class="cio"><span class="cb sm"></span>Bony</span><span class="cio"><span class="cb sm r"></span>Pain</span></td></tr>
+<tr><td><b>Ulnar Deviation</b></td><td></td><td></td><td></td><td><span class="cio"><span class="cb sm"></span>Firm</span><span class="cio"><span class="cb sm"></span>Caps</span><span class="cio"><span class="cb sm r"></span>Pain</span></td></tr>
+<tr><td><b>Forearm Pronation</b></td><td></td><td></td><td></td><td><span class="cio"><span class="cb sm"></span>Firm</span><span class="cio"><span class="cb sm r"></span>Pain</span></td></tr>
+<tr><td><b>Forearm Supination</b></td><td></td><td></td><td></td><td><span class="cio"><span class="cb sm"></span>Firm</span><span class="cio"><span class="cb sm r"></span>Pain</span></td></tr>
+<tr><td><b>Thumb CMC / MCP / IP &amp; Opposition</b></td><td></td><td></td><td></td><td><span class="cio"><span class="cb sm"></span>Full</span><span class="cio"><span class="cb sm"></span>Caps</span><span class="cio"><span class="cb sm r"></span>Pain</span></td></tr>
+<tr><td><b>Fingers MCP / PIP / DIP &amp; Composite Fist</b></td><td></td><td></td><td></td><td><span class="cio"><span class="cb sm"></span>Full</span><span class="cio"><span class="cb sm"></span>Caps</span><span class="cio"><span class="cb sm r"></span>Pain</span></td></tr>
+</tbody>
+</table>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#wrist-goniometry" rel="noopener" target="_blank"><b>Wrist goniometry (multicentre)</b></a> (LaStayo 1994 Phys Ther) <span class="eb eb-m">M</span>: <b class="nav">flexion ICC within tester .86 / .87 / .92 (radial / ulnar / dorsal alignment), extension .80 / .80 / .84; between testers flexion .88 / .89 / .93; volar/dorsal alignment gives least error</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#wrist-hand-resisted-isometric" rel="noopener" target="_blank"><b>Resisted isometric testing</b></a> <span class="eb eb-e">E</span>: wrist flexion / extension, radial / ulnar deviation, thumb and finger flexors / extensors — pain on contraction vs weakness</div></div>
+</div>
+</section>
+<section class="card" id="p3-grip">
+<div class="card-h"><span>B · Grip &amp; Pinch Dynamometry Write-In</span><span class="tag">DYNAMOMETRY</span></div>
+<div class="card-b">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>Grip Norms &amp; Device Rules</span><a class="calc-badge" href="https://azhry-x.github.io/wrist-hand-atlas/#grip-strength-jamar" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Grip Ratio Calc</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#grip-strength-jamar" rel="noopener" target="_blank"><b>Grip strength norms (Jamar)</b></a> (Wang 2018 JOSPT) <span class="eb eb-m">M</span>: <b class="nav">mean grip from 49.7 kg (dominant hand, men 25–29 years) to 18.7 kg (non-dominant, women 75–79 years); use age / sex tables</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#grip-strength-jamar" rel="noopener" target="_blank"><b>Grip dynamometers</b></a> (Mutalib 2022 BMC Musculoskelet Disord) <span class="eb eb-l">L</span>: <b class="nav">GripAble vs Jamar ICC 0.906 (0.87–0.94); GripAble reads 69% of Jamar — devices must not be interchanged</b></div></div>
+</div>
+<div class="divider-v">
+<table class="t">
+<thead>
+<tr>
+<th style="width:36%">Measure <span class="eb eb-e">E</span></th>
+<th class="c" style="width:16%">Affected</th>
+<th class="c" style="width:16%">Unaffected</th>
+<th class="c" style="width:16%">Ratio (%)</th>
+<th class="c" style="width:16%">Device</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#grip-strength-jamar" rel="noopener" target="_blank">Grip (kg)</a></b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#pinch-strength-test" rel="noopener" target="_blank">Lateral (key) pinch (kg)</a></b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#pinch-strength-test" rel="noopener" target="_blank">Tip / tripod pinch (kg)</a></b></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="p3-neuro">
+<div class="card-h"><span>C · Sensory &amp; Neuro Screen, Vascular, Neurodynamic &amp; Oedema Write-In</span><span class="tag">NEURO &amp; OEDEMA</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<table class="t">
+<thead>
+<tr>
+<th style="width:12%">Nerve <span class="eb eb-e">E</span></th>
+<th style="width:40%">Sensory Territory</th>
+<th style="width:30%">Motor Key Test</th>
+<th class="c" style="width:18%">Finding (L / R)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><b>Median</b></td><td>Palmar thumb, index, middle &amp; radial half of ring finger</td><td>APB thumb abduction; opposition</td><td></td></tr>
+<tr><td><b>Ulnar</b></td><td>Little finger &amp; ulnar half of ring finger; hypothenar</td><td>Interossei; <a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#froment-sign" rel="noopener" target="_blank">Froment</a>; <a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#wartenberg-sign" rel="noopener" target="_blank">Wartenberg</a></td><td></td></tr>
+<tr><td><b>Radial</b></td><td>Dorsal first web space &amp; dorsoradial hand</td><td>Wrist &amp; finger extension</td><td></td></tr>
+</tbody>
+</table>
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>Sensory Detail &amp; Neurodynamics</span><span class="stat"><span class="eb eb-e">E</span></span></div>
+<div class="row xs"><span class="lb"><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#sensory-two-point-monofilament" rel="noopener" target="_blank">2-point discrimination</a>:</span><span class="fl"></span><span class="lb">Monofilament:</span><span class="fl"></span></div>
+<div class="row xs"><span class="lb"><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#ulnt1-median" rel="noopener" target="_blank">ULNT1 (median)</a> L / R:</span><span class="fl"></span><span class="lb">Hypalgesia map:</span><span class="fl"></span></div>
+</div>
+<div class="divider-v">
+<div class="sh" style="margin:0 0 .5px;"><span>Vascular &amp; Oedema</span><span class="stat"><span class="eb eb-e">E</span></span></div>
+<div class="row xs"><span class="lb"><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#allen-test" rel="noopener" target="_blank">Allen test</a>:</span><span class="cio"><span class="cb sm"></span>Radial patent</span><span class="cio"><span class="cb sm"></span>Ulnar patent</span><span class="cio"><span class="cb sm r"></span>Delayed refill</span></div>
+<div class="row xs"><span class="lb"><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#hand-volumetry-figure-of-eight" rel="noopener" target="_blank">Figure-of-eight</a> A / U:</span><span class="fl"></span><span class="lb">Volumetry A / U:</span><span class="fl"></span></div>
+</div>
+</div>
+</div>
+</section>
+<div class="dots fill" id="p3-notes"><span class="dots-l">Objective Examination · Goniometry · Grip / Pinch · Sensory &amp; Oedema Notes</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab on" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 4 ===================== -->
+<div class="clinical-page" id="page-4" data-accent="blue">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">WRH</div>
+      <div>
+        <div class="kicker">Wrist &amp; Hand &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Carpal Tunnel, Tendon &amp; Carpal Instability Special Tests + Validated PROMs</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">04 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <section class="card" id="p4-cts-tests">
+<div class="card-h"><span>A · Carpal Tunnel Syndrome Tests, Rational Clinical Exam &amp; Clinical Prediction Rule</span><span class="tag">CTS TESTS</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<table class="t">
+<thead>
+<tr>
+<th style="width:22%">Test</th>
+<th style="width:30%">Technique &amp; Positive Criterion</th>
+<th style="width:38%">Verified Diagnostic Performance</th>
+<th class="c" style="width:10%">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#phalens-test" rel="noopener" target="_blank">Phalen's test</a></b> &amp; <a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#reverse-phalens-test" rel="noopener" target="_blank">reverse Phalen</a></td>
+<td>Sustained full wrist flexion (or extension) → median-territory paraesthesia</td>
+<td>Phalen <b>Sn 68%, Sp 73%</b> (MacDermid 2004) <span class="eb eb-m">M</span> · reverse <span class="eb eb-e">E</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#tinel-sign-wrist" rel="noopener" target="_blank">Tinel sign (wrist)</a></b></td>
+<td>Tap over median nerve at the carpal tunnel → distal tingling</td>
+<td><b>Sn 50%, Sp 77%</b> (MacDermid 2004) <span class="eb eb-m">M</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#carpal-compression-test" rel="noopener" target="_blank">Carpal compression</a></b></td>
+<td>Thumb pressure over the carpal tunnel → median symptoms</td>
+<td><b>Sn 64%, Sp 83%</b> (MacDermid 2004) <span class="eb eb-m">M</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#flick-sign" rel="noopener" target="_blank">Flick sign</a></b> &amp; <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#hand-elevation-test" rel="noopener" target="_blank">hand elevation</a></td>
+<td>Shaking relieves symptoms; arms overhead reproduce symptoms</td>
+<td>Wainner / CPG item <span class="eb eb-l">L</span> · elevation <span class="eb eb-e">E</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#darcy-cts-rational-exam" rel="noopener" target="_blank">Katz diagram, hypalgesia &amp; thumb abduction</a></b></td>
+<td>Hand symptom diagram; pinprick median vs little finger; resisted APB</td>
+<td>For: hypalgesia <b>LR 3.1 (2.0–5.1)</b>, classic / probable Katz <b>2.4 (1.6–3.5)</b>, weak thumb abduction <b>1.8 (1.4–2.3)</b>; against: unlikely Katz <b>0.2 (0.0–0.7)</b>, normal thumb abduction <b>0.5 (0.4–0.7)</b> (D'Arcy 2000) <span class="eb eb-m">M</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#wainner-cts-cpr" rel="noopener" target="_blank">Wainner CPR</a></b> <a class="calc-badge" href="https://azhry-x.github.io/wrist-hand-atlas/#wainner-cts-cpr" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a></td>
+<td>Shaking relieves; wrist-ratio index &gt; .67; SSS &gt; 1.9; reduced median sensory field of digit 1; age &gt; 45</td>
+<td><b>LR 18.3</b> when all 5 positive; post-test probability changes up to <b>56%</b> (not validated) (Wainner 2005) <span class="eb eb-l">L</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-6-graham" rel="noopener" target="_blank">CTS-6</a></b></td>
+<td>Delphi-derived weighted clinical criteria</td>
+<td>Correlation with clinician panel <b>0.71</b> (Graham 2006) <span class="eb eb-l">L</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+</tbody>
+</table>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#jospt-2019-cts-cpg" rel="noopener" target="_blank"><b>JOSPT CTS CPG — diagnosis</b></a> (Erickson 2019 JOSPT CTS CPG) (Guideline): <b class="nav">“Clinicians should assess and document patient age (older than 45 years), whether shaking their hands relieves their symptoms, sensory loss in the thumb, the wrist ratio index (greater than 0.67), and scores from the Boston Carpal Tunnel Questionnaire symptom severity scale (CTQ-SSS) (greater than 1.9). The presence of more than 3 of these clinical findings has shown acceptable diagnostic accuracy.”</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#darcy-cts-rational-exam" rel="noopener" target="_blank"><b>Single findings</b></a> (D'Arcy 2000 JAMA) <span class="eb eb-m">M</span>: <b class="nav">Phalen, Tinel, nocturnal paraesthesia, thenar atrophy, 2-point / vibration / monofilament have little or no value</b>; 2-point discrimination and APB weakness / atrophy specific but not sensitive (MacDermid 2004)</div></div>
+</div>
+</section>
+<section class="card" id="p4-radial-ulnar">
+<div class="card-h"><span>B · De Quervain, Thumb CMC, TFCC / DRUJ &amp; Carpal Instability Tests</span><span class="tag">SPECIAL TESTS</span></div>
+<div class="card-b">
+<table class="t">
+<thead>
+<tr>
+<th style="width:24%">Test</th>
+<th style="width:38%">Technique &amp; Positive Criterion</th>
+<th style="width:28%">Verified Diagnostic Performance</th>
+<th class="c" style="width:10%">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#what-test" rel="noopener" target="_blank">WHAT test</a></b>, <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#finkelstein-test" rel="noopener" target="_blank">Finkelstein</a> &amp; <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#eichhoffs-test" rel="noopener" target="_blank">Eichhoff</a></td>
+<td>Wrist hyperflexion + resisted thumb abduction / extension; passive thumb traction; thumb-in-fist ulnar deviation</td>
+<td>WHAT <b>Sn 0.99, Sp 0.29, PPV 0.95, NPV 0.67</b> (Goubau 2014) <span class="eb eb-l">L</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#cmc-grind-test" rel="noopener" target="_blank">CMC grind test</a></b></td>
+<td>Axial load + rotation of first metacarpal on trapezium</td>
+<td><b>κ 0.48; LR+ 2.65 and 6.00; LR− 0.59 and 0.62</b> (Merritt 2010) <span class="eb eb-l">L</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#ulnar-fovea-sign" rel="noopener" target="_blank">Ulnar fovea sign</a></b></td>
+<td>Press into the fovea between ulnar styloid and FCU</td>
+<td><b>Sn 95.2%, Sp 86.5%</b> (Tay 2007) <span class="eb eb-m">M</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#tfcc-compression-test" rel="noopener" target="_blank">TFCC compression</a></b> &amp; <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#ulnar-grinding-test" rel="noopener" target="_blank">ulnar grinding</a></td>
+<td>Ulnar deviation + axial load ± rotation of the carpus</td>
+<td>Ulnocarpal provocation <span class="eb eb-e">E</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#druj-ballottement-test" rel="noopener" target="_blank">DRUJ test</a></b></td>
+<td>Dorso-palmar translation of the ulnar head vs stabilised radius</td>
+<td>Laxity vs other side <span class="eb eb-e">E</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#watson-scaphoid-shift-test" rel="noopener" target="_blank">Watson scaphoid shift</a></b></td>
+<td>Thumb on scaphoid tubercle; ulnar → radial deviation; release → clunk</td>
+<td>Scapholunate instability <span class="eb eb-e">E</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+<tr>
+<td><b><a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#lunotriquetral-ballottement-test" rel="noopener" target="_blank">LT ballottement</a></b> &amp; <a class="test-link has-video" href="https://azhry-x.github.io/wrist-hand-atlas/#midcarpal-shift-test" rel="noopener" target="_blank">midcarpal test</a></td>
+<td>Shuck triquetrum on lunate; palmar load + ulnar deviation → catch-up clunk</td>
+<td>Carpal instability <span class="eb eb-e">E</span></td>
+<td class="c"><span class="cio"><span class="cb sm"></span>−</span><span class="cio"><span class="cb sm r"></span>+</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="card" id="p4-proms">
+<div class="card-h"><span>C · Validated Wrist &amp; Hand PROM Dashboard (PRWE, QuickDASH / DASH, BCTQ, NPRS, MHQ, AUSCAN, PSFS)</span><span class="tag">PROMS</span></div>
+<div class="card-b">
+<table class="t">
+<thead>
+<tr>
+<th style="width:19%">Outcome Scale</th>
+<th style="width:25%">Scoring Rule &amp; Range</th>
+<th style="width:40%">Verified Reliability, MDC &amp; MCID (population)</th>
+<th class="c" style="width:8%">Initial</th>
+<th class="c" style="width:8%">Follow-Up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#prwe" rel="noopener" target="_blank">PRWE</a></b> <a class="calc-badge" href="https://azhry-x.github.io/wrist-hand-atlas/#prwe" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a></td>
+<td>15 items (0–10): Pain (5 items, 0–50) + Function (10 items ÷ 2, 0–50) = 0–100</td>
+<td>ICC <b>&gt; 0.90</b> (MacDermid 1998) <span class="eb eb-m">M</span> · Surgical DRF: <b>71.8 → 34.3 (6 weeks) → 21.2 (12 weeks); MCID 43.1 (6 weeks), 56.0 (12 weeks)</b> (Huyke-Hernández 2023) <span class="eb eb-l">L</span></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#quickdash" rel="noopener" target="_blank">QuickDASH / DASH</a></b> <a class="calc-badge" href="https://azhry-x.github.io/wrist-hand-atlas/#quickdash" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a></td>
+<td>11 items (1–5, ≥ 10 answered): ((sum ÷ n) − 1) × 25</td>
+<td>Upper limb: ICC <b>0.91 / 0.93</b>; MDC90 <b>12.85 / 10.81</b>; MCID <b>15.91</b> (QuickDASH), <b>10.83</b> (DASH) (Franchignoni 2014) <span class="eb eb-m">M</span></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#bctq" rel="noopener" target="_blank">BCTQ</a></b> <a class="calc-badge" href="https://azhry-x.github.io/wrist-hand-atlas/#bctq" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a> · <b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#nprs" rel="noopener" target="_blank">NPRS</a></b></td>
+<td>SSS mean of 11 items; FSS mean of 8 items (1–5) · NPRS 0–10</td>
+<td>Women with CTS: MCID BCTQ <b>0.23</b> (functional status), <b>0.64</b> (symptom severity); NPRS <b>1.5</b> (mean), <b>2.5</b> (worst pain) (López-de-Uralde-Villanueva 2024) <span class="eb eb-l">L</span></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#mhq-score" rel="noopener" target="_blank">MHQ</a></b></td>
+<td>Domain scores (function, ADL, work, pain, aesthetics, satisfaction)</td>
+<td>Older adults after DRF: five domains fit Rasch model; interpret domain scores rather than the summary score (Jayaram 2021) <span class="eb eb-l">L</span></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#auscan-index" rel="noopener" target="_blank">AUSCAN</a></b> · <b><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#psfs" rel="noopener" target="_blank">PSFS</a></b> <a class="calc-badge" href="https://azhry-x.github.io/wrist-hand-atlas/#psfs" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a></td>
+<td>AUSCAN pain / stiffness / function · PSFS mean 0–10</td>
+<td>Clinical tracking scales <span class="eb eb-e">E</span></td>
+<td></td><td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<div class="dots fill" id="p4-notes"><span class="dots-l">Special Tests Synthesis · Baseline PROM Scores · Functional Goal Setting</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab on" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 5 ===================== -->
+<div class="clinical-page" id="page-5" data-accent="purple">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">WRH</div>
+      <div>
+        <div class="kicker">Wrist &amp; Hand &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Post-Surgical &amp; Post-Fracture Rehabilitation (DRF, CTS, Scaphoid, Flexor, CMC)</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">05 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <section class="card" id="p5-drf">
+<div class="card-h"><span>A · Distal Radius Fracture: Fixation Trials (WRIST, DRAFFT) &amp; Rehabilitation</span><span class="tag">POST-FRACTURE</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<div class="box r" style="padding:.4mm 1.2mm;text-align:center;">
+<b class="crim" style="font-size:7.6px;letter-spacing:.04em;">POST-OP RESTRICTIONS ARE SURGEON-DIRECTED <span class="eb eb-e">E</span></b>
+</div>
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>Fixation Trials</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4122170/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>DRAFFT</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-surgical-fixation-rehab" rel="noopener" target="_blank"><b>DRF ≥ 60 years — WRIST trial</b></a> (Chung 2020 Plast Reconstr Surg) <span class="eb eb-h">H</span>: <b class="nav">12-month MHQ: volar plate vs external fixation 3 points (97.5% CL −6.0 to 11.5), vs pinning −0.14 (−9.2 to 8.9); at 6 weeks plate better than external fixation by 19, pinning by 11, casting by 7 (p = 0.03); malunion in 48% of casting participants</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-surgical-fixation-rehab" rel="noopener" target="_blank"><b>K-wires vs volar plate (DRAFFT, n = 461)</b></a> (Costa 2014 BMJ) <span class="eb eb-h">H</span>: <b class="nav">no clinically relevant PRWE difference at 3, 6 or 12 months (−1.3, −4.5 to 1.8; P = 0.40); DASH at 12 months −3.2 (−6.5 to 0.0)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-surgical-fixation-rehab" rel="noopener" target="_blank"><b>DRAFFT 5-year</b></a> (Costa 2019 Bone Joint J) <span class="eb eb-h">H</span>: <b class="nav">PRWE 8.3 (wires) vs 11.3 (plate) (−6.99 to 0.99; p = 0.139) — no clinically relevant difference</b></div></div>
+</div>
+<div class="divider-v">
+<div class="sh" style="margin:0 0 .5px;"><span>Rehabilitation After DRF</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9250132/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Handoll 2015</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-surgical-fixation-rehab" rel="noopener" target="_blank"><b>Rehabilitation (Cochrane, 26 trials)</b></a> (Handoll 2015 Cochrane) <span class="eb eb-m">M</span>: <b class="nav">“not enough evidence available to determine the best form of rehabilitation for people with wrist fractures”</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-surgical-fixation-rehab" rel="noopener" target="_blank"><b>Advice + exercise vs no intervention</b></a> (Kay 2008 Aust J Physiother) <span class="eb eb-m">M</span>: <b class="nav">advice and exercise program gave “some additional benefits over no intervention”</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-surgical-fixation-rehab" rel="noopener" target="_blank"><b>Volar plate — early vs delayed motion (RCT, n = 48)</b></a> (Laohaprasitiporn 2022 Sci Rep) <span class="eb eb-m">M</span>: <b class="nav">no significant differences in function, radiographs or complications</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-surgical-fixation-rehab" rel="noopener" target="_blank"><b>Manual therapy (SR/MA)</b></a> (Gutiérrez-Espinoza 2022 J Man Manip Ther) <span class="eb eb-l">L</span>: <b class="nav">exercise + MWM vs exercise at 12 weeks: PRWE −10.2 (p = 0.02), DASH −9.86 (p = 0.0001); manual lymph drainage reduced oedema (e.g. −17.96 ml at 17–21 days)</b></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="p5-surgery">
+<div class="card-h"><span>B · Carpal Tunnel Release, Scaphoid, Flexor Tendon, Thumb CMC, Trigger Finger &amp; CRPS Prevention</span><span class="tag">POST-OP</span></div>
+<div class="card-b">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>Carpal Tunnel Release &amp; Scaphoid Waist</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10493644/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Peters 2016</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-surgical-release-rehab" rel="noopener" target="_blank"><b>Surgery vs night splint (RCT, n = 176)</b></a> (Gerritsen 2002 JAMA) <span class="eb eb-h">H</span>: <b class="nav">success at 3 months 80% vs 54% (difference 26%, 12–40%); at 18 months 90% vs 75% (15%, 3–27%)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-surgical-release-rehab" rel="noopener" target="_blank"><b>Surgery vs non-surgical therapy (no denervation)</b></a> (Jarvik 2009 Lancet) <span class="eb eb-h">H</span>: <b class="nav">“surgery is useful for patients with carpal tunnel syndrome without denervation”</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-surgical-release-rehab" rel="noopener" target="_blank"><b>Rehab after release (Cochrane, 22 trials, 1521 pts)</b></a> (Peters 2016 Cochrane) <span class="eb eb-m">M</span>: <b class="nav">limited, low-quality evidence; decision “should be based on the clinician's expertise, the patient's preferences and the context”</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#scaphoid-fracture-swifft" rel="noopener" target="_blank"><b>Scaphoid waist — surgery vs cast (SWIFFT, n = 439)</b></a> (Dias 2020 Lancet) <span class="eb eb-h">H</span>: <b class="nav">no significant PRWE difference at 52 weeks (surgery adjusted mean 11·9, 9·2–14·5)</b></div></div>
+</div>
+<div class="divider-v">
+<div class="sh" style="margin:0 0 .5px;"><span>Tendon, CMC, Trigger Finger &amp; CRPS</span><span class="stat">Hand Surgery</span></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#flexor-tendon-repair-rehab" rel="noopener" target="_blank"><b>Flexor tendon repair (SR, 34 studies)</b></a> (Starr 2013 J Hand Surg Am) <span class="eb eb-m">M</span>: <b class="nav">early passive motion: rupture 4%, reduced ROM 9%; early active motion: rupture 5%, reduced ROM 6%</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#thumb-cmc-oa-surgery" rel="noopener" target="_blank"><b>Thumb CMC OA surgery (Cochrane, 11 RCTs)</b></a> (Wajon 2015 Cochrane) <span class="eb eb-l">L</span>: <b class="nav">LRTI vs trapeziectomy alone: pain −2.8 mm (−9.8 to 4.2); adverse events 19 vs 10 per 100 (RR 1.89, 0.96–3.73) — LRTI may add nothing</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#trigger-finger-release-injection" rel="noopener" target="_blank"><b>Trigger finger — release vs injection (RCTs)</b></a> (Sato 2012 Rheumatology · Zyluk 2011 J Hand Surg Eur) <span class="eb eb-m">M</span>: <b class="nav">percutaneous and open release similar and superior to steroid injection for cure and relapse; percutaneous release lower recurrence than injection</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#crps-prevention-vitamin-c" rel="noopener" target="_blank"><b>CRPS after wrist fracture — vitamin C (RCT, 416 pts)</b></a> (Zollinger 2007 J Bone Joint Surg Am) <span class="eb eb-m">M</span>: <b class="nav">CRPS 2.4% vitamin C vs 10.1% placebo (p = 0.002); 500 mg: 1.8% (RR 0.17, 0.04–0.77)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#crps-prevention-vitamin-c" rel="noopener" target="_blank"><b>Vitamin C (MA, 3 RCTs)</b></a> (Evaniew 2015 J Orthop Trauma) <span class="eb eb-m">M</span>: <b class="nav">“fails to demonstrate a significant benefit”</b></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="p5-oplog">
+<div class="card-h"><span>C · Wound / Neuro / Cast-Complaint Re-Check Box &amp; Operative Details Log</span><span class="tag">OPERATIVE LOG</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<div class="box r" style="padding:.4mm 1.2mm;">
+<div class="fr flex-wrap xs">
+<span class="lb crim">Re-Check <span class="eb eb-e">E</span>:</span>
+<span class="cio"><span class="cb sm r"></span>Wound erythema / drainage / infection</span><span class="cio"><span class="cb sm r"></span>New median / ulnar / radial deficit</span><span class="cio"><span class="cb sm r"></span>Cast too tight / burning pain / swelling</span><span class="cio"><span class="cb sm r"></span>Hardware or tendon complaint</span>
+</div>
+<div class="xs" style="margin-top:.3mm;"><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#crps-prevention-vitamin-c" rel="noopener" target="_blank"><b>Early cast-related complaints</b></a> (Zollinger 2007 J Bone Joint Surg Am) <span class="eb eb-m">M</span>: <b class="crim">predicted CRPS (RR 5.35, 2.13–13.42)</b> → check cast and screen with <a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#crps-budapest-criteria" rel="noopener" target="_blank">Budapest criteria</a></div>
+</div>
+<div class="row xs">
+<div class="fr" style="flex:2"><span class="lb">Procedure / Fixation / Repair Zone</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.2"><span class="lb">Surgery Date</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.5"><span class="lb">Surgeon</span><span class="fl"></span></div>
+</div>
+<div class="row xs">
+<div class="fr" style="flex:1"><span class="lb">Surgeon-Directed Restrictions &amp; Orthosis / Cast Orders</span><span class="fl"></span></div>
+</div>
+<div class="row xs">
+<div class="fr" style="flex:1"><span class="lb">Median / Ulnar / Radial Status</span><span class="fl"></span></div>
+<div class="fr" style="flex:1"><span class="lb">Target RTW / Function Milestone</span><span class="fl"></span></div>
+</div>
+</div>
+</section>
+<div class="dots fill" id="p5-notes"><span class="dots-l">Post-Operative Communication · Surgeon Orders · Orthosis / Cast Notes</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab on" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 6 ===================== -->
+<div class="clinical-page" id="page-6" data-accent="orange">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">WRH</div>
+      <div>
+        <div class="kicker">Wrist &amp; Hand &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Orthoses, Corticosteroid Injections &amp; Electrophysical Agents</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">06 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <section class="card" id="p6-cts-conservative">
+<div class="card-h"><span>A · Carpal Tunnel Syndrome: Corticosteroid Injection, Night Splinting &amp; Ultrasound</span><span class="tag">INJECTION &amp; ORTHOSIS</span></div>
+<div class="card-b">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>Corticosteroid Injection</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8536954/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Hofer 2021</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-corticosteroid-injection" rel="noopener" target="_blank"><b>Steroid injection (Cochrane)</b></a> (Marshall 2007 Cochrane) <span class="eb eb-m">M</span>: <b class="nav">no better than anti-inflammatory + splint at 8 weeks or laser at 6 months; two injections no better than one</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-corticosteroid-injection" rel="noopener" target="_blank"><b>Methylprednisolone vs placebo (RCT, n = 111)</b></a> (Atroshi 2013 Ann Intern Med) <span class="eb eb-h">H</span>: <b class="nav">10 weeks: symptom score −0.64 (80 mg) and −0.88 (40 mg) vs placebo; no difference at 1 year; surgery within 1 year 73%, 81%, 92% (80 mg, 40 mg, placebo)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-corticosteroid-injection" rel="noopener" target="_blank"><b>Same trial — 5 years</b></a> (Hofer 2021 JAMA Netw Open) <span class="eb eb-h">H</span>: <b class="nav">symptom-score change vs placebo 0.14 (−0.17 to 0.45) for 80 mg and 0.12 (−0.19 to 0.43) for 40 mg</b></div></div>
+</div>
+<div class="divider-v">
+<div class="sh" style="margin:0 0 .5px;"><span>Splinting &amp; Therapeutic Ultrasound</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7389822/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Page 2012</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-splinting-orthoses" rel="noopener" target="_blank"><b>Splinting (Cochrane 2012)</b></a> (Page 2012 Cochrane) <span class="eb eb-l">L</span>: <b class="nav">night splint vs no treatment: overall improvement at 4 weeks RR 3.86 (2.29–6.51), low quality; neutral vs extension splint RR 2.43 (1.12–5.28), very low quality</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-splinting-orthoses" rel="noopener" target="_blank"><b>Splinting (Cochrane 2023)</b></a> (Karjalainen 2023 Cochrane) <span class="eb eb-l">L</span>: <b class="nav">12 weeks may not be better than six weeks; six months may be better than six weeks (low certainty)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-ultrasound-epas-ergonomics" rel="noopener" target="_blank"><b>Therapeutic ultrasound (Cochrane)</b></a> (Page 2013 Cochrane) <span class="eb eb-l">L</span>: <b class="nav">one low-quality trial (68 pts): RR 2.36 (1.40 to 3.98) for improvement at 7 weeks; overall poor-quality evidence</b></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="p6-cpg-other">
+<div class="card-h"><span>B · JOSPT CTS CPG Orthosis, Physical-Agent &amp; Ergonomics Quotes + De Quervain, CMC OA, Trigger Finger &amp; CRPS</span><span class="tag">CPG &amp; EPAs</span></div>
+<div class="card-b">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>JOSPT CTS CPG (Erickson 2019)</span><a class="guide-badge" href="https://doi.org/10.2519/jospt.2019.0301" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>JOSPT 2019</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-splinting-orthoses" rel="noopener" target="_blank"><b>Orthoses &amp; education</b></a> (Erickson 2019 JOSPT CTS CPG) (Guideline): <b class="nav">“Clinicians should recommend a neutral-positioned wrist orthosis worn at night for short-term symptom relief and functional improvement”; “may suggest adjusting wear time to include daytime, symptomatic, or full-time use when night-only use is ineffective”; “may add patient education on pathology, risk identification, symptom self-management, and postures/activities that aggravate symptoms”; “should recommend an orthosis for women experiencing CTS during pregnancy”</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-ultrasound-epas-ergonomics" rel="noopener" target="_blank"><b>Physical agents</b></a> (Erickson 2019 JOSPT CTS CPG) (Guideline): <b class="nav">“may recommend a trial of superficial heat”; “may recommend the application of microwave or shortwave diathermy”; “may offer a trial of interferential current”; “may perform phonophoresis”; “should not use low-level laser therapy or other types of nonlaser light therapy”; “should not use thermal ultrasound”; “should not use iontophoresis”; “should not use or recommend the use of magnets”</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-ultrasound-epas-ergonomics" rel="noopener" target="_blank"><b>Ergonomics</b></a> (Erickson 2019 JOSPT CTS CPG · O'Connor 2012 Cochrane) (Guideline): <b class="nav">“may educate their patients regarding the effects of mouse use on carpal tunnel pressure”; “may recommend keyboards with reduced strike force” · ergonomic equipment: insufficient evidence to determine benefit or harm (L)</b></div></div>
+</div>
+<div class="divider-v">
+<div class="sh" style="margin:0 0 .5px;"><span>De Quervain, Thumb CMC OA, Trigger Finger &amp; CRPS</span><span class="stat">Orthoses &amp; Injection</span></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#de-quervain-injection-spica" rel="noopener" target="_blank"><b>De Quervain — injection ± thumb spica (RCT)</b></a> (Ippolito 2020 Hand (N Y)) <span class="eb eb-l">L</span>: <b class="nav">outcomes comparable except radial wrist pain resolution better with injection alone (100% vs 64%)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#thumb-cmc-oa-splints-combined" rel="noopener" target="_blank"><b>Thumb CMC OA — splints (SR/MA)</b></a> (Buhler 2019 Osteoarthritis Cartilage) <span class="eb eb-m">M</span>: <b class="nav">3–12 months: pain SMD 0.7 (1.04, 0.35), function SMD 0.42 (0.77, 0.08); low-quality evidence; no short-term effect</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#thumb-cmc-oa-splints-combined" rel="noopener" target="_blank"><b>Thumb base OA — combined care (RCT, n = 204)</b></a> (Deveza 2021 JAMA Intern Med) <span class="eb eb-h">H</span>: <b class="nav">splint + exercise + topical NSAID + education vs education: FIHOA −1.7 at 6 weeks, −2.4 (−3.5 to −1.3) at 12 weeks; pain −8.6 mm (−15.2 to −2.0)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#trigger-finger-release-injection" rel="noopener" target="_blank"><b>Trigger finger — steroid injection (Cochrane, 2 RCTs)</b></a> (Peters-Veluthamaningal 2009 Cochrane) <span class="eb eb-l">L</span>: <b class="nav">steroid + lidocaine superior to lidocaine alone (“silver” level evidence)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#crps-gmi-mirror-exposure" rel="noopener" target="_blank"><b>CRPS — graded motor imagery / mirror therapy</b></a> (Moseley 2004 Pain · Méndez-Rebolledo 2017 J Back Musculoskelet Rehabil) <span class="eb eb-l">L</span>: <b class="nav">GMI RCT in chronic CRPS1 (13 pts) effective; SR of 6 trials (171 pts) GMI / mirror therapy improve pain and function in CRPS 1</b></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="p6-param-log">
+<div class="card-h"><span>C · Orthosis, Injection &amp; Electrophysical Agent Delivery Log</span><span class="tag">PARAMETER LOG</span></div>
+<div class="card-b">
+<table class="t">
+<thead>
+<tr>
+<th style="width:14%">Date</th>
+<th style="width:24%">Orthosis / Injection / Modality</th>
+<th style="width:28%">Position, Wear Time / Dose / Parameters</th>
+<th style="width:18%">Pre / Post NPRS or BCTQ</th>
+<th style="width:16%">Patient Response</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height:6mm;"><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6mm;"><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6mm;"><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<div class="dots fill" id="p6-notes"><span class="dots-l">Injection Counselling · Orthosis Fit &amp; Wear Schedule · Modality Notes</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab on" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 7 ===================== -->
+<div class="clinical-page" id="page-7" data-accent="teal">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">WRH</div>
+      <div>
+        <div class="kicker">Wrist &amp; Hand &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Manual Therapy, Neural / Tendon Mobilisation &amp; Informed Consent</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">07 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <section class="card" id="p7-cts-manual">
+<div class="card-h"><span>A · Carpal Tunnel Syndrome: Exercise, Mobilisation, Neural Mobilisation &amp; Manual Therapy vs Surgery</span><span class="tag">MANUAL THERAPY</span></div>
+<div class="card-b">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>CTS Manual Therapy Evidence</span><a class="guide-badge" href="https://doi.org/10.1016/j.jpain.2015.07.012" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Fernández-de-las-Peñas 2015</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-manual-neural-mobilisation" rel="noopener" target="_blank"><b>Exercise &amp; mobilisation (Cochrane, 16 trials)</b></a> (Page 2012 Cochrane) <span class="eb eb-l">L</span>: <b class="nav">limited, low-quality evidence; decision should be based on clinician's expertise and patient preference</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-manual-neural-mobilisation" rel="noopener" target="_blank"><b>Neural mobilisation (SR/MA, 40 RCTs)</b></a> (Basson 2017 JOSPT) <span class="eb eb-m">M</span>: <b class="nav">in CTS most clinical outcomes not improved (P &gt; .11), some positive neurophysiological effects</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#cts-manual-neural-mobilisation" rel="noopener" target="_blank"><b>Manual therapy vs surgery (RCT, 120 women)</b></a> (Fernández-de-las-Peñas 2015 J Pain) <span class="eb eb-h">H</span>: <b class="nav">PT better at 1 and 3 months: mean pain −2.0 (−2.8 to −1.2) and −1.3 (−2.1 to −.6); worst pain −2.9 and −2.0; similar at 6 and 12 months</b></div></div>
+</div>
+<div class="divider-v">
+<div class="sh" style="margin:0 0 .5px;"><span>JOSPT CTS CPG — Manual Therapy (Erickson 2019)</span><a class="guide-badge" href="https://doi.org/10.2519/jospt.2019.0301" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>JOSPT 2019</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#jospt-2019-cts-cpg" rel="noopener" target="_blank"><b>Cervical spine &amp; upper extremity</b></a> (Erickson 2019 JOSPT CTS CPG) (Guideline): <b class="nav">“may perform manual therapy, directed at the cervical spine and upper extremity, for individuals with mild to moderate CTS in the short term”</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#jospt-2019-cts-cpg" rel="noopener" target="_blank"><b>Orthosis + stretching</b></a> (Erickson 2019 JOSPT CTS CPG) (Guideline): <b class="nav">“may use a combined orthotic/stretching program in individuals with mild to moderate CTS who do not have thenar atrophy and have normal 2-point discrimination”</b></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="p7-cmc-oedema">
+<div class="card-h"><span>B · Thumb CMC OA Mobilisation &amp; Manual Oedema Mobilisation</span><span class="tag">CMC &amp; OEDEMA</span></div>
+<div class="card-b">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>Thumb CMC OA</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10584044/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Magni 2022</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#thumb-cmc-manual-therapy" rel="noopener" target="_blank"><b>Manual therapy + exercise (RCT, 60 pts aged 70–90)</b></a> (Villafañe 2013 JOSPT) <span class="eb eb-m">M</span>: <b class="nav">reduced pain vs sham; limited value for pressure pain threshold, pinch and grip</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#thumb-cmc-manual-therapy" rel="noopener" target="_blank"><b>Mobilisation (SR/MA, 8 RCTs)</b></a> (Magni 2022 Hand Ther) <span class="eb eb-l">L</span>: <b class="nav">pain SMD 0.53 (0.03 to 1), pinch SMD 0.35 (0.03 to 0.7) — statistically but not clinically significant</b></div></div>
+</div>
+<div class="divider-v">
+<div class="sh" style="margin:0 0 .5px;"><span>Hand Oedema</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5686286/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Miller 2017</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#hand-oedema-mobilisation" rel="noopener" target="_blank"><b>Manual oedema mobilisation (SR, 10 studies)</b></a> (Miller 2017 J Hand Ther) <span class="eb eb-l">L</span>: <b class="nav">low-to-moderate evidence supports manual oedema mobilisation with standard therapy for problematic hand oedema</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#hand-oedema-mobilisation" rel="noopener" target="_blank"><b>Technique</b></a> <span class="eb eb-e">E</span>: proximal clearing first, light skin-traction strokes toward the axilla, elevation and active pumping of the digits; re-measure with <a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#hand-volumetry-figure-of-eight" rel="noopener" target="_blank">figure-of-eight / volumetry</a></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="p7-consent">
+<div class="card-h"><span>C · Pre-Intervention Safety Screen, Informed Consent &amp; Manual Therapy Log</span><span class="tag">CONSENT</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<div class="fr flex-wrap xs">
+<span class="lb">Contraindications / Precautions Screened <span class="eb eb-e">E</span>:</span>
+<span class="cio"><span class="cb sm g"></span>Fracture / scaphoid excluded or cleared</span><span class="cio"><span class="cb sm g"></span>No infection / Kanavel signs</span><span class="cio"><span class="cb sm g"></span>No acute CRPS flare with allodynia</span><span class="cio"><span class="cb sm g"></span>Post-op orders checked with surgeon</span>
+</div>
+<div class="box g" style="padding:.5mm 1.2mm;">
+<div class="row xs">
+<span class="lb emer">CONSENT OBTAINED FOR:</span>
+<span class="cio"><span class="cb sm g"></span>Wrist / carpal / CMC mobilisation</span><span class="cio"><span class="cb sm g"></span>Cervical / upper-limb manual therapy</span><span class="cio"><span class="cb sm g"></span>Neural &amp; tendon gliding</span><span class="cio"><span class="cb sm g"></span>Manual oedema mobilisation</span>
+</div>
+<div class="row xs" style="margin-top:.5mm;">
+<div class="fr" style="flex:2"><span class="lb">Patient / Guardian Signature</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.5"><span class="lb">Clinician</span><span class="fl"></span></div>
+<div class="fr" style="flex:1"><span class="lb">Date</span><span class="fl"></span></div>
+</div>
+</div>
+<table class="t" style="margin-top:1px;">
+<thead>
+<tr>
+<th style="width:14%">Date</th>
+<th style="width:28%">Technique (Mob / Neural / Oedema)</th>
+<th style="width:24%">Joint / Direction / Dosage</th>
+<th style="width:18%">Immediate NPRS / ROM</th>
+<th style="width:16%">Adverse Events</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height:6mm;"><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6mm;"><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6mm;"><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<div class="dots fill" id="p7-notes"><span class="dots-l">Manual Therapy Response · Glide Direction · Home Self-Mobilisation Instructions</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab on" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 8 ===================== -->
+<div class="clinical-page" id="page-8" data-accent="green">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">WRH</div>
+      <div>
+        <div class="kicker">Wrist &amp; Hand &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Exercise Therapy, Return to Activity &amp; 12-Week Loading Log</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">08 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <section class="card" id="p8-exercise-evidence">
+<div class="card-h"><span>A · Exercise, Recovery, CRPS Exposure, Return to Work &amp; JOSPT CTS CPG Outcome Measures</span><span class="tag">EXERCISE &amp; RTW</span></div>
+<div class="card-b">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="sh" style="margin:0 0 .5px;"><span>Exercise &amp; Recovery</span><a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6464796/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Østerås 2017</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#hand-oa-ra-exercise" rel="noopener" target="_blank"><b>Hand OA exercise (Cochrane)</b></a> (Østerås 2017 Cochrane) <span class="eb eb-l">L</span>: <b class="nav">pain SMD −0.27 (−0.47 to −0.07), 5 trials 381 pts; function SMD −0.28 (−0.58 to 0.02); stiffness SMD −0.36 (−0.58 to −0.15); low quality</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#hand-oa-ra-exercise" rel="noopener" target="_blank"><b>Rheumatoid hand — SARAH (RCT, n = 490)</b></a> (Lamb 2015 Lancet) <span class="eb eb-h">H</span>: <b class="nav">tailored exercises: MHQ function +4·3 (1·5–7·1) at 12 months</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-recovery-rtw-prognosis" rel="noopener" target="_blank"><b>DRF recovery (cohort, n = 129)</b></a> (MacDermid 2003 BMC Musculoskelet Disord) <span class="eb eb-m">M</span>: <b class="nav">by 3 months median 'no pain at rest', worst pain 3/10; most recovery within six months; hardest tasks: carrying ten pounds, pushing up from a chair</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#crps-gmi-mirror-exposure" rel="noopener" target="_blank"><b>CRPS-I — exposure in vivo (RCT, n = 46)</b></a> (den Hollander 2016 Pain) <span class="eb eb-m">M</span>: <b class="nav">graded exposure more effective than pain-contingent care for disability in patients with pain-related fear</b></div></div>
+</div>
+<div class="divider-v">
+<div class="sh" style="margin:0 0 .5px;"><span>Return to Work &amp; Outcome Measures</span><a class="guide-badge" href="https://doi.org/10.2519/jospt.2019.0301" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>JOSPT 2019</a></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-recovery-rtw-prognosis" rel="noopener" target="_blank"><b>Hand / wrist trauma (cohort, n = 383)</b></a> (Neutel 2019 J Hand Surg Eur) <span class="eb eb-m">M</span>: <b class="nav">time off work linked to job type, diagnosis, complication, blaming someone else, gender</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#drf-recovery-rtw-prognosis" rel="noopener" target="_blank"><b>Occupational upper-limb injury (cohort)</b></a> (Bai 2022 Front Med) <span class="eb eb-l">L</span>: <b class="nav">107/163 (65.6%) back at work at 1 year</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#jospt-2019-cts-cpg" rel="noopener" target="_blank"><b>JOSPT CTS CPG — outcome measures</b></a> (Erickson 2019 JOSPT CTS CPG) (Guideline): <b class="nav">“should use the CTQ-SSS to assess symptoms and the ... CTQ-FS or the ... DASH questionnaire to assess function”; “should not use grip strength when assessing short-term (less than 3 months) change ... following CTR surgery”; “should not use lateral pinch strength as an outcome measure”</b></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="card" id="p8-gliding">
+<div class="card-h"><span>B · Tendon &amp; Nerve Gliding and Wrist Proprioception Progression</span><span class="tag">PROGRESSION</span></div>
+<div class="card-b">
+<div class="grid grid-cols-3 gap-x-2">
+<div><div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#tendon-nerve-gliding-proprioception" rel="noopener" target="_blank"><b>Tendon gliding</b></a> <span class="eb eb-e">E</span>: straight hand → hook fist → full fist → tabletop → straight fist; smooth, pain-free excursion</div></div></div>
+<div class="divider-v"><div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#tendon-nerve-gliding-proprioception" rel="noopener" target="_blank"><b>Nerve gliding</b></a> <span class="eb eb-e">E</span>: median / ulnar sliders before tensioners; stop if paraesthesia persists after the set</div></div></div>
+<div class="divider-v"><div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#tendon-nerve-gliding-proprioception" rel="noopener" target="_blank"><b>Proprioception &amp; loading</b></a> <span class="eb eb-e">E</span>: joint position sense → dart-thrower's motion → weight-bearing → perturbation → work / sport tasks</div></div></div>
+</div>
+</div>
+</section>
+<section class="card" id="p8-loading-log">
+<div class="card-h"><span>C · 12-Week Wrist &amp; Hand Progressive Loading Log</span><span class="tag">12-WEEK LOG</span></div>
+<div class="card-b">
+<table class="t">
+<thead>
+<tr>
+<th style="width:22%">Exercise / Drill</th>
+<th class="c" style="width:6.5%">Wk 1</th><th class="c" style="width:6.5%">Wk 2</th><th class="c" style="width:6.5%">Wk 3</th><th class="c" style="width:6.5%">Wk 4</th><th class="c" style="width:6.5%">Wk 5</th><th class="c" style="width:6.5%">Wk 6</th><th class="c" style="width:6.5%">Wk 7</th><th class="c" style="width:6.5%">Wk 8</th><th class="c" style="width:6.5%">Wk 9</th><th class="c" style="width:6.5%">Wk 10</th><th class="c" style="width:6.5%">Wk 11</th><th class="c" style="width:6.5%">Wk 12</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height:5.5mm;"><td><b>Tendon / Nerve Gliding</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5.5mm;"><td><b>Grip &amp; Pinch Strength</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5.5mm;"><td><b>Wrist Ext / Flex / RD / UD Loading</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5.5mm;"><td><b>Pronation / Supination Load</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5.5mm;"><td><b>Proprioception &amp; Weight-Bearing</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5.5mm;"><td><b>Work / Sport Task Simulation</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<div class="dots fill" id="p8-notes"><span class="dots-l">Home Exercise Prescription · Work Conditioning · Return-to-Activity Notes</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab on" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 9 ===================== -->
+<div class="clinical-page" id="page-9" data-accent="slate">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">WRH</div>
+      <div>
+        <div class="kicker">Wrist &amp; Hand &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Longitudinal Session-by-Session Tracking Flowsheet</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">09 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <table class="t flow slate" id="p9-flowsheet" style="table-layout:fixed;">
+<thead>
+<tr>
+<th class="c" style="width:4%">#</th>
+<th style="width:7%">Date</th>
+<th style="width:6%">NPRS</th>
+<th style="width:8.5%">Flex / Ext</th>
+<th style="width:8.5%">RD / UD</th>
+<th style="width:9%">Grip / Pinch (kg)</th>
+<th style="width:22%">Exercise &amp; Loading Delivered</th>
+<th style="width:16%">Orthosis / Manual / EPA</th>
+<th style="width:8%">Irritability</th>
+<th style="width:7%">PROM</th>
+<th class="c" style="width:4%">Init</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height:11.2mm;">
+<td class="vnum">1</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">2</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">3</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">4</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">5</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">6</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">7</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">8</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">9</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">10</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">11</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:11.2mm;">
+<td class="vnum">12</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Glide | Grip | Load | Prop | Task</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Orth | Mob | Oedema | EPA</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+</tbody>
+</table>
+<section class="card" id="p9-discharge">
+<div class="card-h"><span>Discharge Milestones (Population-Specific MCID &amp; MDC Benchmarks) &amp; Discharge Summary</span><span class="tag">DISCHARGE</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<div class="grid grid-cols-2 gap-x-2">
+<div>
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#prwe" rel="noopener" target="_blank"><b>PRWE</b></a> <span class="eb eb-l">L</span>: <b>Surgical DRF</b> (Huyke-Hernández 2023): <b>MCID 43.1 (6 weeks), 56.0 (12 weeks)</b> · <b>DRF at 6 months</b> (Mahdavi 2022): <b>pain or function ≥ 18/50 → screen for catastrophizing, distress and fear</b></div></div>
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#quickdash" rel="noopener" target="_blank"><b>QuickDASH / DASH</b></a> <span class="eb eb-m">M</span>: <b>Upper limb</b> (Franchignoni 2014): <b>QuickDASH MDC90 12.85, MCID 15.91; DASH MDC90 10.81, MCID 10.83</b></div></div>
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#mhq-score" rel="noopener" target="_blank"><b>MHQ</b></a> <span class="eb eb-l">L</span>: <b>Older adults after DRF</b> (Jayaram 2021): <b>interpret domain scores rather than the summary score</b></div></div>
+</div>
+<div class="divider-v">
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#bctq" rel="noopener" target="_blank"><b>BCTQ</b></a> <span class="eb eb-l">L</span>: <b>Women with CTS</b> (López-de-Uralde-Villanueva 2024): <b>MCID 0.64 symptom severity, 0.23 functional status</b></div></div>
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#nprs" rel="noopener" target="_blank"><b>NPRS</b></a> <span class="eb eb-l">L</span>: <b>Women with CTS</b> (López-de-Uralde-Villanueva 2024): <b>MCID 1.5 mean pain, 2.5 worst pain</b></div></div>
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/wrist-hand-atlas/#grip-strength-jamar" rel="noopener" target="_blank"><b>Grip</b></a> <span class="eb eb-l">L</span>: <b>same device every visit</b> (Mutalib 2022) · after CTR: <b>“should not use grip strength when assessing short-term (less than 3 months) change”</b> (Erickson 2019, Guideline)</div></div>
+</div>
+</div>
+<div class="row xs" style="margin-top:1px;">
+<div class="fr" style="flex:1"><span class="lb">Final PRWE / QuickDASH / BCTQ</span><span class="fl"></span></div>
+<div class="fr" style="flex:1"><span class="lb">Final Grip / Pinch (kg)</span><span class="fl"></span></div>
+<div class="fr" style="flex:1"><span class="lb">Final Flex / Ext / RD / UD</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.2"><span class="lb">Disposition</span><span class="cio"><span class="cb sm g"></span>Self-Mgmt / RTW</span><span class="cio"><span class="cb sm r"></span>Hand Surgeon Refer</span></div>
+</div>
+</div>
+</section>
+<div class="dots fill" id="p9-notes"><span class="dots-l">Discharge Summary · Long-Term Self-Management · Return-to-Work / Sport Clearance</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Discharging Clinician</b> <span class="fl l"></span> <b>Sig.</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab on" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

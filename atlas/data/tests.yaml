@@ -1,0 +1,1688 @@
+- id: suspected-scaphoid-fracture
+  title: Suspected Scaphoid Fracture — Clinical Rule & Advanced Imaging
+  page: 1
+  type: info
+  review_status: approved
+  evidence: M
+  summary: 'Clinical decision pathway for suspected scaphoid fracture after wrist trauma: epidemiology, clinical examination, 5-item decision rule (not externally validated), and advanced imaging accuracy.'
+  steps:
+  - 'Assess clinical signs after wrist trauma: sex, anatomical snuffbox swelling, anatomical snuffbox tenderness, painful ulnar deviation, and painful axial thumb compression (Mallee 2020 5-item clinical decision rule; not externally validated).'
+  - In clinical examination, only the absence of snuffbox tenderness helps rule out fracture (LR− 0.15); single signs are inadequate alone and combining tests improves post-test probability.
+  - 'When initial radiographs are non-diagnostic and clinical suspicion remains, refer for advanced imaging: MRI is superior to bone scan, CT or ultrasound; if MRI is unavailable, CT is adequate to rule in but not to rule out.'
+  positive: Absence of anatomical snuffbox tenderness reduces probability (LR− 0.15, Carpenter 2014). Mallee 2020 5-item rule (sex, snuffbox swelling, snuffbox tenderness, painful ulnar deviation, painful axial thumb compression) has internal validation Sn 97%, Sp 20% (not externally validated).
+  interpretation: 'Carpenter 2014 (SR/MA, 75 studies): scaphoid = 70% of carpal fractures; occult fracture prevalence 12% to 57%, point estimate 25% pretest probability with non-diagnostic X-ray; only the absence of snuffbox tenderness helps (LR− 0.15); other findings ''lack accuracy to rule in or rule out''; MRI superior to bone scan, CT or US; if MRI unavailable, CT adequate to rule in but not to rule out. Mallee 2014 (SR/MA, 13 studies): snuffbox tenderness the most sensitive test; low specificity -> many overtreated; combining tests improved post-test probability. Parvizi 1998: pain on thumb movement Sn 69%, Sp 66%; signs inadequate alone, should be combined. Mallee 2020 (n = 893, 7.6% fractures): 5-item rule internal validation Sn 97%, Sp 20%; 15% fewer unnecessary immobilisations and imaging, 50% lower risk of missing a fracture vs current practice (not externally validated). Bäcker 2020 (SR, 42 studies, 2,507 pts): X-ray + exam may miss up to 16%; 21.8% missed on X-ray and found on advanced imaging; MRI Sn 94.2%, Sp 97.7%; CT 81.5%, 96.0%; ultrasound 81.5%, 77.4%. Mallee 2015 (Cochrane DTA, 11 studies): CT Sn 0.72 (0.36–0.92), Sp 0.99 (0.71–1.00); MRI 0.88 (0.64–0.97), 1.00 (0.38–1.00); bone scan 0.99 (0.69–1.00), 0.86 (0.73–0.94); median true-fracture prevalence 20%.'
+  metrics: 'Absence of snuffbox tenderness LR− 0.15 (Carpenter 2014) · Mallee 2020 rule Sn 97%, Sp 20% (not externally validated) · Bäcker 2020: MRI Sn 94.2%, Sp 97.7%; CT 81.5%, 96.0%; US 81.5%, 77.4% · Mallee 2015 Cochrane: CT Sn 0.72 (0.36–0.92), Sp 0.99 (0.71–1.00); MRI Sn 0.88 (0.64–0.97), Sp 1.00 (0.38–1.00); bone scan Sn 0.99 (0.69–1.00), Sp 0.86 (0.73–0.94)'
+  sources:
+  - text: Carpenter 2014 Acad Emerg Med
+    url: https://doi.org/10.1111/acem.12317
+  - text: Mallee 2014 J Hand Surg Am
+    url: https://doi.org/10.1016/j.jhsa.2014.06.004
+  - text: Parvizi 1998 J Hand Surg Br
+    url: https://doi.org/10.1016/s0266-7681(98)80050-8
+  - text: Mallee 2020 Arch Orthop Trauma Surg
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7109163/
+    free_full_text: true
+  - text: Bäcker 2020 J Wrist Surg
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7000269/
+    free_full_text: true
+  - text: Mallee 2015 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6464799/
+    free_full_text: true
+- id: anatomical-snuffbox-tenderness
+  title: Anatomical Snuffbox Tenderness & Scaphoid Clinical Signs
+  page: 1
+  type: test
+  review_status: approved
+  evidence: M
+  summary: Palpation of the anatomical snuffbox and combined clinical signs (snuffbox swelling, painful ulnar deviation, painful axial thumb compression, pain on thumb movement) after acute wrist trauma.
+  steps:
+  - Inspect the anatomical snuffbox for localized swelling.
+  - Palpate the floor of the anatomical snuffbox (between EPL dorsally and EPB/APL volarly) with the wrist in slight ulnar deviation.
+  - Assess pain on active/passive ulnar deviation, axial compression along the thumb metacarpal, and thumb movement.
+  positive: Reproduction of focal tenderness in the anatomical snuffbox or pain with ulnar deviation / axial thumb compression.
+  interpretation: 'Carpenter 2014 (SR/MA, 75 studies): only the absence of snuffbox tenderness helps (LR− 0.15); other findings ''lack accuracy to rule in or rule out''. Mallee 2014 (SR/MA, 13 studies): snuffbox tenderness is the most sensitive test; low specificity -> many overtreated; combining tests improved post-test probability. Parvizi 1998: pain on thumb movement Sn 69%, Sp 66%; signs inadequate alone, should be combined. Mallee 2020 (n = 893, 7.6% fractures): 5-item rule (sex, snuffbox swelling, snuffbox tenderness, painful ulnar deviation, painful axial thumb compression) internal validation Sn 97%, Sp 20% (not externally validated).'
+  metrics: Absence of snuffbox tenderness LR− 0.15 (Carpenter 2014) · Pain on thumb movement Sn 69%, Sp 66% (Parvizi 1998) · 5-item rule Sn 97%, Sp 20% (Mallee 2020, not externally validated)
+  sources:
+  - text: Carpenter 2014 Acad Emerg Med
+    url: https://doi.org/10.1111/acem.12317
+  - text: Mallee 2014 J Hand Surg Am
+    url: https://doi.org/10.1016/j.jhsa.2014.06.004
+  - text: Parvizi 1998 J Hand Surg Br
+    url: https://doi.org/10.1016/s0266-7681(98)80050-8
+  - text: Mallee 2020 Arch Orthop Trauma Surg
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7109163/
+    free_full_text: true
+- id: acute-cts-after-drf
+  title: Acute Carpal Tunnel Syndrome After Distal Radius Fracture
+  page: 1
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Incidence, presentation, fracture risk profile, and CRPS progression of acute carpal tunnel syndrome following distal radius fracture.
+  steps:
+  - Monitor patients after distal radius fracture (especially AO type C fractures) for acute median-territory paraesthesia, pain out of proportion, and progressive motor weakness.
+  - Recognise that onset occurs at a median of one week (range 1–12 weeks) post-injury.
+  - Refer urgently for surgical decompression assessment when acute progressive median nerve compression is suspected.
+  positive: New or worsening median nerve sensory loss, pain out of proportion (13.7%), or reduced power (9.8%) after distal radius fracture.
+  interpretation: 'Leow 2021 (n = 1,189): 51 (4.3%) developed acute CTS; median onset one week (range 1–12); pain out of proportion in 13.7%, reduced power in 9.8%; 10 of 51 (20%) resolved without intervention; 5 (10%) of the CTS group developed CRPS; type C fractures at higher risk.'
+  metrics: Incidence 4.3% (51 of 1,189); median onset 1 week (range 1–12); pain out of proportion 13.7%; reduced power 9.8%; 10 of 51 (20%) resolved without intervention; 5 (10%) developed CRPS (Leow 2021)
+  sources:
+  - text: Leow 2021 Eur J Orthop Surg Traumatol
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8233234/
+    free_full_text: true
+- id: crps-budapest-criteria
+  title: CRPS — Budapest Clinical & Research Diagnostic Criteria
+  page: 1
+  type: test
+  review_status: approved
+  evidence: M
+  summary: Diagnostic criteria for Complex Regional Pain Syndrome (CRPS) evaluating continuing pain disproportionate to any inciting event across sensory, vasomotor, sudomotor/oedema, and motor/trophic categories.
+  steps:
+  - Confirm continuing pain disproportionate to any inciting trauma or immobilisation.
+  - 'Assess patient-reported symptoms and exam signs across four categories: sensory (hyperaesthesia / allodynia), vasomotor (temperature or skin colour asymmetry), sudomotor / oedema (oedema or sweating asymmetry), and motor / trophic (decreased ROM, motor dysfunction, or trophic changes in hair/nails/skin).'
+  - Confirm that no other diagnosis better explains the signs and symptoms.
+  positive: Disproportionate continuing pain plus required symptom and sign categories without a better alternative explanation.
+  interpretation: 'Harden 2010 (113 CRPS vs 47 neuropathic pain): IASP criteria Sn 1.00, Sp 0.41; Budapest clinical criteria Sn 0.99, Sp 0.68; Budapest research criteria Sp 0.79.'
+  metrics: IASP criteria Sn 1.00, Sp 0.41 · Budapest clinical criteria Sn 0.99, Sp 0.68 · Budapest research criteria Sp 0.79 (Harden 2010)
+  sources:
+  - text: Harden 2010 Pain
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2914601/
+    free_full_text: true
+- id: pyogenic-flexor-tenosynovitis-kanavel
+  title: Pyogenic Flexor Tenosynovitis — Kanavel Signs & Prognostic Factors
+  page: 1
+  type: test
+  review_status: approved
+  evidence: L
+  summary: Emergency clinical recognition of closed-space flexor tendon sheath infection using the classic Kanavel signs and verified poor-outcome prognostic factors.
+  steps:
+  - 'Examine the affected digit for the four Kanavel signs: (1) uniform fusiform swelling of the entire digit, (2) flexed resting posture of the digit, (3) exquisite tenderness along the course of the flexor tendon sheath, and (4) severe pain on passive extension of the digit.'
+  - 'Screen for poor-outcome prognostic factors (Pang 2007): age > 43 years, diabetes mellitus, peripheral vascular disease or renal failure, subcutaneous purulence, digital ischaemia, and polymicrobial infection.'
+  - Arrange immediate same-day surgical referral for drainage and antibiotics.
+  positive: Presence of Kanavel signs (fusiform swelling, flexed posture, tenderness along the flexor sheath, pain on passive digital extension) -> immediate surgical emergency.
+  interpretation: 'Pang 2007: poor-outcome factors in pyogenic flexor tenosynovitis include age > 43 years; diabetes, peripheral vascular disease or renal failure; subcutaneous purulence; digital ischaemia; and polymicrobial infection. Kanavel signs require same-day surgical referral.'
+  metrics: 'Poor-outcome factors: age > 43 years; diabetes, peripheral vascular disease or renal failure; subcutaneous purulence; digital ischaemia; polymicrobial infection (Pang 2007)'
+  sources:
+  - text: Pang 2007 J Bone Joint Surg Am
+    url: https://doi.org/10.2106/jbjs.f.01356
+- id: wrist-hand-red-flags-triage
+  title: Wrist & Hand Emergency Red Flags (Compartment, Septic, Injection, Fight Bite)
+  page: 1
+  type: info
+  review_status: approved
+  evidence: E
+  summary: 'Emergency hand and forearm red flags requiring immediate same-day surgical referral: forearm/hand compartment syndrome, septic arthritis, high-pressure injection injury, and clenched-fist fight bite.'
+  steps:
+  - 'Forearm / hand compartment syndrome: severe pain out of proportion to injury, tense swollen compartment, pain on passive stretch of the digits, paraesthesia or paresis -> immediate surgical fasciotomy referral.'
+  - 'Septic arthritis of the wrist or finger joints: acute hot, swollen, erythematous joint with severe restriction of active/passive motion and systemic signs -> urgent joint aspiration and washout.'
+  - 'High-pressure injection injury (paint, grease, hydraulic fluid, fuel): benign-appearing pinpoint entry wound concealing rapid deep tissue necrosis and compartment tamponade -> immediate surgical debridement.'
+  - 'Fight bite (clenched-fist laceration over the MCP joint capsule): human oral flora inoculated into the joint or extensor mechanism -> immediate surgical washout and antibiotic therapy.'
+  positive: Any sign of pyogenic flexor tenosynovitis (Kanavel signs), compartment syndrome, septic arthritis, high-pressure injection injury, fight bite, or acute progressive CTS after fracture.
+  interpretation: 'Expert opinion (E): Kanavel signs, compartment syndrome, septic arthritis, high-pressure injection injury, and fight bite require immediate same-day surgical referral.'
+  metrics: Expert consensus (E) — immediate same-day surgical referral
+  sources: []
+- id: cts-epidemiology-prognosis
+  title: Carpal Tunnel Syndrome — Prevalence & Natural History
+  page: 2
+  type: info
+  review_status: approved
+  evidence: H
+  summary: General population prevalence of median-territory symptoms and confirmed carpal tunnel syndrome (Atroshi 1999) and natural course of untreated idiopathic CTS (Padua 1998).
+  steps:
+  - 'Interpret symptom prevalence against electrophysiological findings: 1 in 5 symptomatic people in the general population have confirmed CTS, while 18.4% of asymptomatic controls show median neuropathy on nerve conduction testing (Atroshi 1999).'
+  - 'Factor occupational exposure: blue-collar workers have higher prevalence (3.5%) than white-collar workers (1.7%) (Atroshi 1999).'
+  - In untreated CTS, counsel patients that spontaneous improvement occurs in about one-third of mild and moderate cases, whereas extreme cases never improved in natural history follow-up (Padua 1998).
+  positive: Clinically + electrophysiologically confirmed CTS prevalence 2.7% (2.1–3.4) in the general population (Atroshi 1999).
+  interpretation: 'Atroshi 1999 (general population, n = 2,466): median-territory symptoms 14.4% (13.0–15.8); clinically certain CTS 3.8% (3.1–4.6); electrophysiological median neuropathy 4.9% (4.1–5.8); clinically + electrophysiologically confirmed 2.7% (2.1–3.4); 1 in 5 symptomatic people have CTS; blue-collar 3.5% vs white-collar 1.7%; median neuropathy in 18.4% of asymptomatic controls. Padua 1998 (80 untreated): worsening inversely related to severity; about one-third of mild and moderate cases improved; extreme cases never improved.'
+  metrics: 'Prevalence (Atroshi 1999, n = 2,466): symptoms 14.4% (13.0–15.8), clinically certain 3.8% (3.1–4.6), electrophysiological 4.9% (4.1–5.8), combined 2.7% (2.1–3.4); blue-collar 3.5% vs white-collar 1.7%; asymptomatic median neuropathy 18.4% · Untreated course (Padua 1998, n = 80): ~1/3 mild/moderate improved; extreme never improved'
+  sources:
+  - text: Atroshi 1999 JAMA
+    url: https://doi.org/10.1001/jama.282.2.153
+  - text: Padua 1998 Ital J Neurol Sci
+    url: https://doi.org/10.1007/bf02341782
+- id: persistent-wrist-pain-prognosis
+  title: Persistent Wrist Pain & Post-DRF Psychological Prognostic Screen
+  page: 2
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Prognostic trajectory of persistent wrist pain in an arthroscopy cohort (Prosser 2012) and 6-month PRWE cut-off screening for psychological distress after distal radius fracture (Mahdavi 2022).
+  steps:
+  - In patients with persistent wrist pain, document symptom duration and baseline PRWHE score, which together explain 24% of 1-year PRWHE variance (Prosser 2012).
+  - At 6 months after distal radius fracture, check whether PRWE pain or function subscale score is ≥ 18/50 to screen for pain catastrophizing, psychological distress, and fear of movement (Mahdavi 2022).
+  positive: PRWE pain or function ≥ 18/50 at 6 months post-DRF screens positive for pain catastrophizing, distress and fear (AUC ≥ 0.88, Mahdavi 2022).
+  interpretation: 'Prosser 2012 (arthroscopy cohort): improved on average by approximately 50% at one year, but most had some pain and disability; duration of pain and baseline PRWHE explained 24% of 1-year PRWHE. Mahdavi 2022: PRWE pain or function ≥ 18/50 at 6 months screens for pain catastrophizing, distress and fear (AUC ≥ 0.88).'
+  metrics: 'Persistent wrist pain (Prosser 2012): ~50% average improvement at 1 year; duration + baseline PRWHE explain 24% of 1-year PRWHE · Post-DRF screen (Mahdavi 2022): PRWE pain or function ≥ 18/50 at 6 months AUC ≥ 0.88'
+  sources:
+  - text: Prosser 2012 J Hand Ther
+    url: https://doi.org/10.1016/j.jht.2012.03.001
+  - text: Mahdavi 2022 Musculoskelet Sci Pract
+    url: https://doi.org/10.1016/j.msksp.2021.102474
+- id: wrist-hand-differential-pathologies
+  title: Wrist & Hand Differential Diagnosis Matrix
+  page: 2
+  type: info
+  review_status: approved
+  evidence: E
+  summary: 'Pattern recognition across radial, central/dorsal, ulnar, and palmar/neural wrist and hand presentations: CTS, de Quervain tenosynovitis, thumb CMC OA, trigger finger, TFCC / DRUJ injury, scapholunate instability, scaphoid fracture / non-union, DRF, CRPS, and hand OA.'
+  steps:
+  - 'Palmar / neural: Carpal tunnel syndrome (nocturnal paraesthesia in thumb, index, middle digits; flick sign; Wainner cluster / Katz diagram) vs Guyon''s canal ulnar neuropathy (ring and little digits).'
+  - 'Radial wrist / thumb base: De Quervain tenosynovitis (1st dorsal compartment pain over radial styloid; WHAT / Finkelstein / Eichhoff tests) vs Thumb CMC 1 OA (base of thumb pain on pinch/jar opening; grind test) vs Suspected scaphoid fracture / non-union (anatomical snuffbox tenderness after FOOSH).'
+  - 'Central / dorsal carpal: Scapholunate instability (dorsal scapholunate interval pain and clunk on Watson scaphoid shift test) vs Midcarpal instability (midcarpal shift clunk).'
+  - 'Ulnar wrist: TFCC / ulnar-sided pain (ulnar fovea sign, TFCC compression, ulnar grinding) vs DRUJ instability (painful laxity on DRUJ ballottement) vs Lunotriquetral instability (lunotriquetral ballottement / shuck test).'
+  - 'Digits & global hand: Trigger finger (flexor tendon catching/locking at the A1 pulley) · Hand OA (DIP/PIP/CMC nodal stiffness and aching) · CRPS (disproportionate regional pain with sensory, vasomotor, sudomotor/oedema, and motor/trophic changes per Budapest criteria).'
+  positive: Matched anatomical pain zone, aggravating load, and provocative cluster.
+  interpretation: Combine anatomical localisation with validated clinical rules and tests from the dossier.
+  metrics: Expert clinical synthesis (E) combined with condition-specific studies on Pages 1–4
+  sources: []
+- id: wrist-hand-active-rom
+  title: Wrist & Hand Active Range of Motion (AROM)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=kFnDRhcsFdM
+  video_title: 'Physiotutors: Active Range of Motion: Wrist & Hand'
+  summary: Active range-of-motion assessment of wrist flexion, extension, radial deviation, ulnar deviation, forearm pronation/supination, thumb opposition/abduction/flexion/extension, and digital composite flexion/extension.
+  steps:
+  - Seat the patient with the forearm supported and the wrist free to move.
+  - Assess active wrist flexion, wrist extension, radial deviation, and ulnar deviation bilaterally, noting pain and quality of movement.
+  - With the elbow flexed at the side, assess active forearm pronation and supination.
+  - Assess active thumb flexion, extension, palmar/radial abduction, opposition to the base of the little finger, and finger MCP/PIP/DIP composite fist and full extension.
+  positive: Side-to-side restriction, painful arc, catching/locking, or compensatory movement.
+  interpretation: Record active angles bilaterally on the Page 3 write-in table; see the Wrist Goniometry card for goniometer alignment and reliability.
+  metrics: 'Expert clinical assessment (E) · Goniometer alignment: see Wrist Goniometry card'
+  sources: []
+- id: wrist-passive-rom
+  title: Wrist Passive Range of Motion (PROM)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=Au2CoKHYAPs
+  video_title: 'Physiotutors: Wrist Passive Range of Motion (PROM)'
+  summary: Passive range-of-motion and end-feel assessment of the radiocarpal, midcarpal, and distal radioulnar joints in flexion, extension, radial/ulnar deviation, and pronation/supination.
+  steps:
+  - Stabilise the distal forearm with one hand and move the carpus passively into full wrist flexion and extension, noting end-feel and symptom reproduction.
+  - Passively move the wrist into radial deviation and ulnar deviation.
+  - Stabilise the distal humerus and passively rotate the distal radius and ulna into full pronation and supination.
+  positive: Capsular stiffness, bony block, empty end-feel, or concordant pain reproduction.
+  interpretation: Compare passive range against active range to differentiate capsular/articular restriction from tendon or motor deficit.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: wrist-hand-resisted-isometric
+  title: Wrist & Hand Resisted Isometric Testing
+  page: 3
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=DKE4QDMlFAs
+  video_title: 'Physiotutors: Resisted Isometric Testing (Wrist & Hand)'
+  summary: Isometric manual resistance testing of wrist flexors, wrist extensors, radial/ulnar deviators, forearm pronators/supinators, and intrinsic/extrinsic thumb and finger muscles.
+  steps:
+  - Position the wrist and digits in neutral resting alignment.
+  - Apply graded isometric resistance to wrist flexion, extension, radial deviation, and ulnar deviation.
+  - Test resisted thumb abduction (APB — median nerve), thumb extension/abduction (EPL/EPB/APL), finger abduction/adduction (interossei — ulnar nerve), and finger flexion.
+  positive: Pain reproduction over the contractile unit or myotomal/peripheral nerve weakness.
+  interpretation: Compare strength and pain response bilaterally across median, ulnar, and radial innervated muscle groups.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: wrist-goniometry
+  title: Wrist Goniometry (Volar / Dorsal Alignment)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: M
+  summary: Standardised goniometric measurement of passive and active wrist flexion and extension comparing radial, ulnar, and dorsal/volar goniometer placement.
+  steps:
+  - For wrist flexion, place the goniometer along the dorsal aspect of the third metacarpal and dorsal midline of the forearm.
+  - For wrist extension, place the goniometer along the volar aspect of the palm/third metacarpal and volar midline of the forearm.
+  - Use volar/dorsal alignment consistently across visits, as it yields the highest intra- and inter-tester reliability and least measurement error (LaStayo 1994).
+  positive: Volar/dorsal alignment gives the least error and highest within- and between-tester ICCs (LaStayo 1994).
+  interpretation: 'LaStayo 1994 (multicentre): flexion ICC within tester .86 / .87 / .92 (radial / ulnar / dorsal alignment), extension .80 / .80 / .84; between testers flexion .88 / .89 / .93; volar/dorsal alignment gives least error.'
+  metrics: 'Within-tester ICC: flexion .86 / .87 / .92 (radial / ulnar / dorsal), extension .80 / .80 / .84 · Between-tester ICC: flexion .88 / .89 / .93; volar/dorsal alignment gives least error (LaStayo 1994)'
+  sources:
+  - text: LaStayo 1994 Phys Ther
+    url: https://doi.org/10.1093/ptj/74.2.162
+- id: grip-strength-jamar
+  title: Grip Strength (Jamar Dynamometer & Limb Symmetry Ratio)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: M
+  summary: Standardised hand grip dynamometry (kg) and affected-to-unaffected grip ratio (%) with population reference ranges and device non-interchangeability rules.
+  steps:
+  - Seat the patient with the shoulder adducted, elbow flexed, and forearm and wrist in neutral.
+  - Record grip strength (kg) on the affected and unaffected hands using the same dynamometer across all assessments.
+  - 'Do not swap devices between visits: GripAble reads 69% of Jamar and devices must not be interchanged (Mutalib 2022). In post-CTR surgery, JOSPT CTS CPG states clinicians ''should not use grip strength when assessing short-term (less than 3 months) change ... following CTR surgery''.'
+  positive: Asymmetric grip ratio (%) or deficit relative to age and sex normative tables (Wang 2018).
+  interpretation: 'Wang 2018 (Jamar norms): mean grip from 49.7 kg (dominant hand, men 25–29 years) to 18.7 kg (non-dominant, women 75–79 years); use age / sex tables. Mutalib 2022: GripAble vs Jamar ICC 0.906 (0.87–0.94); GripAble reads 69% of Jamar — devices must not be interchanged.'
+  metrics: 'Jamar norms (Wang 2018): mean grip 49.7 kg (dominant, men 25–29 years) to 18.7 kg (non-dominant, women 75–79 years) · GripAble vs Jamar (Mutalib 2022): ICC 0.906 (0.87–0.94); GripAble reads 69% of Jamar (do not interchange)'
+  calculator:
+    kind: formula
+    decimals: 1
+    value_label: '% Grip Ratio (Affected ÷ Unaffected × 100)'
+    expr: '(unaff > 0) ? (aff / unaff * 100) : NaN'
+    inputs:
+    - heading: Grip Strength Ratio (do not swap devices between visits — Mutalib 2022)
+    - key: aff
+      label: Affected hand grip strength (kg)
+      type: number
+    - key: unaff
+      label: Unaffected hand grip strength (kg)
+      type: number
+    outputs:
+    - when: v >= 0
+      text: 'Grip Ratio: {v|1}% (Affected {aff|1} kg ÷ Unaffected {unaff|1} kg × 100) · Do not swap devices: GripAble vs Jamar ICC 0.906 (0.87–0.94), GripAble reads 69% of Jamar — devices must not be interchanged (Mutalib 2022) · Jamar norms (Wang 2018): mean 49.7 kg (dominant, men 25–29 years) to 18.7 kg (non-dominant, women 75–79 years)'
+      tone: good
+  sources:
+  - text: Wang 2018 JOSPT
+    url: https://doi.org/10.2519/jospt.2018.7851
+  - text: Mutalib 2022 BMC Musculoskelet Disord
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8785007/
+    free_full_text: true
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: pinch-strength-test
+  title: Pinch Strength Dynamometry (Lateral / Key, Tip-to-Tip, Tripod)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: E
+  summary: Pinch gauge assessment of lateral (key) pinch, two-point (tip-to-tip) pinch, and three-jaw chuck (tripod) pinch bilaterally.
+  steps:
+  - Position the patient seated with the shoulder adducted, elbow flexed, and forearm in neutral.
+  - Test lateral (key) pinch between the thumb pulp and lateral aspect of the middle phalanx of the index finger, tip-to-tip pinch between thumb and index tips, and tripod pinch between thumb, index, and middle finger pulps.
+  - 'Note: For CTS outcome tracking, JOSPT CTS CPG states clinicians ''should not use lateral pinch strength as an outcome measure'' (Erickson 2019).'
+  positive: Pain reproduction at the thumb base (CMC 1) or weakness in median/ulnar intrinsic pinch.
+  interpretation: Record affected and unaffected pinch strength values on the Page 3 write-in table. In CTS, JOSPT CTS CPG states clinicians 'should not use lateral pinch strength as an outcome measure' (Erickson 2019).
+  metrics: 'Expert clinical assessment (E) · JOSPT CTS CPG (Erickson 2019): ''should not use lateral pinch strength as an outcome measure'''
+  sources:
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: sensory-two-point-monofilament
+  title: Hand Sensory Screen (Median / Ulnar / Radial, 2-Point Discrimination & Monofilament)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: M
+  summary: Sensory mapping of the palmar thumb/index/middle (median), ring/little (ulnar), and dorsal first web space (radial) using pinprick/hypalgesia, Semmes-Weinstein monofilaments, and static/moving 2-point discrimination.
+  steps:
+  - Map sensory changes across median (palmar thumb, index, middle, radial half of ring), ulnar (ulnar half of ring and little finger, Guyon's/dorsal ulnar hand), and superficial radial (dorsal first web space) territories.
+  - Test for hypalgesia (diminished pinprick sensation) in the palmar aspect of the thumb/index finger compared with the ipsilateral little finger (D'Arcy 2000; Wainner 2005).
+  - Assess static 2-point discrimination and Semmes-Weinstein monofilament threshold across digital pulps to document baseline nerve function prior to combined orthotic/stretching care (Erickson 2019).
+  positive: Reduced median sensory field of digit 1 or palmar median hypalgesia (LR 3.1, D'Arcy 2000). Abnormal 2-point discrimination is specific but not sensitive for CTS (MacDermid 2004).
+  interpretation: 'MacDermid 2004 (SR, 60 studies): 2-point discrimination and APB weakness / atrophy are specific but not sensitive. D''Arcy 2000 (JAMA SR, 12 studies): hypalgesia in median territory LR 3.1 (2.0–5.1); 2-point / vibration / monofilament have little or no value for ruling in or ruling out CTS alone. Wainner 2005 / Erickson 2019 JOSPT CTS CPG include sensory loss in the thumb (digit 1) in the 5-item diagnostic cluster.'
+  metrics: Median territory hypalgesia LR 3.1 (2.0–5.1) (D'Arcy 2000) · 2-point discrimination specific but not sensitive (MacDermid 2004)
+  sources:
+  - text: MacDermid 2004 J Hand Ther
+    url: https://doi.org/10.1197/j.jht.2004.02.015
+  - text: D'Arcy 2000 JAMA
+    url: https://doi.org/10.1001/jama.283.23.3110
+  - text: Wainner 2005 Arch Phys Med Rehabil
+    url: https://doi.org/10.1016/j.apmr.2004.11.008
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: froment-sign
+  title: Froment Sign (Ulnar Nerve — Adductor Pollicis)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: E
+  summary: Clinical test for ulnar nerve palsy assessing compensation by the median-innervated flexor pollicis longus (FPL) during forceful key pinch.
+  steps:
+  - Ask the patient to grasp a flat sheet of paper forcefully between the thumb pulp and radial side of the index finger (key pinch).
+  - Attempt to pull the paper away while observing the thumb interphalangeal (IP) joint bilaterally.
+  positive: Flexion of the thumb interphalangeal (IP) joint (FPL substitution via the anterior interosseous nerve) on the affected side due to weakness of the ulnar-innervated adductor pollicis.
+  interpretation: Indicates motor involvement of the deep motor branch of the ulnar nerve (cubital tunnel or Guyon's canal).
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: wartenberg-sign
+  title: Wartenberg Sign (Ulnar Nerve — Little Finger Abduction Drift)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: E
+  summary: Clinical sign of ulnar intrinsic motor weakness characterised by persistent abduction of the fifth digit due to unopposed extensor digiti minimi pull.
+  steps:
+  - Place the patient's hand flat on the examination table with the fingers extended and abducted.
+  - Ask the patient to adduct all fingers tightly together toward the middle finger.
+  positive: Inability to actively adduct the little finger to the ring finger (or resting abducted posture of the fifth digit that catches on pockets).
+  interpretation: Reflects weakness of the ulnar-innervated third palmar interosseous muscle with unopposed abduction force from the radial-innervated extensor digiti minimi.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: allen-test
+  title: Allen Test (Radial & Ulnar Arterial Patency)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=D1tJO0RW9UM
+  video_title: 'Physiotutors: Allen Test | Hand Vascularisation'
+  summary: Vascular patency assessment of the radial and ulnar arteries and completeness of the superficial/deep palmar arterial arches.
+  steps:
+  - Instruct the patient to open and close the fist tightly several times, then hold a tight fist to exsanguinate the palm.
+  - Compress both the radial and ulnar arteries firmly at the volar wrist.
+  - Ask the patient to relax the hand open (palm appears blanched), then release pressure over one artery (e.g., ulnar) while maintaining occlusion of the other, observing palmar flushing. Repeat for the other artery.
+  positive: Delayed or absent palmar capillary refill upon releasing either the radial or ulnar artery, indicating arterial insufficiency or incomplete palmar arch collateral flow.
+  interpretation: Vascular screen in ulnar-sided wrist pain (hypothenar hammer syndrome), after trauma, or before hand surgery.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: ulnt1-median
+  title: Upper Limb Neurodynamic Test 1 — ULNT1 (Median Nerve Bias)
+  page: 3
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=rir6x6Iiqc4
+  video_title: 'Physiotutors: All Upper Limb Tension Tests | ULTT | ULNT'
+  summary: Neurodynamic provocation test applying sequential mechanical tension to the median nerve and brachial plexus from the cervical spine to the digits.
+  steps:
+  - Position the patient supine; depress and stabilise the shoulder girdle.
+  - Abduct the shoulder, supinate the forearm, extend the wrist and fingers, laterally rotate the shoulder, and slowly extend the elbow.
+  - Perform structural differentiation using contralateral/ipsilateral cervical lateral flexion or wrist release.
+  positive: Reproduction of the patient's concordant median-territory symptoms that alter with structural differentiation and show side-to-side asymmetry.
+  interpretation: Used alongside cervical and carpal tunnel examination to evaluate mechanosensitivity of the median nerve pathway.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: hand-volumetry-figure-of-eight
+  title: Hand Oedema Assessment — Water Volumetry & Figure-of-Eight Tape
+  page: 3
+  type: test
+  review_status: approved
+  evidence: E
+  summary: Objective quantification of wrist and hand oedema using water displacement volumetry (ml) or figure-of-eight circumferential tape measurement (mm/cm).
+  steps:
+  - 'For figure-of-eight measurement: wrap the tape across the volar wrist crease (distal to ulnar styloid -> radial styloid), diagonally across the dorsum of the hand to the 5th MCP joint, across the palmar MCP heads to the 2nd MCP joint, and diagonally back across the dorsum to the starting point.'
+  - 'For water volumetry: immerse the hand to the standardised landmark in a calibrated overflow volumeter and measure displaced water volume (ml) bilaterally.'
+  positive: Increased volume (ml) or figure-of-eight circumference compared with the uninvolved hand or prior session baseline.
+  interpretation: Used to monitor post-fracture, post-surgical, and CRPS oedema over time; use the same method and landmarks at every visit.
+  metrics: Expert clinical measurement (E)
+  sources: []
+- id: phalens-test
+  title: Phalen's Test (Wrist Flexion Median Nerve Provocation)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: M
+  video_url: https://www.youtube.com/watch?v=TMAD-dhT9PM
+  video_title: 'Physiotutors: Phalen''s Test | Carpal Tunnel Syndrome (CTS)'
+  summary: Sustained maximal wrist flexion test increasing intracarpal canal pressure to provoke median nerve paraesthesia in suspected carpal tunnel syndrome.
+  steps:
+  - Ask the patient to place the dorsal aspects of both hands together with the wrists in complete, unforced flexion.
+  - Maintain the flexed position and note the reproduction of numbness or tingling in the median nerve distribution (thumb, index, middle, and radial half of ring finger).
+  positive: Reproduction of paraesthesia or numbness in the median nerve territory (not isolated wrist joint pain).
+  interpretation: 'MacDermid 2004 (SR, 60 studies): Phalen Sn 68%, Sp 73% (Tinel 50%, 77%; carpal compression 64%, 83%). D''Arcy 2000 (JAMA SR, 12 studies): Phalen, Tinel, nocturnal paraesthesia, thenar atrophy, 2-point / vibration / monofilament have little or no value alone; combine with rational exam findings and the Wainner / JOSPT CPG cluster.'
+  metrics: Sn 68%, Sp 73% (MacDermid 2004, SR of 60 studies) · Little or no value alone (D'Arcy 2000)
+  sources:
+  - text: MacDermid 2004 J Hand Ther
+    url: https://doi.org/10.1197/j.jht.2004.02.015
+  - text: D'Arcy 2000 JAMA
+    url: https://doi.org/10.1001/jama.283.23.3110
+- id: reverse-phalens-test
+  title: Reverse Phalen's Test (Prayer Test)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: E
+  summary: Sustained maximal wrist extension (palms pressed together in prayer position) used as an adjunct provocation manoeuvre for carpal tunnel syndrome.
+  steps:
+  - Ask the patient to press the palms of both hands together and lower the hands toward the waist to bring the wrists into full extension.
+  - Hold the position and monitor for paraesthesia in the median nerve distribution.
+  positive: Reproduction of tingling or numbness in the thumb, index, middle, or radial ring finger.
+  interpretation: Adjunct provocation manoeuvre; interpret alongside carpal compression test and the 5-item JOSPT CPG diagnostic cluster.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: tinel-sign-wrist
+  title: Tinel Sign at the Wrist (Median Nerve)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: M
+  video_url: https://www.youtube.com/watch?v=SOHdFU3hllE
+  video_title: 'Physiotutors: Tinel Sign of the Wrist | Carpal Tunnel Syndrome (CTS)'
+  summary: Percussion over the median nerve at the volar wrist crease / flexor retinaculum to elicit paresthesia radiating into the median-innervated digits.
+  steps:
+  - Support the patient's supinated wrist in neutral or slight extension.
+  - Tap lightly over the course of the median nerve at the distal wrist crease between the palmaris longus and flexor carpi radialis tendons.
+  positive: Tingling or electric-shock paraesthesia radiating distally into the thumb, index, middle, or radial half of the ring finger.
+  interpretation: 'MacDermid 2004 (SR, 60 studies): Tinel Sn 50%, Sp 77% (Phalen 68%, 73%; carpal compression 64%, 83%). D''Arcy 2000 (JAMA SR, 12 studies): Phalen, Tinel, nocturnal paraesthesia, thenar atrophy, 2-point / vibration / monofilament have little or no value alone.'
+  metrics: Sn 50%, Sp 77% (MacDermid 2004, SR of 60 studies) · Little or no value alone (D'Arcy 2000)
+  sources:
+  - text: MacDermid 2004 J Hand Ther
+    url: https://doi.org/10.1197/j.jht.2004.02.015
+  - text: D'Arcy 2000 JAMA
+    url: https://doi.org/10.1001/jama.283.23.3110
+- id: carpal-compression-test
+  title: Carpal Compression Test (Durkan's Test)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: M
+  video_url: https://www.youtube.com/watch?v=OfDuo3CPX1o
+  video_title: 'Physiotutors: Carpal Compression Test | Carpal Tunnel Syndrome'
+  summary: Direct manual thumb pressure over the flexor retinaculum / carpal tunnel to provoke median nerve symptoms.
+  steps:
+  - Support the patient's forearm in supination with the wrist in neutral.
+  - Apply firm, direct pressure with both thumbs over the median nerve at the carpal tunnel (just distal to the wrist crease).
+  positive: Reproduction of paraesthesia, numbness, or pain in the median nerve territory.
+  interpretation: 'MacDermid 2004 (SR, 60 studies): carpal compression Sn 64%, Sp 83% (Phalen Sn 68%, Sp 73%; Tinel Sn 50%, Sp 77%).'
+  metrics: Sn 64%, Sp 83% (MacDermid 2004, SR of 60 studies)
+  sources:
+  - text: MacDermid 2004 J Hand Ther
+    url: https://doi.org/10.1197/j.jht.2004.02.015
+- id: flick-sign
+  title: Flick Sign (Shaking Hands Relieves Symptoms)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=QX2h4haky2I
+  video_title: 'Physiotutors: Flick Sign | Carpal Tunnel Syndrome'
+  summary: History and demonstration sign in which the patient reports or demonstrates shaking/flicking the hand (as if shaking down a thermometer) to relieve nocturnal or daytime hand paraesthesia.
+  steps:
+  - Ask the patient what they do with their hand when symptoms wake them at night or flare during the day.
+  - Observe whether the patient demonstrates a flicking or shaking motion of the wrist and hand and reports that shaking relieves symptoms.
+  positive: Patient reports and/or demonstrates that shaking their hands relieves their symptoms.
+  interpretation: Included in the 5-item Wainner 2005 CTS clinical prediction rule (LR 18.3 when all 5 positive; not validated) and recommended in the Erickson 2019 JOSPT CTS CPG ('Clinicians should assess and document patient age (older than 45 years), whether shaking their hands relieves their symptoms, sensory loss in the thumb, the wrist ratio index (greater than 0.67), and scores from the Boston Carpal Tunnel Questionnaire symptom severity scale (CTQ-SSS) (greater than 1.9). The presence of more than 3 of these clinical findings has shown acceptable diagnostic accuracy.').
+  metrics: Component of 5-item Wainner 2005 CPR (LR 18.3 when all 5 positive; not validated) and Erickson 2019 JOSPT CTS CPG (> 3 of 5 findings)
+  sources:
+  - text: Wainner 2005 Arch Phys Med Rehabil
+    url: https://doi.org/10.1016/j.apmr.2004.11.008
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: hand-elevation-test
+  title: Hand Elevation Test (Carpal Tunnel Syndrome)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=_6Bf_Rp_Vbk
+  video_title: 'Physiotutors: Hand Elevation Test | Carpal Tunnel Syndrome'
+  summary: Positional provocation test elevating both hands overhead to reduce capillary perfusion pressure in the median nerve and reproduce CTS symptoms.
+  steps:
+  - Instruct the patient to raise both arms completely overhead with the elbows and shoulders extended and wrists relaxed.
+  - Maintain the elevated position and monitor for reproduction of median-territory numbness or paraesthesia.
+  positive: Reproduction of paresthesia and numbness in the median nerve distribution of the hand.
+  interpretation: Clinical adjunct to carpal compression, Phalen's test, and the 5-item Wainner / JOSPT CPG cluster.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: darcy-cts-rational-exam
+  title: CTS Rational Clinical Exam — Katz Hand Diagram, Hypalgesia & Thumb Abduction
+  page: 4
+  type: test
+  review_status: approved
+  evidence: M
+  summary: 'Three highest-value individual physical examination findings from the JAMA Rational Clinical Examination systematic review (D''Arcy 2000): median-territory hypalgesia, Katz hand symptom diagram, and thumb abduction (APB) strength.'
+  steps:
+  - 'Katz hand diagram: have the patient shade the exact distribution of pain, numbness, and tingling on a hand diagram; classify as classic/probable (palmar thumb, index, middle ± ring) vs unlikely (no palmar involvement of digits 1–3).'
+  - 'Median-territory hypalgesia: compare pinprick sensation over the palmar aspect of the index/thumb with the ipsilateral little finger.'
+  - 'Thumb abduction strength (abductor pollicis brevis, APB): position the palm supinated and resist palmar abduction of the thumb perpendicular to the plane of the palm.'
+  positive: 'For CTS: hypalgesia in median territory LR 3.1 (2.0–5.1), classic / probable Katz hand diagram LR 2.4 (1.6–3.5), weak thumb abduction LR 1.8 (1.4–2.3). Against CTS: unlikely Katz diagram LR 0.2 (0.0–0.7), normal thumb abduction LR 0.5 (0.4–0.7).'
+  interpretation: 'D''Arcy 2000 (JAMA SR, 12 studies): best findings: hypalgesia in median territory LR 3.1 (2.0–5.1), classic / probable Katz hand diagram 2.4 (1.6–3.5), weak thumb abduction 1.8 (1.4–2.3); against CTS: unlikely Katz diagram LR 0.2 (0.0–0.7), normal thumb abduction 0.5 (0.4–0.7); Phalen, Tinel, nocturnal paraesthesia, thenar atrophy, 2-point / vibration / monofilament have little or no value.'
+  metrics: Hypalgesia LR 3.1 (2.0–5.1) · Classic/probable Katz diagram LR 2.4 (1.6–3.5); unlikely Katz diagram LR 0.2 (0.0–0.7) · Weak thumb abduction LR 1.8 (1.4–2.3); normal thumb abduction LR 0.5 (0.4–0.7) (D'Arcy 2000)
+  sources:
+  - text: D'Arcy 2000 JAMA
+    url: https://doi.org/10.1001/jama.283.23.3110
+- id: wainner-cts-cpr
+  title: Wainner Carpal Tunnel Syndrome Clinical Prediction Rule (5-Item Cluster)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=h136sLsCZcc
+  video_title: 'Physiotutors: Wainner Clinical Prediction Rule (CPR) | Carpal Tunnel Syndrome (CTS)'
+  summary: 5-item clinical prediction rule for carpal tunnel syndrome (Wainner 2005; not validated) and JOSPT 2019 CPG diagnostic cluster.
+  steps:
+  - 1. Ask whether shaking hands relieves symptoms (Flick sign).
+  - 2. Measure anteroposterior wrist depth divided by mediolateral wrist width at the distal wrist crease to check if wrist-ratio index > .67.
+  - 3. Score the Boston Carpal Tunnel Questionnaire Symptom Severity Scale (CTQ-SSS) to check if > 1.9.
+  - 4. Test pinprick sensation on the thumb (digit 1) compared with the little finger for reduced median sensory field of digit 1.
+  - 5. Document whether patient age > 45 years.
+  positive: All 5 items positive -> LR 18.3 (not validated); post-test probability changes up to 56% (Wainner 2005). Presence of more than 3 of 5 findings has shown acceptable diagnostic accuracy (Erickson 2019 JOSPT CTS CPG).
+  interpretation: 'Wainner 2005: 5 items: shaking hands relieves symptoms, wrist-ratio index > .67, Symptom Severity Scale > 1.9, reduced median sensory field of digit 1, age > 45; LR 18.3 when all 5 positive; post-test probability changes up to 56% (not validated). Erickson 2019 JOSPT CTS CPG: ''Clinicians should assess and document patient age (older than 45 years), whether shaking their hands relieves their symptoms, sensory loss in the thumb, the wrist ratio index (greater than 0.67), and scores from the Boston Carpal Tunnel Questionnaire symptom severity scale (CTQ-SSS) (greater than 1.9). The presence of more than 3 of these clinical findings has shown acceptable diagnostic accuracy.'''
+  metrics: '5 items positive: LR 18.3; post-test probability changes up to 56% (Wainner 2005, not validated) · > 3 of 5 findings: acceptable diagnostic accuracy (Erickson 2019 JOSPT CTS CPG)'
+  calculator:
+    kind: formula
+    decimals: 0
+    value_label: / 5 Wainner CTS cluster items positive
+    expr: c1 + c2 + c3 + c4 + c5
+    inputs:
+    - heading: Wainner 2005 CTS Cluster (5 checkboxes — tick all positive findings)
+    - key: c1
+      label: 1. Shaking hands relieves symptoms
+      type: check
+    - key: c2
+      label: 2. Wrist-ratio index > 0.67 (AP depth ÷ ML width at distal wrist crease)
+      type: check
+    - key: c3
+      label: 3. Boston Carpal Tunnel Questionnaire Symptom Severity Scale (CTQ-SSS) > 1.9
+      type: check
+    - key: c4
+      label: 4. Reduced median sensory field of digit 1 (sensory loss in the thumb)
+      type: check
+    - key: c5
+      label: 5. Age > 45 years
+      type: check
+    outputs:
+    - when: v === 5
+      text: LR 18.3 (not validated)
+      tone: bad
+    - when: v < 5
+      text: 'fewer than 5 positive — see JOSPT CPG (more than 3 of 5: acceptable accuracy)'
+      tone: warn
+  sources:
+  - text: Wainner 2005 Arch Phys Med Rehabil
+    url: https://doi.org/10.1016/j.apmr.2004.11.008
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: cts-6-graham
+  title: CTS-6 Diagnostic Criteria (Graham 2006)
+  page: 4
+  type: info
+  review_status: approved
+  evidence: L
+  summary: 'Delphi-derived weighted clinical diagnostic criteria for carpal tunnel syndrome (CTS-6: median numbness, nocturnal numbness, thenar atrophy/weakness, Phalen''s sign, loss of 2-point discrimination, Tinel sign).'
+  steps:
+  - Evaluate the patient across the 6 Delphi-derived clinical history and examination items.
+  - Use alongside the Wainner 5-item cluster and JOSPT 2019 CTS CPG diagnostic guidance.
+  positive: Delphi-derived weighted criteria correlate with expert clinician panel diagnosis (0.71, Graham 2006).
+  interpretation: 'Graham 2006: Delphi-derived weighted criteria; correlation with clinician panel 0.71.'
+  metrics: Correlation with clinician panel 0.71 (Graham 2006)
+  sources:
+  - text: Graham 2006 J Hand Surg Am
+    url: https://doi.org/10.1016/j.jhsa.2006.04.007
+- id: jospt-2019-cts-cpg
+  title: JOSPT 2019 Carpal Tunnel Syndrome Clinical Practice Guideline (Erickson et al.)
+  page: 4
+  type: info
+  review_status: approved
+  evidence: Guideline
+  summary: Verbatim clinical practice guideline recommendations for carpal tunnel syndrome diagnosis, orthoses, education, physical agents, ergonomics, manual therapy, and outcome measures (Erickson 2019 JOSPT CTS CPG).
+  steps:
+  - 'Diagnosis: ''Clinicians should assess and document patient age (older than 45 years), whether shaking their hands relieves their symptoms, sensory loss in the thumb, the wrist ratio index (greater than 0.67), and scores from the Boston Carpal Tunnel Questionnaire symptom severity scale (CTQ-SSS) (greater than 1.9). The presence of more than 3 of these clinical findings has shown acceptable diagnostic accuracy.'''
+  - 'Orthoses & education: ''Clinicians should recommend a neutral-positioned wrist orthosis worn at night for short-term symptom relief and functional improvement''; ''may suggest adjusting wear time to include daytime, symptomatic, or full-time use when night-only use is ineffective''; ''may add patient education on pathology, risk identification, symptom self-management, and postures/activities that aggravate symptoms''; ''should recommend an orthosis for women experiencing CTS during pregnancy''.'
+  - 'Physical agents & ergonomics: ''may recommend a trial of superficial heat''; ''may recommend the application of microwave or shortwave diathermy''; ''may offer a trial of interferential current''; ''may perform phonophoresis''; ''should not use low-level laser therapy or other types of nonlaser light therapy''; ''should not use thermal ultrasound''; ''should not use iontophoresis''; ''should not use or recommend the use of magnets''; ''may educate their patients regarding the effects of mouse use on carpal tunnel pressure''; ''may recommend keyboards with reduced strike force''.'
+  - 'Manual therapy: ''may perform manual therapy, directed at the cervical spine and upper extremity, for individuals with mild to moderate CTS in the short term''; ''may use a combined orthotic/stretching program in individuals with mild to moderate CTS who do not have thenar atrophy and have normal 2-point discrimination''.'
+  - 'Outcome measures: ''should use the CTQ-SSS to assess symptoms and the ... CTQ-FS or the ... DASH questionnaire to assess function''; ''should not use grip strength when assessing short-term (less than 3 months) change ... following CTR surgery''; ''should not use lateral pinch strength as an outcome measure''.'
+  positive: Guideline strength is indicated by the CPG's own verb ('should', 'may', 'should not').
+  interpretation: Erickson 2019 JOSPT CTS CPG provides evidence-based clinical practice recommendations across diagnosis, non-surgical care, and outcome measurement.
+  metrics: Guideline (Erickson 2019 JOSPT CTS CPG — 'should' / 'may' / 'should not')
+  sources:
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: what-test
+  title: WHAT Test (Wrist Hyperflexion and Abduction of the Thumb — De Quervain)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=FlFMFhrbWwM
+  video_title: 'Physiotutors: Wrist Hyperflexion Abduction of the Thumb / WHAT Test | De Quervain''s Disease'
+  summary: Active dynamic provocation test for de Quervain tenosynovitis combining maximal wrist hyperflexion with resisted thumb abduction/extension against the examiner's index finger.
+  steps:
+  - Ask the patient to hyperflex the wrist actively while holding the thumb in full abduction and extension.
+  - Apply gradual isometric resistance against the patient's thumb with your index finger until the patient can no longer hold the thumb against the resistance.
+  positive: Reproduction of sharp pain over the first dorsal extensor compartment (APL and EPB tendons) at the radial styloid.
+  interpretation: 'Goubau 2014 (n = 100, ultrasound reference): WHAT test Sn 0.99, Sp 0.29, PPV 0.95, NPV 0.67 — more accurate than Eichhoff''s test (often wrongly called Finkelstein''s).'
+  metrics: Sn 0.99, Sp 0.29, PPV 0.95, NPV 0.67 (Goubau 2014, n = 100, ultrasound reference)
+  sources:
+  - text: Goubau 2014 J Hand Surg Eur
+    url: https://doi.org/10.1177/1753193412475043
+- id: finkelstein-test
+  title: Finkelstein Test (De Quervain Tenosynovitis)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=8WBVXBx34W0
+  video_title: 'Physiotutors: Finkelstein Test | De Quervain''s Tenosynovitis'
+  summary: Classic passive thumb-traction and ulnar-deviation provocation test for de Quervain tenosynovitis of the first dorsal compartment (APL and EPB).
+  steps:
+  - Rest the ulnar border of the patient's forearm on the examination table with the hand hanging free off the edge in neutral.
+  - Grasp the patient's thumb and gently deviate the wrist and thumb palmarly/ulnarly, gliding the APL and EPB tendons through the first dorsal compartment.
+  positive: Reproduction of sharp pain over the radial styloid / first dorsal compartment.
+  interpretation: Goubau 2014 notes that Eichhoff's manoeuvre (clenching the thumb inside the fist) is often wrongly called Finkelstein's test, and that the active WHAT test (Sn 0.99, Sp 0.29, PPV 0.95, NPV 0.67) is more accurate than Eichhoff's test.
+  metrics: Compare with WHAT test Sn 0.99, Sp 0.29, PPV 0.95, NPV 0.67 (Goubau 2014)
+  sources:
+  - text: Goubau 2014 J Hand Surg Eur
+    url: https://doi.org/10.1177/1753193412475043
+- id: eichhoffs-test
+  title: Eichhoff's Test (De Quervain Tenosynovitis)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=l_9Suv0xhmY
+  video_title: 'Physiotutors: Eichhoff''s Test | De Quervain''s Tenosynovitis'
+  summary: Passive ulnar deviation of the wrist with the patient's thumb clenched inside the flexed fingers (frequently misnamed Finkelstein's test).
+  steps:
+  - Ask the patient to place the thumb across the palm and wrap the fingers tightly over the thumb.
+  - Stabilise the forearm and passively deviate the wrist into ulnar deviation.
+  positive: Pain over the first dorsal extensor compartment at the radial styloid.
+  interpretation: 'Goubau 2014 (n = 100, ultrasound reference): WHAT test Sn 0.99, Sp 0.29, PPV 0.95, NPV 0.67 — more accurate than Eichhoff''s test (often wrongly called Finkelstein''s).'
+  metrics: Less accurate than WHAT test (Sn 0.99, Sp 0.29, PPV 0.95, NPV 0.67; Goubau 2014)
+  sources:
+  - text: Goubau 2014 J Hand Surg Eur
+    url: https://doi.org/10.1177/1753193412475043
+- id: cmc-grind-test
+  title: Thumb CMC 1 Grind Test (Trapeziometacarpal Osteoarthritis)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=kaNVc4uHTI8
+  video_title: 'Physiotutors: Grind Test | CMC 1 Osteoarthritis'
+  summary: Axial compression and rotation of the first metacarpal on the trapezium to provoke pain and crepitus in thumb carpometacarpal osteoarthritis.
+  steps:
+  - Stabilise the patient's wrist and trapezium with one hand.
+  - Grasp the shaft of the first metacarpal and apply axial compressive load while gently rotating/circumducting the metacarpal base on the trapezium.
+  positive: Reproduction of localized pain and/or palpable crepitus at the first carpometacarpal (trapeziometacarpal) joint.
+  interpretation: 'Merritt 2010: κ 0.48; Sn 42% and 53%, Sp 80% and 93% (two testers); LR+ 2.65 and 6.00; LR− 0.59 and 0.62 — confirms thumb CMC OA when positive, but a negative test does not exclude.'
+  metrics: κ 0.48 · Sn 42% and 53%, Sp 80% and 93% (two testers) · LR+ 2.65 and 6.00, LR− 0.59 and 0.62 (Merritt 2010)
+  sources:
+  - text: Merritt 2010 J Hand Ther
+    url: https://doi.org/10.1016/j.jht.2010.02.001
+- id: ulnar-fovea-sign
+  title: Ulnar Fovea Sign (TFCC Foveal Disruption / Ulnotriquetral Injury)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: M
+  video_url: https://www.youtube.com/watch?v=sniIceE_hL8
+  video_title: 'Physiotutors: Fovea Sign | TFCC Lesions'
+  summary: Direct palpation of the ulnar fovea (soft spot between the ulnar styloid, flexor carpi ulnaris tendon, volar ulnar head, and pisiform) for TFCC foveal or ulnotriquetral ligament disruption.
+  steps:
+  - Position the patient's elbow flexed with the forearm in neutral rotation.
+  - Press the thumb tip firmly into the ulnar fovea depression between the ulnar styloid process posteriorly and the flexor carpi ulnaris tendon / pisiform anteriorly.
+  positive: Exquisite tenderness in the ulnar fovea that replicates the patient's deep ulnar-sided wrist pain compared with the contralateral side.
+  interpretation: 'Tay 2007 (arthroscopy reference): Sn 95.2%, Sp 86.5% for foveal disruption and / or ulnotriquetral ligament injury. Chang 2019 (ulnar fovea sign outcomes): non-surgical care: 54% improved pain; surgery: 83%.'
+  metrics: 'Sn 95.2%, Sp 86.5% for foveal disruption and/or ulnotriquetral ligament injury (Tay 2007) · Outcomes (Chang 2019): non-surgical 54% improved pain; surgery 83%'
+  sources:
+  - text: Tay 2007 J Hand Surg Am
+    url: https://doi.org/10.1016/j.jhsa.2007.01.022
+  - text: Chang 2019 J Hand Surg Asian Pac
+    url: https://doi.org/10.1142/s242483551950053x
+- id: tfcc-compression-test
+  title: TFCC Compression Test (TFCC Load Test)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=HnzhKMrmdVE
+  video_title: 'Physiotutors: TFCC Compression Test | Triangular Fibrocartilage Complex Lesions'
+  summary: Axial ulnar-deviation compression manoeuvre loading the triangular fibrocartilage complex between the ulnar head and ulnar carpus.
+  steps:
+  - Stabilise the distal forearm with one hand.
+  - Grasp the ulnar side of the hand, move the wrist into ulnar deviation, and apply axial compression across the ulnocarpal joint.
+  positive: Reproduction of ulnar-sided wrist pain or clicking at the ulnocarpal interval.
+  interpretation: Used alongside the ulnar fovea sign and the DRUJ test to evaluate TFCC pathology.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: ulnar-grinding-test
+  title: Ulnar Grinding Test (TFCC / Ulnocarpal Grind)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=KqpSLP4c45k
+  video_title: 'Physiotutors: Ulnar Grinding Test | TFCC Lesions'
+  summary: Combined ulnar deviation, axial compression, and circumduction/rotation of the carpus on the ulnar head to provoke TFCC tears or ulnocarpal impaction.
+  steps:
+  - Fixate the distal radius and ulna with one hand.
+  - Bring the wrist into dorsiflexion and ulnar deviation, apply axial load, and rotate/roll the carpus volarly and dorsally.
+  positive: Ulnar-sided wrist pain, crepitus, or catching during axial ulnar rotation.
+  interpretation: Evaluates mechanical shear across the TFCC disc and lunate/triquetral articular surfaces.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: druj-ballottement-test
+  title: DRUJ Test (Distal Radioulnar Joint Ballottement / Piano Key)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=nz53aeq-30k
+  video_title: 'Physiotutors: Distal Radioulnar Joint Test / DRUJ Test | Radioulnar Wrist Ligament Instability'
+  summary: Dorso-palmar shear translation of the distal ulna relative to the stabilised distal radius in neutral, pronation, and supination to assess DRUJ stability.
+  steps:
+  - Stabilise the distal radius and radiocarpal unit firmly with one hand.
+  - Grasp the distal ulnar head with the other hand and translate it dorsally and palmarly in neutral forearm rotation, then repeat in pronation and supination, comparing with the contralateral wrist.
+  positive: Excessive dorso-palmar laxity, clunk, or concordant ulnar wrist pain compared with the uninjured side.
+  interpretation: Evaluates integrity of the deep foveal radioulnar ligaments of the TFCC and DRUJ capsule.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: watson-scaphoid-shift-test
+  title: Watson Test (Scaphoid Shift Test — Scapholunate Instability)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=xBBUwsVi2-o
+  video_title: 'Physiotutors: Watson Test / Scaphoid Shift Test | Scapholunate Instability'
+  summary: Dynamic carpal stability test applying volar thumb pressure to the scaphoid tubercle while moving the wrist from ulnar to radial deviation.
+  steps:
+  - Position the patient's wrist in ulnar deviation and slight extension; place your thumb firmly over the volar scaphoid tubercle and your fingers dorsally over the scapholunate interval.
+  - Passively move the wrist from ulnar deviation into radial deviation and slight flexion while maintaining thumb pressure against the scaphoid tubercle (preventing normal scaphoid flexion).
+  - Release thumb pressure and feel for a dorsal-to-volar reduction clunk and dorsal scapholunate pain.
+  positive: Painful dorsal subluxation of the proximal scaphoid pole over the dorsal rim of the radius that reduces with a palpable clunk when thumb pressure is released.
+  interpretation: Always compare with the asymptomatic contralateral wrist to distinguish physiological laxity from symptomatic scapholunate ligament instability.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: lunotriquetral-ballottement-test
+  title: Lunotriquetral Ballottement Test (Reagan / Shuck Test)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=FU1gIwZF8mE
+  video_title: 'Physiotutors: Lunotriquetral Ballottement Test / Shuck Test | Wrist Ligament Instability'
+  summary: Dorso-palmar shear translation of the triquetrum-pisiform complex on the stabilised lunate to assess lunotriquetral interosseous ligament integrity.
+  steps:
+  - Pinch and stabilise the lunate between the thumb and index finger of one hand.
+  - Grasp the pisiform and triquetrum with the thumb and index finger of the other hand and translate the triquetrum dorsally and palmarly relative to the lunate.
+  positive: Reproduction of ulnar carpal pain, crepitus, or excessive laxity at the lunotriquetral interval compared with the contralateral wrist.
+  interpretation: Helps differentiate lunotriquetral ligament injury from TFCC or DRUJ pathology in ulnar-sided wrist pain.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: midcarpal-shift-test
+  title: Midcarpal Shift Test (Lichtman Test — Midcarpal Instability)
+  page: 4
+  type: test
+  review_status: approved
+  evidence: E
+  video_url: https://www.youtube.com/watch?v=t1byFHnFIEk
+  video_title: 'Physiotutors: MC / Midcarpal Test | Wrist Instability'
+  summary: Palmar translation, axial load, and ulnar deviation of the pronated wrist to reproduce the catch-up clunk of palmar midcarpal instability.
+  steps:
+  - Support the patient's forearm in pronation with the wrist in neutral.
+  - Apply a palmarly directed shear force to the distal capitate/hand with axial load while moving the wrist from radial into ulnar deviation.
+  positive: Palpable/audible painful catch-up clunk as the proximal carpal row snaps from flexion into extension during ulnar deviation, reproducing the patient's symptoms.
+  interpretation: Identifies dynamic midcarpal instability across the capitolunate and triquetrohamate articulations.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: prwe
+  title: PRWE (Patient-Rated Wrist Evaluation)
+  page: 4
+  type: info
+  review_status: approved
+  evidence: M
+  summary: 15 items (0–10 per item) evaluating wrist pain (5 pain items, 0–50) and functional disability (10 function items ÷ 2, 0–50) for a total score of 0–100.
+  steps:
+  - 'Pain subscale (5 pain items, each 0–10): at rest, doing a task with a repeated wrist movement, lifting a heavy object, when it is at its worst, and how often you have pain. Pain = sum of 5 pain items (0–50).'
+  - 'Function subscale (10 function items, each 0–10: specific activities + usual activities). Function = sum of 10 function items ÷ 2 (0–50).'
+  - Total score = Pain + Function (0–100, higher score = worse pain and disability).
+  positive: 'Surgical DRF (Huyke-Hernández 2023): MCID 43.1 (6 weeks) and 56.0 (12 weeks). Post-DRF 6-month psychological screen (Mahdavi 2022): PRWE pain or function ≥ 18/50 screens for pain catastrophizing, distress and fear (AUC ≥ 0.88).'
+  interpretation: 'MacDermid 1998: 15 items; test-retest ICC > 0.90. Huyke-Hernández 2023 (surgical DRF): mean 71.8 baseline -> 34.3 at 6 weeks -> 21.2 at 12 weeks; MCID 43.1 (6 weeks) and 56.0 (12 weeks). Mahdavi 2022 (DRF psychological screen): PRWE pain or function ≥ 18/50 at 6 months screens for pain catastrophizing, distress and fear (AUC ≥ 0.88).'
+  metrics: 'ICC > 0.90 (MacDermid 1998) · Surgical DRF MCID: 43.1 at 6 weeks, 56.0 at 12 weeks (Huyke-Hernández 2023) · 6-month DRF psychological screen: pain or function ≥ 18/50 (AUC ≥ 0.88, Mahdavi 2022)'
+  calculator:
+    kind: formula
+    decimals: 1
+    value_label: / 100 PRWE Total Score (Pain 0–50 + Function 0–50)
+    expr: (p1+p2+p3+p4+p5) + (f1+f2+f3+f4+f5+f6+f7+f8+f9+f10)/2
+    inputs:
+    - heading: Pain Subscale (5 pain items, 0–10 each; sum 0–50)
+    - key: p1
+      label: 1. Pain at rest
+      type: select
+      options: &id001
+      - - '0'
+        - 0 — No pain / no difficulty
+      - - '1'
+        - 1 — 1
+      - - '2'
+        - 2 — 2
+      - - '3'
+        - 3 — 3
+      - - '4'
+        - 4 — 4
+      - - '5'
+        - 5 — 5
+      - - '6'
+        - 6 — 6
+      - - '7'
+        - 7 — 7
+      - - '8'
+        - 8 — 8
+      - - '9'
+        - 9 — 9
+      - - '10'
+        - 10 — Worst pain / unable to do
+    - key: p2
+      label: 2. Pain when doing a task with a repeated wrist movement
+      type: select
+      options: *id001
+    - key: p3
+      label: 3. Pain when lifting a heavy object
+      type: select
+      options: *id001
+    - key: p4
+      label: 4. Pain when it is at its worst
+      type: select
+      options: *id001
+    - key: p5
+      label: 5. How often do you have pain? (0 = never, 10 = always)
+      type: select
+      options: *id001
+    - heading: Function Subscale — Specific & Usual Activities (10 function items, 0–10 each; sum ÷ 2 = 0–50)
+    - key: f1
+      label: 6. Turn a door knob using my affected hand
+      type: select
+      options: *id001
+    - key: f2
+      label: 7. Cut meat using a knife in my affected hand
+      type: select
+      options: *id001
+    - key: f3
+      label: 8. Fasten buttons on my shirt
+      type: select
+      options: *id001
+    - key: f4
+      label: 9. Use my affected hand to push up from a chair
+      type: select
+      options: *id001
+    - key: f5
+      label: 10. Carry a 10lb object in my affected hand
+      type: select
+      options: *id001
+    - key: f6
+      label: 11. Use bathroom tissue with my affected hand
+      type: select
+      options: *id001
+    - key: f7
+      label: 12. Personal care activities (dressing, washing)
+      type: select
+      options: *id001
+    - key: f8
+      label: 13. Household work (cleaning, maintenance)
+      type: select
+      options: *id001
+    - key: f9
+      label: 14. Work (your job or usual everyday work)
+      type: select
+      options: *id001
+    - key: f10
+      label: 15. Recreational activities
+      type: select
+      options: *id001
+    outputs:
+    - when: v >= 0
+      text: 'Pain Subscale: {p1+p2+p3+p4+p5|1} / 50 · Function Subscale: {(f1+f2+f3+f4+f5+f6+f7+f8+f9+f10)/2|1} / 50 · Total Score: {v|1} / 100 · Surgical DRF MCID (Huyke-Hernández 2023): 43.1 (6 weeks) and 56.0 (12 weeks) · DRF 6-month screen (Mahdavi 2022): pain or function ≥ 18/50 screens for pain catastrophizing, distress and fear (AUC ≥ 0.88)'
+      tone: good
+  sources:
+  - text: MacDermid 1998 J Orthop Trauma
+    url: https://doi.org/10.1097/00005131-199811000-00009
+  - text: Huyke-Hernández 2023 Injury
+    url: https://doi.org/10.1016/j.injury.2023.110959
+  - text: Mahdavi 2022 Musculoskelet Sci Pract
+    url: https://doi.org/10.1016/j.msksp.2021.102474
+- id: bctq
+  title: BCTQ (Boston Carpal Tunnel Questionnaire — CTQ-SSS & CTQ-FS)
+  page: 4
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Condition-specific carpal tunnel outcome measure comprising the Symptom Severity Scale (mean of 11 items, 1–5) and Functional Status Scale (mean of 8 items, 1–5).
+  steps:
+  - 'Symptom Severity Scale (CTQ-SSS): rate 11 items from 1 (normal / no symptoms) to 5 (very severe) and compute the mean (sum ÷ 11).'
+  - 'Functional Status Scale (CTQ-FS): rate 8 hand-function tasks from 1 (no difficulty) to 5 (cannot perform) and compute the mean (sum ÷ 8).'
+  - 'JOSPT CTS CPG (Erickson 2019): ''should use the CTQ-SSS to assess symptoms and the ... CTQ-FS or the ... DASH questionnaire to assess function''; CTQ-SSS > 1.9 is one of the 5 diagnostic cluster items.'
+  positive: 'Women with CTS (López-de-Uralde-Villanueva 2024): MCID 0.64 for Symptom Severity Scale (CTQ-SSS) and 0.23 for Functional Status Scale (CTQ-FS). Diagnostic cluster threshold: CTQ-SSS > 1.9 (Wainner 2005 / Erickson 2019).'
+  interpretation: 'López-de-Uralde-Villanueva 2024 (women with CTS): MCID: NPRS 1.5 (mean) and 2.5 (worst pain); BCTQ 0.23 (functional status) and 0.64 (symptom severity). Erickson 2019 JOSPT CTS CPG: ''should use the CTQ-SSS to assess symptoms and the ... CTQ-FS or the ... DASH questionnaire to assess function''.'
+  metrics: 'MCID in women with CTS (López-de-Uralde-Villanueva 2024): BCTQ 0.23 (functional status) and 0.64 (symptom severity) · Diagnostic threshold CTQ-SSS > 1.9 (Wainner 2005 / Erickson 2019)'
+  calculator:
+    kind: formula
+    decimals: 2
+    value_label: / 5.00 BCTQ Symptom Severity Scale (CTQ-SSS, mean of 11 items)
+    expr: (s1+s2+s3+s4+s5+s6+s7+s8+s9+s10+s11)/11
+    inputs:
+    - heading: Symptom Severity Scale — CTQ-SSS (11 items, 1–5 each; mean = sum ÷ 11)
+    - key: s1
+      label: 1. Hand or wrist pain at night — severity
+      type: select
+      options: &id002
+      - - '1'
+        - 1 — None / normal / no difficulty
+      - - '2'
+        - 2 — Mild / slight
+      - - '3'
+        - 3 — Moderate / medium
+      - - '4'
+        - 4 — Severe
+      - - '5'
+        - 5 — Very severe / cannot perform
+    - key: s2
+      label: 2. Frequency hand/wrist pain woke you at night
+      type: select
+      options: *id002
+    - key: s3
+      label: 3. Hand or wrist pain during the daytime — severity
+      type: select
+      options: *id002
+    - key: s4
+      label: 4. Frequency of daytime pain
+      type: select
+      options: *id002
+    - key: s5
+      label: 5. Duration of a daytime pain episode
+      type: select
+      options: *id002
+    - key: s6
+      label: 6. Numbness (loss of sensation) in your hand
+      type: select
+      options: *id002
+    - key: s7
+      label: 7. Weakness in your hand or wrist
+      type: select
+      options: *id002
+    - key: s8
+      label: 8. Tingling sensations in your hand
+      type: select
+      options: *id002
+    - key: s9
+      label: 9. Severity of numbness or tingling at night
+      type: select
+      options: *id002
+    - key: s10
+      label: 10. Frequency numbness or tingling woke you up
+      type: select
+      options: *id002
+    - key: s11
+      label: 11. Difficulty grasping and using small objects (keys, pens)
+      type: select
+      options: *id002
+    - heading: Functional Status Scale — CTQ-FS (8 items, 1–5 each; mean = sum ÷ 8)
+    - key: f1
+      label: 1. Writing
+      type: select
+      options: *id002
+    - key: f2
+      label: 2. Buttoning of clothes
+      type: select
+      options: *id002
+    - key: f3
+      label: 3. Holding a book while reading
+      type: select
+      options: *id002
+    - key: f4
+      label: 4. Gripping of a telephone handle
+      type: select
+      options: *id002
+    - key: f5
+      label: 5. Opening of jars
+      type: select
+      options: *id002
+    - key: f6
+      label: 6. Household chores
+      type: select
+      options: *id002
+    - key: f7
+      label: 7. Carrying of grocery basket
+      type: select
+      options: *id002
+    - key: f8
+      label: 8. Bathing and dressing
+      type: select
+      options: *id002
+    outputs:
+    - when: v >= 0
+      text: 'Symptom Severity Scale (CTQ-SSS, 11 items): {v|2} / 5.00 (MCID = 0.64 in women with CTS, López-de-Uralde-Villanueva 2024; Wainner / JOSPT CPG diagnostic threshold > 1.9) · Functional Status Scale (CTQ-FS, 8 items): {(f1+f2+f3+f4+f5+f6+f7+f8)/8|2} / 5.00 (MCID = 0.23 in women with CTS, López-de-Uralde-Villanueva 2024)'
+      tone: good
+  sources:
+  - text: López-de-Uralde-Villanueva 2024 Arch Phys Med Rehabil
+    url: https://doi.org/10.1016/j.apmr.2023.07.018
+  - text: Wainner 2005 Arch Phys Med Rehabil
+    url: https://doi.org/10.1016/j.apmr.2004.11.008
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: quickdash
+  title: QuickDASH / DASH (Upper Extremity Disability Scale)
+  page: 4
+  type: info
+  review_status: approved
+  evidence: M
+  summary: 11 items (scored 1–5; at least 10 items answered) transformed via ((sum ÷ n) − 1) × 25 to a 0–100 upper-limb disability score.
+  steps:
+  - Rate 11 upper-extremity symptom and function items from 1 (no difficulty/none) to 5 (unable/extreme). At least 10 items must be answered.
+  - Compute Score = ((sum ÷ n) − 1) × 25 (0–100, higher = greater disability).
+  - Compare change against Franchignoni 2014 upper-limb MDC90 and MCID benchmarks.
+  positive: Upper-limb change exceeding MDC90 12.85 / MCID 15.91 for QuickDASH, or MDC90 10.81 / MCID 10.83 for DASH (Franchignoni 2014).
+  interpretation: 'Franchignoni 2014 (upper limb): ICC 0.91 / 0.93; MDC90 12.85 / 10.81; MCID 15.91 (QuickDASH) and 10.83 (DASH). Erickson 2019 JOSPT CTS CPG: ''should use the CTQ-SSS to assess symptoms and the ... CTQ-FS or the ... DASH questionnaire to assess function''.'
+  metrics: ICC 0.91 (QuickDASH) / 0.93 (DASH) · MDC90 12.85 (QuickDASH) / 10.81 (DASH) · MCID 15.91 (QuickDASH) and 10.83 (DASH) (Franchignoni 2014)
+  calculator:
+    kind: formula
+    decimals: 1
+    value_label: / 100 QuickDASH Score (0–100, at least 10 items answered)
+    expr: '(((q1>0)+(q2>0)+(q3>0)+(q4>0)+(q5>0)+(q6>0)+(q7>0)+(q8>0)+(q9>0)+(q10>0)+(q11>0)) >= 10) ? ((((q1+q2+q3+q4+q5+q6+q7+q8+q9+q10+q11) / ((q1>0)+(q2>0)+(q3>0)+(q4>0)+(q5>0)+(q6>0)+(q7>0)+(q8>0)+(q9>0)+(q10>0)+(q11>0))) - 1) * 25) : NaN'
+    inputs:
+    - heading: QuickDASH Items (11 items, 1–5 each; answer at least 10 items)
+    - key: q1
+      label: 1. Open a tight or new jar
+      type: select
+      options: &id003
+      - - '0'
+        - — Not answered —
+      - - '1'
+        - 1 — No difficulty / none
+      - - '2'
+        - 2 — Mild difficulty / mild
+      - - '3'
+        - 3 — Moderate difficulty / moderate
+      - - '4'
+        - 4 — Severe difficulty / severe
+      - - '5'
+        - 5 — Unable / extreme
+    - key: q2
+      label: 2. Do heavy household chores
+      type: select
+      options: *id003
+    - key: q3
+      label: 3. Carry a shopping bag or briefcase
+      type: select
+      options: *id003
+    - key: q4
+      label: 4. Wash your back
+      type: select
+      options: *id003
+    - key: q5
+      label: 5. Use a knife to cut food
+      type: select
+      options: *id003
+    - key: q6
+      label: 6. Recreational activities with force/impact through arm, shoulder or hand
+      type: select
+      options: *id003
+    - key: q7
+      label: 7. Interference with normal social activities during past week
+      type: select
+      options: *id003
+    - key: q8
+      label: 8. Limitation in work or regular daily activities during past week
+      type: select
+      options: *id003
+    - key: q9
+      label: 9. Arm, shoulder or hand pain
+      type: select
+      options: *id003
+    - key: q10
+      label: 10. Tingling (pins and needles) in your arm, shoulder or hand
+      type: select
+      options: *id003
+    - key: q11
+      label: 11. Difficulty sleeping because of pain in your arm, shoulder or hand
+      type: select
+      options: *id003
+    outputs:
+    - when: v >= 0
+      text: 'QuickDASH Score: {v|1} / 100 · Franchignoni 2014 (upper limb): ICC 0.91 / 0.93; MDC90 12.85 (QuickDASH) / 10.81 (DASH); MCID 15.91 (QuickDASH) and 10.83 (DASH)'
+      tone: good
+  sources:
+  - text: Franchignoni 2014 JOSPT
+    url: https://doi.org/10.2519/jospt.2014.4893
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: mhq-score
+  title: MHQ (Michigan Hand Outcomes Questionnaire)
+  page: 4
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Hand-specific outcome instrument evaluating overall hand function, activities of daily living, work performance, pain, aesthetics, and patient satisfaction.
+  steps:
+  - Administer the MHQ across its separate domains.
+  - In older adults after distal radius fracture, interpret domain scores rather than the summary score (Jayaram 2021).
+  positive: In older adults after DRF, five domains fit the Rasch model; interpret domain scores rather than the summary score (Jayaram 2021).
+  interpretation: 'Jayaram 2021 (older adults after DRF): five domains fit Rasch model; interpret domain scores rather than the summary score.'
+  metrics: Five domains fit Rasch model; interpret domain scores rather than the summary score (Jayaram 2021)
+  sources:
+  - text: Jayaram 2021 Plast Reconstr Surg
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8462015/
+    free_full_text: true
+- id: auscan-index
+  title: AUSCAN (Australian Canadian Osteoarthritis Hand Index)
+  page: 4
+  type: info
+  review_status: approved
+  evidence: E
+  summary: Disease-specific self-report instrument for hand osteoarthritis evaluating hand pain, morning/rest stiffness, and physical function.
+  steps:
+  - Administer the AUSCAN pain, stiffness, and physical function items at baseline and follow-up in patients with hand or thumb CMC osteoarthritis.
+  - Track longitudinal score changes alongside grip/pinch strength and patient-nominated functional goals.
+  positive: Reduction in AUSCAN pain, stiffness, and function subscale scores over rehabilitation.
+  interpretation: Condition-specific outcome tool for hand osteoarthritis.
+  metrics: Expert clinical assessment (E)
+  sources: []
+- id: nprs
+  title: NPRS (Numeric Pain Rating Scale 0–10)
+  page: 4
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Unidimensional 0–10 numeric pain intensity scale for wrist/hand pain, with verified MCID benchmarks (mean and worst pain) in women with carpal tunnel syndrome.
+  steps:
+  - Ask the patient to rate current, mean, and worst pain on a 0–10 scale.
+  - 'Compare change in women with CTS against López-de-Uralde-Villanueva 2024 MCIDs: 1.5 (mean pain) and 2.5 (worst pain).'
+  positive: 'In women with CTS (López-de-Uralde-Villanueva 2024): MCID 1.5 for mean pain and 2.5 for worst pain.'
+  interpretation: 'López-de-Uralde-Villanueva 2024 (women with CTS): MCID: NPRS 1.5 (mean) and 2.5 (worst pain); BCTQ 0.23 (functional status) and 0.64 (symptom severity).'
+  metrics: 'MCID in women with CTS (López-de-Uralde-Villanueva 2024): 1.5 (mean pain) and 2.5 (worst pain)'
+  calculator:
+    kind: scale
+    items: 1
+    min: 0
+    max: 10
+    step: 1
+    aggregate: sum
+    decimals: 0
+    value_label: / 10 NPRS Pain Rating
+    item_labels:
+    - Current wrist / hand pain (0 = no pain, 10 = worst imaginable pain)
+  sources:
+  - text: López-de-Uralde-Villanueva 2024 Arch Phys Med Rehabil
+    url: https://doi.org/10.1016/j.apmr.2023.07.018
+- id: psfs
+  title: PSFS (Patient-Specific Functional Scale)
+  page: 4
+  type: info
+  review_status: approved
+  evidence: E
+  summary: Patient-nominated activity scale rating 3 to 5 important wrist/hand tasks on a 0–10 scale (0 = unable to perform, 10 = able to perform at prior level).
+  steps:
+  - Ask the patient to identify up to 5 important wrist/hand activities they are having difficulty performing.
+  - Rate each activity from 0 (unable to perform) to 10 (able to perform at prior level) and compute the average of the rated items.
+  positive: Increase in mean PSFS score across follow-up visits.
+  interpretation: Individualised functional goal tracking across rehabilitation.
+  metrics: Average of 0–10 items (E)
+  calculator:
+    kind: formula
+    decimals: 1
+    value_label: / 10 PSFS Mean Score (average of rated 0–10 items)
+    expr: ((a1>=0?a1:0)+(a2>=0?a2:0)+(a3>=0?a3:0)+(a4>=0?a4:0)+(a5>=0?a5:0)) / ((a1>=0)+(a2>=0)+(a3>=0)+(a4>=0)+(a5>=0))
+    inputs:
+    - heading: Rate 3 to 5 patient-nominated activities (0–10 each)
+    - key: a1
+      label: Activity 1 (0–10)
+      type: select
+      options:
+      - &id004
+        - '0'
+        - 0 — Unable to perform
+      - &id005
+        - '1'
+        - 1 — 1
+      - &id006
+        - '2'
+        - 2 — 2
+      - &id007
+        - '3'
+        - 3 — 3
+      - &id008
+        - '4'
+        - 4 — 4
+      - &id009
+        - '5'
+        - 5 — 5
+      - &id010
+        - '6'
+        - 6 — 6
+      - &id011
+        - '7'
+        - 7 — 7
+      - &id012
+        - '8'
+        - 8 — 8
+      - &id013
+        - '9'
+        - 9 — 9
+      - &id014
+        - '10'
+        - 10 — Able to perform at prior level
+    - key: a2
+      label: Activity 2 (0–10)
+      type: select
+      options:
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+    - key: a3
+      label: Activity 3 (0–10)
+      type: select
+      options:
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+    - key: a4
+      label: Activity 4 (optional, 0–10)
+      type: select
+      options: &id015
+      - - '-1'
+        - — Not used —
+      - *id004
+      - *id005
+      - *id006
+      - *id007
+      - *id008
+      - *id009
+      - *id010
+      - *id011
+      - *id012
+      - *id013
+      - *id014
+    - key: a5
+      label: Activity 5 (optional, 0–10)
+      type: select
+      options: *id015
+    outputs:
+    - when: v >= 0
+      text: 'PSFS Mean Score: {v|1} / 10 across {(a1>=0)+(a2>=0)+(a3>=0)+(a4>=0)+(a5>=0)|0} nominated activities'
+      tone: good
+  sources: []
+- id: drf-surgical-fixation-rehab
+  title: Distal Radius Fracture — Fixation Trials (WRIST, DRAFFT) & Rehabilitation
+  page: 5
+  type: info
+  review_status: approved
+  evidence: H
+  summary: Evidence from landmark distal radius fracture fixation trials (WRIST, DRAFFT 1-year and 5-year) and post-fracture rehabilitation trials (Handoll, Kay, Laohaprasitiporn, Gutiérrez-Espinoza).
+  steps:
+  - POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  - 'Fixation trials: WRIST (Chung 2020, ≥ 60 years) showed 12-month MHQ volar plate vs external fixation 3 points (97.5% CL −6.0 to 11.5), vs pinning −0.14 (−9.2 to 8.9); at 6 weeks plate was better than external fixation by 19, pinning by 11, casting by 7 (p = 0.03), with malunion in 48% of casting participants. DRAFFT (Costa 2014, n = 461; Costa 2019 5-year) showed no clinically relevant PRWE difference between K-wires and volar plate at 3, 6, 12 months, or 5 years.'
+  - 'Rehabilitation: Handoll 2015 (Cochrane, 26 trials) found ''not enough evidence available to determine the best form of rehabilitation for people with wrist fractures''. Kay 2008 found an advice and exercise program gave ''some additional benefits over no intervention''. Laohaprasitiporn 2022 (n = 48) found no significant differences in function, radiographs or complications between early and delayed motion after volar plate. Gutiérrez-Espinoza 2022 found exercise + MWM vs exercise at 12 weeks improved PRWE −10.2 (p = 0.02) and DASH −9.86 (p = 0.0001), and manual lymph drainage reduced oedema (−17.96 ml at 17–21 days).'
+  positive: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  interpretation: 'Chung 2020 (WRIST, ≥ 60 years): 12-month MHQ volar plate vs external fixation 3 points (97.5% CL −6.0 to 11.5), vs pinning −0.14 (−9.2 to 8.9); at 6 weeks plate better than external fixation by 19, pinning by 11, casting by 7 (p = 0.03); malunion in 48% of casting participants. Costa 2014 (DRAFFT, n = 461): no clinically relevant PRWE difference at 3, 6 or 12 months (−1.3, −4.5 to 1.8; P = 0.40); DASH at 12 months −3.2 (−6.5 to 0.0). Costa 2019 (DRAFFT 5-year): PRWE 8.3 (wires) vs 11.3 (plate) (−6.99 to 0.99; p = 0.139) — no clinically relevant difference. Handoll 2015 (Cochrane, 26 trials): ''not enough evidence available to determine the best form of rehabilitation for people with wrist fractures''. Kay 2008: advice and exercise program gave ''some additional benefits over no intervention''. Laohaprasitiporn 2022 (n = 48): early vs delayed motion after volar plate — no significant differences in function, radiographs or complications. Gutiérrez-Espinoza 2022: exercise + MWM vs exercise at 12 weeks PRWE −10.2 (p = 0.02), DASH −9.86 (p = 0.0001); manual lymph drainage reduced oedema (e.g. −17.96 ml at 17–21 days).'
+  metrics: 'WRIST (Chung 2020): 6-wk MHQ plate +19 vs ex-fix, +11 vs pinning, +7 vs cast (p = 0.03); cast malunion 48% · DRAFFT (Costa 2014 / 2019): 12-mo PRWE −1.3 (−4.5 to 1.8, P = 0.40); 5-yr PRWE 8.3 vs 11.3 (−6.99 to 0.99, p = 0.139) · Gutiérrez-Espinoza 2022: MWM + exercise PRWE −10.2 (p = 0.02), DASH −9.86 (p = 0.0001); MLD oedema −17.96 ml at 17–21 days'
+  sources:
+  - text: Chung 2020 Plast Reconstr Surg
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7255928/
+    free_full_text: true
+  - text: Costa 2014 BMJ
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4122170/
+    free_full_text: true
+  - text: Costa 2019 Bone Joint J
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6681675/
+    free_full_text: true
+  - text: Handoll 2015 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9250132/
+    free_full_text: true
+  - text: Kay 2008 Aust J Physiother
+    url: https://doi.org/10.1016/s0004-9514(08)70004-7
+  - text: Laohaprasitiporn 2022 Sci Rep
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9187720/
+    free_full_text: true
+  - text: Gutiérrez-Espinoza 2022 J Man Manip Ther
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8865096/
+    free_full_text: true
+- id: cts-surgical-release-rehab
+  title: Carpal Tunnel Release — Surgical Trials & Post-Operative Rehabilitation
+  page: 5
+  type: info
+  review_status: approved
+  evidence: H
+  summary: Evidence comparing carpal tunnel release against night splinting and non-surgical therapy (Gerritsen 2002, Jarvik 2009) and Cochrane review of post-operative rehabilitation (Peters 2016).
+  steps:
+  - POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  - 'Surgery vs night splint (Gerritsen 2002, n = 176): success at 3 months 80% vs 54% (difference 26%, 12–40%); at 18 months 90% vs 75% (15%, 3–27%).'
+  - 'Surgery vs non-surgical therapy without denervation (Jarvik 2009): ''surgery is useful for patients with carpal tunnel syndrome without denervation''.'
+  - 'Post-operative rehabilitation (Peters 2016 Cochrane, 22 trials, 1521 pts): limited, low-quality evidence; decision ''should be based on the clinician''s expertise, the patient''s preferences and the context''.'
+  positive: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  interpretation: 'Gerritsen 2002 (RCT, n = 176): success at 3 months 80% vs 54% (difference 26%, 12–40%); at 18 months 90% vs 75% (15%, 3–27%). Jarvik 2009 (RCT, no denervation): ''surgery is useful for patients with carpal tunnel syndrome without denervation''. Peters 2016 (Cochrane, 22 trials, 1521 pts): limited, low-quality evidence; decision ''should be based on the clinician''s expertise, the patient''s preferences and the context''.'
+  metrics: 'Surgery vs night splint (Gerritsen 2002, n = 176): 3-mo success 80% vs 54% (diff 26%, 12–40%); 18-mo 90% vs 75% (15%, 3–27%) · Rehab after release (Peters 2016, 22 trials, 1521 pts): limited, low-quality evidence'
+  sources:
+  - text: Gerritsen 2002 JAMA
+    url: https://doi.org/10.1001/jama.288.10.1245
+  - text: Jarvik 2009 Lancet
+    url: https://doi.org/10.1016/S0140-6736(09)61517-8
+  - text: Peters 2016 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10493644/
+    free_full_text: true
+- id: scaphoid-fracture-swifft
+  title: Scaphoid Waist Fracture — Surgery vs Cast (SWIFFT Trial)
+  page: 5
+  type: info
+  review_status: approved
+  evidence: H
+  summary: Multicentre randomised trial (SWIFFT, Dias 2020) comparing surgical screw fixation against cast immobilisation with early fixation of non-unions for bicortical scaphoid waist fractures.
+  steps:
+  - POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  - In bicortical scaphoid waist fractures (Dias 2020 SWIFFT, n = 439), there was no significant PRWE difference at 52 weeks between primary surgery and cast immobilisation (surgery adjusted mean 11·9, 9·2–14·5).
+  positive: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  interpretation: 'Dias 2020 (SWIFFT, n = 439): no significant PRWE difference at 52 weeks (surgery adjusted mean 11·9, 9·2–14·5).'
+  metrics: 'SWIFFT (Dias 2020, n = 439): no significant PRWE difference at 52 weeks (surgery adjusted mean 11·9, 9·2–14·5)'
+  sources:
+  - text: Dias 2020 Lancet
+    url: https://doi.org/10.1016/S0140-6736(20)30931-4
+- id: flexor-tendon-repair-rehab
+  title: Flexor Tendon Repair — Early Passive vs Early Active Motion Protocols
+  page: 5
+  type: info
+  review_status: approved
+  evidence: M
+  summary: Systematic review of 34 studies (Starr 2013) comparing rupture and range-of-motion restriction rates between early passive motion and early active motion protocols after flexor tendon repair.
+  steps:
+  - POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  - Follow the operating surgeon's exact tendon-zone repair protocol and orthosis protection instructions.
+  - 'Compare complication profiles (Starr 2013, SR of 34 studies): early passive motion had rupture 4% and reduced ROM 9%; early active motion had rupture 5% and reduced ROM 6%.'
+  positive: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  interpretation: 'Starr 2013 (SR, 34 studies): early passive motion: rupture 4%, reduced ROM 9%; early active motion: rupture 5%, reduced ROM 6%.'
+  metrics: 'Early passive motion: rupture 4%, reduced ROM 9% · Early active motion: rupture 5%, reduced ROM 6% (Starr 2013, 34 studies)'
+  sources:
+  - text: Starr 2013 J Hand Surg Am
+    url: https://doi.org/10.1016/j.jhsa.2013.06.025
+- id: thumb-cmc-oa-surgery
+  title: Thumb CMC OA Surgery — Trapeziectomy vs LRTI (Cochrane Review)
+  page: 5
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Cochrane systematic review of 11 RCTs (Wajon 2015) comparing trapeziectomy with ligament reconstruction and tendon interposition (LRTI) against trapeziectomy alone.
+  steps:
+  - POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  - 'Wajon 2015 (Cochrane, 11 RCTs): LRTI vs trapeziectomy alone showed pain −2.8 mm (−9.8 to 4.2) and adverse events 19 vs 10 per 100 (RR 1.89, 0.96–3.73) — LRTI may add nothing.'
+  positive: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  interpretation: 'Wajon 2015 (Cochrane, 11 RCTs): LRTI vs trapeziectomy alone: pain −2.8 mm (−9.8 to 4.2); adverse events 19 vs 10 per 100 (RR 1.89, 0.96–3.73) — LRTI may add nothing.'
+  metrics: 'LRTI vs trapeziectomy alone (Wajon 2015, 11 RCTs): pain −2.8 mm (−9.8 to 4.2); adverse events 19 vs 10 per 100 (RR 1.89, 0.96–3.73)'
+  sources:
+  - text: Wajon 2015 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6464627/
+    free_full_text: true
+- id: trigger-finger-release-injection
+  title: Trigger Finger — Open / Percutaneous A1 Release & Steroid Injection
+  page: 5
+  type: info
+  review_status: approved
+  evidence: M
+  summary: Randomised trials comparing percutaneous and open A1 pulley release against corticosteroid injection (Sato 2012, Zyluk 2011) and Cochrane review of steroid + lidocaine injection (Peters-Veluthamaningal 2009).
+  steps:
+  - POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  - 'For non-operative injection (Peters-Veluthamaningal 2009 Cochrane, 2 RCTs): steroid + lidocaine is superior to lidocaine alone (''silver'' level evidence).'
+  - 'For surgical vs injection comparison (Sato 2012; Zyluk 2011): percutaneous and open release are similar and superior to steroid injection for cure and relapse; percutaneous release has lower recurrence than injection.'
+  positive: Percutaneous and open release similar and superior to steroid injection for cure and relapse; steroid + lidocaine superior to lidocaine alone ('silver' level evidence).
+  interpretation: 'Sato 2012 & Zyluk 2011 (RCTs): percutaneous and open release similar and superior to steroid injection for cure and relapse; percutaneous release lower recurrence than injection. Peters-Veluthamaningal 2009 (Cochrane, 2 RCTs): steroid + lidocaine superior to lidocaine alone (''silver'' level evidence).'
+  metrics: 'Release vs injection (Sato 2012; Zyluk 2011): percutaneous and open release similar and superior to steroid injection for cure and relapse · Steroid + lidocaine > lidocaine alone (''silver'' level evidence, Peters-Veluthamaningal 2009)'
+  sources:
+  - text: Sato 2012 Rheumatology
+    url: https://doi.org/10.1093/rheumatology/ker315
+  - text: Zyluk 2011 J Hand Surg Eur
+    url: https://doi.org/10.1177/1753193410381824
+  - text: Peters-Veluthamaningal 2009 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12671840/
+    free_full_text: true
+- id: crps-prevention-vitamin-c
+  title: CRPS Prevention After Wrist Fracture — Vitamin C & Cast-Complaint Risk
+  page: 5
+  type: info
+  review_status: approved
+  evidence: M
+  summary: Evidence on vitamin C prophylaxis after wrist fracture (Zollinger 2007 RCT vs Evaniew 2015 meta-analysis) and the prognostic risk of early cast-related complaints.
+  steps:
+  - Screen every immobilised wrist fracture patient for early cast-related complaints (tightness, burning pain, paraesthesia, pressure), which strongly predicted CRPS in Zollinger 2007 (RR 5.35, 2.13–13.42).
+  - 'Weigh conflicting vitamin C evidence: Zollinger 2007 (RCT, 416 pts) found CRPS 2.4% vitamin C vs 10.1% placebo (p = 0.002) and 1.8% with 500 mg (RR 0.17, 0.04–0.77), whereas the Evaniew 2015 meta-analysis (3 RCTs) ''fails to demonstrate a significant benefit''.'
+  positive: Early cast-related complaints predicted CRPS (RR 5.35, 2.13–13.42, Zollinger 2007) -> immediate cast check and neurovascular review.
+  interpretation: 'Zollinger 2007 (RCT, 416 pts): CRPS 2.4% vitamin C vs 10.1% placebo (p = 0.002); 500 mg: 1.8% (RR 0.17, 0.04–0.77); early cast-related complaints predicted CRPS (RR 5.35, 2.13–13.42). Evaniew 2015 (MA, 3 RCTs): ''fails to demonstrate a significant benefit''.'
+  metrics: 'Zollinger 2007 (416 pts): CRPS 2.4% vitamin C vs 10.1% placebo (p = 0.002); 500 mg 1.8% (RR 0.17, 0.04–0.77); cast complaints RR 5.35 (2.13–13.42) · Evaniew 2015 (MA, 3 RCTs): ''fails to demonstrate a significant benefit'''
+  sources:
+  - text: Zollinger 2007 J Bone Joint Surg Am
+    url: https://doi.org/10.2106/JBJS.F.01147
+  - text: Evaniew 2015 J Orthop Trauma
+    url: https://doi.org/10.1097/BOT.0000000000000305
+- id: cts-corticosteroid-injection
+  title: Carpal Tunnel Syndrome — Corticosteroid Injection (Short-, 1-Year & 5-Year Outcomes)
+  page: 6
+  type: info
+  review_status: approved
+  evidence: H
+  summary: Cochrane review (Marshall 2007) and placebo-controlled methylprednisolone RCT at 10 weeks, 1 year (Atroshi 2013), and 5 years (Hofer 2021) in carpal tunnel syndrome.
+  steps:
+  - Counsel patients that local corticosteroid injection improves symptom scores at 10 weeks (−0.64 for 80 mg and −0.88 for 40 mg vs placebo), with no difference in symptom score at 1 year (Atroshi 2013) or 5 years (Hofer 2021).
+  - Surgery rates within 1 year were 73% (80 mg), 81% (40 mg), and 92% (placebo) (Atroshi 2013).
+  - 'Marshall 2007 (Cochrane): steroid injection was no better than anti-inflammatory + splint at 8 weeks or laser at 6 months, and two injections were no better than one.'
+  positive: Short-term (10-week) symptom reduction vs placebo; high subsequent 1-year surgery rates (73% / 81% vs 92% placebo) and no symptom-score difference at 1 or 5 years.
+  interpretation: 'Marshall 2007 (Cochrane): no better than anti-inflammatory + splint at 8 weeks or laser at 6 months; two injections no better than one. Atroshi 2013 (RCT, n = 111): 10 weeks: symptom score −0.64 (80 mg) and −0.88 (40 mg) vs placebo; no difference at 1 year; surgery within 1 year 73%, 81%, 92% (80 mg, 40 mg, placebo). Hofer 2021 (5 years): symptom-score change vs placebo 0.14 (−0.17 to 0.45) for 80 mg and 0.12 (−0.19 to 0.43) for 40 mg.'
+  metrics: 'Atroshi 2013 (n = 111): 10-wk symptom score −0.64 (80 mg), −0.88 (40 mg) vs placebo; 1-yr surgery 73%, 81%, 92% · Hofer 2021 (5-yr): 0.14 (−0.17 to 0.45) for 80 mg, 0.12 (−0.19 to 0.43) for 40 mg · Marshall 2007: 2 injections no better than 1'
+  sources:
+  - text: Marshall 2007 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12709571/
+    free_full_text: true
+  - text: Atroshi 2013 Ann Intern Med
+    url: https://doi.org/10.7326/0003-4819-159-5-201309030-00004
+  - text: Hofer 2021 JAMA Netw Open
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8536954/
+    free_full_text: true
+- id: cts-splinting-orthoses
+  title: Carpal Tunnel Syndrome — Wrist Splinting & Orthosis Prescription
+  page: 6
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Cochrane reviews of wrist splinting for carpal tunnel syndrome (Page 2012, Karjalainen 2023) and JOSPT 2019 CPG orthosis and patient-education recommendations.
+  steps:
+  - 'JOSPT CTS CPG (Erickson 2019): ''Clinicians should recommend a neutral-positioned wrist orthosis worn at night for short-term symptom relief and functional improvement''; ''may suggest adjusting wear time to include daytime, symptomatic, or full-time use when night-only use is ineffective''; ''may add patient education on pathology, risk identification, symptom self-management, and postures/activities that aggravate symptoms''; ''should recommend an orthosis for women experiencing CTS during pregnancy''.'
+  - 'Page 2012 (Cochrane): night splint vs no treatment gave overall improvement at 4 weeks RR 3.86 (2.29–6.51), low quality; neutral vs extension splint RR 2.43 (1.12–5.28), very low quality.'
+  - 'Karjalainen 2023 (Cochrane): 12 weeks may not be better than six weeks; six months may be better than six weeks (low certainty).'
+  positive: Neutral-positioned nocturnal wrist orthosis recommended for short-term symptom relief and functional improvement and during pregnancy (Erickson 2019).
+  interpretation: 'Page 2012 (Cochrane): night splint vs no treatment: overall improvement at 4 weeks RR 3.86 (2.29–6.51), low quality; neutral vs extension splint RR 2.43 (1.12–5.28), very low quality. Karjalainen 2023 (Cochrane): 12 weeks may not be better than six weeks; six months may be better than six weeks (low certainty). Erickson 2019 JOSPT CTS CPG: ''Clinicians should recommend a neutral-positioned wrist orthosis worn at night for short-term symptom relief and functional improvement''.'
+  metrics: 'Night splint vs no treatment at 4 weeks RR 3.86 (2.29–6.51); neutral vs extension splint RR 2.43 (1.12–5.28) (Page 2012) · Duration: 12 weeks may not be better than six weeks; six months may be better than six weeks (Karjalainen 2023)'
+  sources:
+  - text: Page 2012 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7389822/
+    free_full_text: true
+  - text: Karjalainen 2023 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9969978/
+    free_full_text: true
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: cts-ultrasound-epas-ergonomics
+  title: CTS Electrophysical Agents & Ergonomic Equipment (Cochrane & JOSPT CPG)
+  page: 6
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Cochrane reviews on therapeutic ultrasound (Page 2013) and ergonomic equipment (O'Connor 2012) alongside JOSPT 2019 CTS CPG recommendations on physical agents and workplace ergonomics.
+  steps:
+  - 'JOSPT CTS CPG — modalities to consider (''may''): ''may recommend a trial of superficial heat''; ''may recommend the application of microwave or shortwave diathermy''; ''may offer a trial of interferential current''; ''may perform phonophoresis''.'
+  - 'JOSPT CTS CPG — modalities NOT to use (''should not''): ''should not use low-level laser therapy or other types of nonlaser light therapy''; ''should not use thermal ultrasound''; ''should not use iontophoresis''; ''should not use or recommend the use of magnets''.'
+  - 'Therapeutic ultrasound (Page 2013 Cochrane): one low-quality trial (68 pts) showed RR 2.36 (1.40 to 3.98) for improvement at 7 weeks; overall poor-quality evidence.'
+  - 'Ergonomics: JOSPT CTS CPG states clinicians ''may educate their patients regarding the effects of mouse use on carpal tunnel pressure'' and ''may recommend keyboards with reduced strike force''. O''Connor 2012 (Cochrane) found insufficient evidence to determine benefit or harm of ergonomic equipment.'
+  positive: 'JOSPT CTS CPG: "should not use thermal ultrasound" and "should not use low-level laser therapy or other types of nonlaser light therapy"; superficial heat, diathermy, interferential current and phonophoresis are "may" options (Erickson 2019).'
+  interpretation: 'Page 2013 (Cochrane): one low-quality trial (68 pts): RR 2.36 (1.40 to 3.98) for improvement at 7 weeks; overall poor-quality evidence. O''Connor 2012 (Cochrane): insufficient evidence to determine benefit or harm of ergonomic equipment. Erickson 2019 JOSPT CTS CPG: "may recommend a trial of superficial heat"; "may recommend the application of microwave or shortwave diathermy"; "may offer a trial of interferential current"; "may perform phonophoresis"; "should not use low-level laser therapy or other types of nonlaser light therapy"; "should not use thermal ultrasound"; "should not use iontophoresis"; "should not use or recommend the use of magnets"; "may educate their patients regarding the effects of mouse use on carpal tunnel pressure"; "may recommend keyboards with reduced strike force".'
+  metrics: 'Ultrasound (Page 2013, 68 pts): RR 2.36 (1.40 to 3.98) at 7 weeks; overall poor-quality evidence · Ergonomics (O''Connor 2012): insufficient evidence'
+  sources:
+  - text: Page 2013 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7100871/
+    free_full_text: true
+  - text: O'Connor 2012 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6486220/
+    free_full_text: true
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: de-quervain-injection-spica
+  title: De Quervain Tenosynovitis — Corticosteroid Injection ± Thumb Spica
+  page: 6
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Randomised trial (Ippolito 2020) comparing corticosteroid injection alone against corticosteroid injection plus thumb spica immobilisation in de Quervain tenosynovitis.
+  steps:
+  - Compare outcomes of corticosteroid injection with vs without added thumb spica immobilisation.
+  - 'Ippolito 2020 (RCT): outcomes were comparable except radial wrist pain resolution was better with injection alone (100% vs 64%).'
+  positive: Outcomes comparable except radial wrist pain resolution was better with injection alone (100% vs 64%, Ippolito 2020).
+  interpretation: 'Ippolito 2020 (RCT): outcomes comparable except radial wrist pain resolution better with injection alone (100% vs 64%).'
+  metrics: 'Radial wrist pain resolution: 100% (injection alone) vs 64% (injection + thumb spica) (Ippolito 2020)'
+  sources:
+  - text: Ippolito 2020 Hand (N Y)
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7076607/
+    free_full_text: true
+- id: thumb-cmc-oa-splints-combined
+  title: Thumb Base (CMC 1) Osteoarthritis — Splints & Multimodal Combined Care
+  page: 6
+  type: info
+  review_status: approved
+  evidence: H
+  summary: Systematic review of thumb CMC OA splinting (Buhler 2019) and the COMBO randomised trial of multimodal care (splint + exercise + topical NSAID + education, Deveza 2021).
+  steps:
+  - 'Splinting alone (Buhler 2019 SR/MA): no short-term effect, but at 3–12 months reduces pain SMD 0.7 (1.04, 0.35) and improves function SMD 0.42 (0.77, 0.08) (low-quality evidence).'
+  - 'Combined multimodal care (Deveza 2021 RCT, n = 204): splint + exercise + topical NSAID + education vs education alone improved FIHOA by −1.7 at 6 weeks and −2.4 (−3.5 to −1.3) at 12 weeks, and reduced pain by −8.6 mm (−15.2 to −2.0).'
+  positive: 3–12 month splinting pain SMD 0.7 (1.04, 0.35), function SMD 0.42 (0.77, 0.08) (Buhler 2019); combined care 12-week FIHOA −2.4 (−3.5 to −1.3), pain −8.6 mm (−15.2 to −2.0) (Deveza 2021).
+  interpretation: 'Buhler 2019 (SR/MA): 3–12 months: pain SMD 0.7 (1.04, 0.35), function SMD 0.42 (0.77, 0.08); low-quality evidence; no short-term effect. Deveza 2021 (RCT, n = 204): splint + exercise + topical NSAID + education vs education: FIHOA −1.7 at 6 weeks, −2.4 (−3.5 to −1.3) at 12 weeks; pain −8.6 mm (−15.2 to −2.0).'
+  metrics: 'Buhler 2019 (3–12 mo): pain SMD 0.7 (1.04, 0.35), function SMD 0.42 (0.77, 0.08) · Deveza 2021 (n = 204): FIHOA −1.7 (6 wk), −2.4 (−3.5 to −1.3, 12 wk); pain −8.6 mm (−15.2 to −2.0)'
+  sources:
+  - text: Buhler 2019 Osteoarthritis Cartilage
+    url: https://doi.org/10.1016/j.joca.2018.09.012
+  - text: Deveza 2021 JAMA Intern Med
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7941246/
+    free_full_text: true
+- id: crps-gmi-mirror-exposure
+  title: CRPS Rehabilitation — Graded Motor Imagery, Mirror Therapy & Exposure in Vivo
+  page: 6
+  type: info
+  review_status: approved
+  evidence: M
+  summary: Evidence for Graded Motor Imagery (GMI) and mirror therapy (Moseley 2004, Méndez-Rebolledo 2017) and graded exposure in vivo for pain-related fear in CRPS-I (den Hollander 2016).
+  steps:
+  - 'Deliver Graded Motor Imagery (left/right hand laterality recognition, imagined movements, and mirror therapy): effective in chronic CRPS1 (Moseley 2004, 13 pts) and improves pain and function in CRPS 1 across a systematic review of 6 trials (171 pts, Méndez-Rebolledo 2017).'
+  - In CRPS-I patients with pain-related fear (den Hollander 2016 RCT, n = 46), graded exposure in vivo is more effective than pain-contingent care for reducing disability.
+  positive: GMI and mirror therapy improve pain and function in CRPS 1 (Moseley 2004; Méndez-Rebolledo 2017); exposure in vivo reduces disability more than pain-contingent care in patients with pain-related fear (den Hollander 2016).
+  interpretation: 'Moseley 2004: GMI RCT in chronic CRPS1 (13 pts) effective. Méndez-Rebolledo 2017: SR of 6 trials (171 pts) GMI / mirror therapy improve pain and function in CRPS 1. den Hollander 2016 (RCT, n = 46): graded exposure more effective than pain-contingent care for disability in patients with pain-related fear.'
+  metrics: 'GMI RCT (Moseley 2004, 13 pts): effective in chronic CRPS1 · GMI / mirror therapy SR (Méndez-Rebolledo 2017, 6 trials, 171 pts): improves pain and function · Exposure in vivo (den Hollander 2016, n = 46): more effective than pain-contingent care for disability'
+  sources:
+  - text: Moseley 2004 Pain
+    url: https://doi.org/10.1016/j.pain.2004.01.006
+  - text: Méndez-Rebolledo 2017 J Back Musculoskelet Rehabil
+    url: https://doi.org/10.3233/BMR-150500
+  - text: den Hollander 2016 Pain
+    url: https://doi.org/10.1097/j.pain.0000000000000651
+- id: cts-manual-neural-mobilisation
+  title: CTS — Manual Therapy, Desensitisation & Neural / Tendon Mobilisation
+  page: 7
+  type: info
+  review_status: approved
+  evidence: H
+  summary: Evidence on exercise and mobilisation (Page 2012 Cochrane), neural mobilisation (Basson 2017), manual therapy vs surgery (Fernández-de-las-Peñas 2015), and JOSPT 2019 CPG manual therapy recommendations in CTS.
+  steps:
+  - 'JOSPT CTS CPG (Erickson 2019): ''may perform manual therapy, directed at the cervical spine and upper extremity, for individuals with mild to moderate CTS in the short term''; ''may use a combined orthotic/stretching program in individuals with mild to moderate CTS who do not have thenar atrophy and have normal 2-point discrimination''.'
+  - 'Manual therapy vs surgery (Fernández-de-las-Peñas 2015 RCT, 120 women): physical therapy was better at 1 and 3 months (mean pain −2.0, −2.8 to −1.2, and −1.3, −2.1 to −.6; worst pain −2.9 and −2.0) and similar to surgery at 6 and 12 months.'
+  - 'Neural mobilisation (Basson 2017 SR/MA, 40 RCTs): in CTS most clinical outcomes were not improved (P > .11), with some positive neurophysiological effects. Page 2012 (Cochrane, 16 trials): limited, low-quality evidence for exercise and mobilisation; decision should be based on clinician''s expertise and patient preference.'
+  positive: 'In women with CTS, physical therapy was better than surgery for pain at 1 and 3 months and similar at 6 and 12 months (Fernández-de-las-Peñas 2015). JOSPT CTS CPG: clinicians "may perform manual therapy, directed at the cervical spine and upper extremity, for individuals with mild to moderate CTS in the short term" (Erickson 2019).'
+  interpretation: 'Page 2012 (Cochrane, 16 trials): limited, low-quality evidence; decision should be based on clinician''s expertise and patient preference. Basson 2017 (SR/MA, 40 RCTs): in CTS most clinical outcomes not improved (P > .11), some positive neurophysiological effects. Fernández-de-las-Peñas 2015 (RCT, 120 women): PT better at 1 and 3 months: mean pain −2.0 (−2.8 to −1.2) and −1.3 (−2.1 to −.6); worst pain −2.9 and −2.0; similar at 6 and 12 months. Erickson 2019 JOSPT CTS CPG: clinicians "may perform manual therapy, directed at the cervical spine and upper extremity, for individuals with mild to moderate CTS in the short term"; "may use a combined orthotic/stretching program in individuals with mild to moderate CTS who do not have thenar atrophy and have normal 2-point discrimination".'
+  metrics: 'PT vs surgery (Fernández-de-las-Peñas 2015, 120 women): 1- & 3-mo mean pain −2.0 (−2.8 to −1.2) and −1.3 (−2.1 to −.6), worst pain −2.9 and −2.0; similar at 6 & 12 mo · Neural mobilisation (Basson 2017, 40 RCTs): clinical outcomes P > .11 · Page 2012 (16 trials): limited, low-quality evidence'
+  sources:
+  - text: Page 2012 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11536321/
+    free_full_text: true
+  - text: Basson 2017 JOSPT
+    url: https://doi.org/10.2519/jospt.2017.7117
+  - text: Fernández-de-las-Peñas 2015 J Pain
+    url: https://doi.org/10.1016/j.jpain.2015.07.012
+  - text: Erickson 2019 JOSPT CTS CPG
+    url: https://doi.org/10.2519/jospt.2019.0301
+- id: thumb-cmc-manual-therapy
+  title: Thumb CMC OA — Joint Mobilisation & Multimodal Manual Therapy
+  page: 7
+  type: info
+  review_status: approved
+  evidence: M
+  summary: Evidence from Villafañe 2013 RCT and Magni 2022 systematic review/meta-analysis on joint mobilisation and manual therapy for thumb carpometacarpal osteoarthritis.
+  steps:
+  - 'Villafañe 2013 (RCT, 60 pts aged 70–90): manual therapy + exercise reduced pain vs sham, with limited value for pressure pain threshold, pinch and grip.'
+  - 'Magni 2022 (SR/MA, 8 RCTs): thumb CMC mobilisation improved pain SMD 0.53 (0.03 to 1) and pinch SMD 0.35 (0.03 to 0.7) — statistically but not clinically significant.'
+  positive: Reduced pain vs sham (Villafañe 2013); pain SMD 0.53 (0.03 to 1) and pinch SMD 0.35 (0.03 to 0.7) — statistically but not clinically significant (Magni 2022).
+  interpretation: 'Villafañe 2013 (RCT, 60 pts aged 70–90): reduced pain vs sham; limited value for pressure pain threshold, pinch and grip. Magni 2022 (SR/MA, 8 RCTs): pain SMD 0.53 (0.03 to 1), pinch SMD 0.35 (0.03 to 0.7) — statistically but not clinically significant.'
+  metrics: 'Villafañe 2013 (60 pts aged 70–90): reduced pain vs sham · Magni 2022 (8 RCTs): pain SMD 0.53 (0.03 to 1), pinch SMD 0.35 (0.03 to 0.7) (statistically but not clinically significant)'
+  sources:
+  - text: Villafañe 2013 JOSPT
+    url: https://doi.org/10.2519/jospt.2013.4524
+  - text: Magni 2022 Hand Ther
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10584044/
+    free_full_text: true
+- id: hand-oedema-mobilisation
+  title: Hand Oedema — Manual Oedema Mobilisation (MEM) & Manual Lymph Drainage
+  page: 7
+  type: info
+  review_status: approved
+  evidence: L
+  summary: Systematic review evidence for manual oedema mobilisation (Miller 2017) and manual lymph drainage after distal radius fracture (Gutiérrez-Espinoza 2022).
+  steps:
+  - Combine manual oedema mobilisation (proximal-to-distal lymphatic pathway clearing, light skin-traction massage, pump-point stimulation, and active exercise) with standard hand therapy for subacute/problematic hand oedema (Miller 2017).
+  - After distal radius fracture, manual lymph drainage reduced hand oedema (e.g. −17.96 ml at 17–21 days, Gutiérrez-Espinoza 2022).
+  positive: Low-to-moderate evidence supports manual oedema mobilisation with standard therapy for problematic hand oedema (Miller 2017); MLD reduced oedema by −17.96 ml at 17–21 days post-DRF (Gutiérrez-Espinoza 2022).
+  interpretation: 'Miller 2017 (SR, 10 studies): low-to-moderate evidence supports manual oedema mobilisation with standard therapy for problematic hand oedema. Gutiérrez-Espinoza 2022: manual lymph drainage reduced oedema (e.g. −17.96 ml at 17–21 days).'
+  metrics: 'Miller 2017 (10 studies): low-to-moderate evidence supports MEM + standard therapy · Gutiérrez-Espinoza 2022: MLD oedema −17.96 ml at 17–21 days'
+  sources:
+  - text: Miller 2017 J Hand Ther
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5686286/
+    free_full_text: true
+  - text: Gutiérrez-Espinoza 2022 J Man Manip Ther
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8865096/
+    free_full_text: true
+- id: hand-oa-ra-exercise
+  title: Hand Osteoarthritis & Rheumatoid Hand Exercise (Cochrane & SARAH Trial)
+  page: 8
+  type: info
+  review_status: approved
+  evidence: H
+  summary: Cochrane review of exercise for hand osteoarthritis (Østerås 2017) and the SARAH randomised trial of tailored hand exercises for rheumatoid arthritis (Lamb 2015).
+  steps:
+  - 'For hand osteoarthritis (Østerås 2017 Cochrane, 5 trials, 381 pts): prescribe hand mobility and strengthening exercise to reduce pain SMD −0.27 (−0.47 to −0.07), improve function SMD −0.28 (−0.58 to 0.02), and reduce stiffness SMD −0.36 (−0.58 to −0.15) (low quality).'
+  - 'For rheumatoid arthritis of the hand (Lamb 2015 SARAH RCT, n = 490): deliver tailored strengthening and stretching hand exercises alongside standard care, improving MHQ overall hand function by +4·3 (1·5–7·1) at 12 months.'
+  positive: 'Hand OA exercise: pain SMD −0.27 and stiffness SMD −0.36, low quality (Østerås 2017); SARAH tailored exercises improve 12-month MHQ function by +4·3 (1·5–7·1) (Lamb 2015).'
+  interpretation: 'Østerås 2017 (Cochrane): pain SMD −0.27 (−0.47 to −0.07), 5 trials 381 pts; function SMD −0.28 (−0.58 to 0.02); stiffness SMD −0.36 (−0.58 to −0.15); low quality. Lamb 2015 (SARAH RCT, n = 490): tailored exercises: MHQ function +4·3 (1·5–7·1) at 12 months.'
+  metrics: 'Hand OA (Østerås 2017, 5 trials, 381 pts): pain SMD −0.27 (−0.47 to −0.07), function SMD −0.28 (−0.58 to 0.02), stiffness SMD −0.36 (−0.58 to −0.15) · SARAH (Lamb 2015, n = 490): 12-mo MHQ function +4·3 (1·5–7·1)'
+  sources:
+  - text: Østerås 2017 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6464796/
+    free_full_text: true
+  - text: Lamb 2015 Lancet
+    url: https://doi.org/10.1016/S0140-6736(14)60998-3
+- id: drf-recovery-rtw-prognosis
+  title: Distal Radius Fracture Recovery & Occupational Return-to-Work Cohorts
+  page: 8
+  type: info
+  review_status: approved
+  evidence: M
+  summary: Recovery trajectory and hardest functional tasks after distal radius fracture (MacDermid 2003) and prognostic determinants of return to work after hand/wrist trauma (Neutel 2019, Bai 2022).
+  steps:
+  - 'Counsel DRF patients on expected recovery (MacDermid 2003, n = 129): by 3 months median is ''no pain at rest'' and worst pain is 3/10; most recovery occurs within six months; the hardest tasks are carrying ten pounds and pushing up from a chair.'
+  - 'Assess return-to-work barriers after hand/wrist trauma (Neutel 2019, n = 383): time off work is linked to job type, diagnosis, complication, blaming someone else, and gender.'
+  - 'In occupational upper-limb injury (Bai 2022): 107/163 (65.6%) were back at work at 1 year.'
+  positive: 'By 3 months post-DRF: median ''no pain at rest'', worst pain 3/10; most recovery within six months (MacDermid 2003). Occupational upper-limb injury: 107/163 (65.6%) back at work at 1 year (Bai 2022).'
+  interpretation: 'MacDermid 2003 (cohort, n = 129): by 3 months median ''no pain at rest'', worst pain 3/10; most recovery within six months; hardest tasks: carrying ten pounds, pushing up from a chair. Neutel 2019 (cohort, n = 383): time off work linked to job type, diagnosis, complication, blaming someone else, gender. Bai 2022 (cohort): 107/163 (65.6%) back at work at 1 year.'
+  metrics: 'DRF recovery (MacDermid 2003, n = 129): 3-mo median ''no pain at rest'', worst pain 3/10; most recovery within 6 months · RTW (Neutel 2019, n = 383): linked to job type, diagnosis, complication, blaming someone else, gender · Occupational RTW at 1 yr: 107/163 (65.6%) (Bai 2022)'
+  sources:
+  - text: MacDermid 2003 BMC Musculoskelet Disord
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC270028/
+    free_full_text: true
+  - text: Neutel 2019 J Hand Surg Eur
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6344984/
+    free_full_text: true
+  - text: Bai 2022 Front Med
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9294147/
+    free_full_text: true
+- id: tendon-nerve-gliding-proprioception
+  title: Tendon & Nerve Gliding and Wrist Proprioception Progression
+  page: 8
+  type: info
+  review_status: approved
+  evidence: E
+  summary: Clinical progression of digital flexor/extensor differential tendon gliding, median/ulnar nerve sliders, and wrist sensorimotor/proprioceptive control.
+  steps:
+  - 'Differential flexor tendon gliding: progress smoothly through straight hand, hook fist (maximises FDP-FDS differential glide), full composite fist, tabletop (intrinsic plus), and straight fist (maximises FDS excursion).'
+  - 'Median and ulnar nerve gliding: perform gentle, non-provocative slider sequences (alternating proximal release with distal tension) without triggering sustained paraesthesia.'
+  - 'Wrist proprioception and neuromuscular control: progress from joint position sense and dart-thrower''s plane (radial extension to ulnar flexion) control to perturbations, closed-chain weight-bearing, and task-specific occupational/sport loading.'
+  positive: Pain-free tendon excursion, reduced neural mechanosensitivity, and restored dynamic carpal stability.
+  interpretation: Expert clinical progression (E) tailored to tissue irritability and surgeon-directed post-operative precautions.
+  metrics: Expert clinical progression (E)
+  sources: []

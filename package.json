@@ -1,0 +1,9 @@
+{
+  "name": "wrist-hand-atlas",
+  "version": "1.0.0",
+  "description": "Wrist & Hand dossier build tooling (Tailwind CLI)",
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "private": true
+}

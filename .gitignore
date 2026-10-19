@@ -1,0 +1,5 @@
+node_modules/
+build/
+preview/
+__pycache__/
+*.pyc
