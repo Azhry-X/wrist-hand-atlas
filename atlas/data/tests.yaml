@@ -598,7 +598,7 @@
   type: info
   review_status: approved
   evidence: Guideline
-  summary: Verbatim clinical practice guideline recommendations for carpal tunnel syndrome diagnosis, orthoses, education, physical agents, ergonomics, manual therapy, and outcome measures (Erickson 2019 JOSPT CTS CPG).
+  summary: Clinical practice guideline recommendations for carpal tunnel syndrome diagnosis, orthoses, education, physical agents, ergonomics, manual therapy, and outcome measures (Erickson 2019 JOSPT CTS CPG).
   steps:
   - 'Diagnosis: ''Clinicians should assess and document patient age (older than 45 years), whether shaking their hands relieves their symptoms, sensory loss in the thumb, the wrist ratio index (greater than 0.67), and scores from the Boston Carpal Tunnel Questionnaire symptom severity scale (CTQ-SSS) (greater than 1.9). The presence of more than 3 of these clinical findings has shown acceptable diagnostic accuracy.'''
   - 'Orthoses & education: ''Clinicians should recommend a neutral-positioned wrist orthosis worn at night for short-term symptom relief and functional improvement''; ''may suggest adjusting wear time to include daytime, symptomatic, or full-time use when night-only use is ineffective''; ''may add patient education on pathology, risk identification, symptom self-management, and postures/activities that aggravate symptoms''; ''should recommend an orthosis for women experiencing CTS during pregnancy''.'
