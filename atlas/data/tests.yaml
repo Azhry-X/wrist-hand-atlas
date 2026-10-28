@@ -1686,3 +1686,176 @@
   interpretation: Expert clinical progression (E) tailored to tissue irritability and surgeon-directed post-operative precautions.
   metrics: Expert clinical progression (E)
   sources: []
+- id: epa-medication-safety
+  title: Medication Safety & Electrophysical Agent Contraindications
+  type: info
+  page: 1
+  review_status: draft
+  summary: Safety screening guidelines for electrophysical agents (EPA) and fluoroquinolone-associated tendon toxicity.
+  steps:
+    - "Screen for electrophysical agent contraindications before applying modalities: implanted electronic devices, pregnancy, malignancy, recently irradiated tissue, active DVT, bleeding, impaired sensation (Houghton 2010)."
+    - "Caution with anticoagulants / coagulopathy: possible increased incidence or severity of haematoma and bruising (Kearns 2019)."
+    - "Screen for fluoroquinolone antibiotic use: tendonitis OR 4.3, rupture OR 2.0; stronger with oral glucocorticoids (OR 9.1) and age > 60 (OR 8.3) (Wise 2012)."
+  positive: Safe application of modalities and screening for medication-related tendon vulnerability.
+  interpretation: "Houghton 2010 provides an agent-by-agent contraindication table for electrophysical agents; Kearns 2019 highlights anticoagulant precautions for haematoma and bruising; Wise 2012 documented significant tendonitis and rupture risk with fluoroquinolones, substantially magnified by oral corticosteroids and older age."
+  metrics: "Houghton 2010 contraindications; Kearns 2019 anticoagulant caution (E); Wise 2012 fluoroquinolone tendonitis OR 4.3, rupture OR 2.0, steroids OR 9.1, age > 60 OR 8.3"
+  evidence: Guideline
+  sources:
+    - text: Houghton 2010 Physiother Can
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3031347/
+      free_full_text: true
+    - text: Kearns 2019 J Man Manip Ther
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6598537/
+      free_full_text: true
+    - text: Wise 2012 Am J Med
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3502655/
+      free_full_text: true
+
+- id: hhd-strength
+  title: Hand-Held Dynamometry (HHD) Wrist Strength & Torque Calculator
+  type: info
+  page: 3
+  review_status: draft
+  summary: Standardised hand-held dynamometry (HHD) force and torque (N·m = N × m) measurement for wrist extension and flexion.
+  steps:
+    - "Use the same device, same position, same strap / lever-arm point and, where possible, the same tester at every visit; compare with the other side."
+    - "Measure lever arm in cm (convert to m = cm ÷ 100) and peak force in Newtons (N) on involved and uninvolved sides."
+    - "Calculate Torque (N·m) = Force (N) × Lever arm (m) and Limb Symmetry Index (LSI % = involved ÷ uninvolved × 100)."
+    - "Do not swap dynamometer devices: GripAble reads 69% of Jamar (ICC 0.906) (Mutalib 2022)."
+  positive: Reliable objective strength tracking and side-to-side symmetry guide progression.
+  interpretation: "Mutalib 2022 demonstrated high correlation between GripAble and Jamar (ICC 0.906) but showed systematic difference (69% of Jamar), indicating devices must not be interchanged; Wang 2018 established population normative values; Soucie 2011 demonstrated significant age- and sex-related variation in peripheral joint ROM and strength."
+  metrics: "Mutalib 2022: GripAble reads 69% of Jamar (ICC 0.906) — do not interchange; Wang 2018: Jamar norms 49.7 kg to 18.7 kg; Soucie 2011: reference variation"
+  evidence: M
+  calculator:
+    decimals: 1
+    expr: f_inv * lever / 100
+    inputs:
+      - key: f_inv
+        label: Involved force (N)
+        type: number
+      - key: f_uninv
+        label: Uninvolved force (N)
+        type: number
+      - key: lever
+        label: Lever arm (cm)
+        type: number
+    kind: formula
+    outputs:
+      - text: "Uninvolved torque: {f_uninv*lever/100|1} N·m · LSI: {f_inv/f_uninv*100|1}%"
+        tone: good
+        when: isFinite(f_inv) && isFinite(f_uninv) && f_uninv>0 && isFinite(lever)
+    value_label: Involved torque (N·m) = N × cm ÷ 100
+  sources:
+    - text: Mutalib 2022 BMC Musculoskelet Disord
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9396827/
+      free_full_text: true
+    - text: Wang 2018 JOSPT
+      url: https://doi.org/10.2519/jospt.2018.7851
+      free_full_text: false
+    - text: Soucie 2011 Haemophilia
+      url: https://doi.org/10.1111/j.1365-2516.2010.02399.x
+      free_full_text: false
+
+- id: post-op-progression-criteria
+  title: Wrist & Hand Post-Operative Progression Criteria Checklist
+  type: info
+  page: 5
+  review_status: draft
+  summary: Objective criteria to progress through post-operative wrist and hand rehabilitation phases.
+  steps:
+    - "Confirm surgeon clearance and verify that POST-OP RESTRICTIONS ARE SURGEON-DIRECTED."
+    - "Inspect surgical incision or pin sites for healing, absence of drainage, infection, or neurovascular symptoms."
+    - "Verify pain tolerance within acceptable traffic light zones on page 8."
+    - "Assess functional active and passive wrist / finger range of motion milestones without symptom exacerbation."
+    - "Record objective grip / pinch and isometric strength on page 3 and assess patient confidence before increasing load."
+  positive: Satisfying criteria allows safe advancement between post-operative rehabilitation phases.
+  interpretation: "POST-OP RESTRICTIONS ARE SURGEON-DIRECTED. Always follow individualised surgical protocols without fixed week counts."
+  metrics: "Surgeon clearance, wound healing, pain ≤ 5/10, target PROM arc, baseline strength, patient confidence (E)"
+  evidence: E
+  sources:
+    - text: Costa 2014 BMJ
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4122170/
+      free_full_text: true
+
+- id: bfr-drf
+  title: Blood Flow Restriction (BFR) after Distal Radius Fracture
+  type: info
+  page: 6
+  review_status: draft
+  summary: Evidence-based blood flow restriction (BFR) training guidelines after distal radius fracture (closed management and surgical fixation).
+  steps:
+    - "Set cuff pressure to 40 to 80 % of arterial occlusion pressure (AOP), determined from measured AOP (Patterson 2019)."
+    - "Apply cuff to proximal arm only (never distal to the elbow or over forearm hardware) (E)."
+    - "Set training load to 20 to 40 % of 1-RM (Patterson 2019)."
+    - "Prescribe 75 repetitions partitioned into 4 sets: 30 repetitions, 15 repetitions, 15 repetitions, 15 repetitions (Patterson 2019)."
+    - "Maintain inter-set rest intervals of 30 to 60 seconds (Patterson 2019)."
+    - "Deliver 2 to 3 training sessions per week (Patterson 2019)."
+  positive: Significant pain reduction and functional improvement during distal radius fracture rehabilitation.
+  interpretation: "Cancio 2019 showed greater pain reduction over 8 weeks (p = 0.03) with BFR in closed management of distal radius fractures, with 100% tolerance without early termination; Sgromolo 2020 demonstrated greater reduction in pain with activity (p = 0.03) and PRWE (p = 0.01) over 8 weeks following surgical fixation; Patterson 2019 international position stand establishes evidence-based pressure, volume, load, and frequency parameters; cuff must be applied to the proximal arm only."
+  metrics: "Cancio 2019: pain reduction (p = 0.03); Sgromolo 2020: pain (p = 0.03), PRWE (p = 0.01); Patterson 2019: 40–80 % AOP, 20–40 % 1-RM, 75 reps (30-15-15-15), 30–60 s rest, 2–3 sessions/wk"
+  evidence: L
+  sources:
+    - text: Cancio 2019 J Wrist Surg
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6685733/
+      free_full_text: true
+    - text: Sgromolo 2020 J Wrist Surg
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7395840/
+      free_full_text: true
+    - text: Patterson 2019 Front Physiol
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6530612/
+      free_full_text: true
+
+- id: needling-safety
+  title: Dry Needling Adverse Events & Safety Screening
+  type: info
+  page: 7
+  review_status: draft
+  summary: Adverse event rates and safety guidelines for dry needling in musculoskeletal clinical practice.
+  steps:
+    - "Obtain informed consent and discuss potential adverse events and treatment alternatives."
+    - "Screen for anticoagulants / coagulopathy (Kearns 2019 caution for haematoma and bruising)."
+    - "Select proper filament needle gauge (32–36 gauge, .25–.20 mm; Halle 2016)."
+    - "Identify and avoid regional anatomical danger zones (neurovascular bundles and pleura)."
+  positive: Safe needling delivery without adverse events.
+  interpretation: "Brady 2014 reported mild AEs 19.18 %, upper risk rate for significant AEs ≤ 0.04 %, bruising 7.55 %, bleeding 4.65 % across 7,629 treatments; Boyce 2020 reported minor AE 36.7 %, major AE < .1 % across 20,464 treatments, with prolonged symptom aggravation .03 %, fainting .02 %, forgotten needles .01 %; Halle 2016 identified serious risks including pneumothorax, cardiac tamponade, haematoma, infection, CNS injury; Kearns 2019 advised caution regarding haematoma and bruising with anticoagulants."
+  metrics: "Mild AEs 19.18 %, significant AEs ≤ 0.04 %, bruising 7.55 %, bleeding 4.65 % (Brady 2014); Minor AE 36.7 %, major AE < .1 % (Boyce 2020); Needles 32–36 gauge (.25–.20 mm) (Halle 2016)"
+  evidence: M
+  sources:
+    - text: Brady 2014 J Man Manip Ther
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4101552/
+      free_full_text: true
+    - text: Boyce 2020 Int J Sports Phys Ther
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7015026/
+      free_full_text: true
+    - text: Halle 2016 Int J Sports Phys Ther
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4970854/
+      free_full_text: true
+    - text: Kearns 2019 J Man Manip Ther
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6598537/
+      free_full_text: true
+
+- id: pain-monitoring-model
+  title: Pain-Monitoring Model & Activity Modification
+  type: info
+  page: 8
+  review_status: draft
+  summary: Pain-monitoring model principles and zone boundaries for exercise and functional loading progression.
+  steps:
+    - "Instruct patient to monitor pain during and immediately after exercise and functional loading."
+    - "Maintain pain at or below 5/10 on the NPRS during loading."
+    - "Verify that symptoms return to pre-activity baseline levels by the following morning."
+    - "Classify daily activities and exercises into Avoid, Modify, or OK categories based on symptom response."
+  positive: Controlled loading without symptom flare-up or morning latency increase.
+  interpretation: "Sprague 2021 established that pain should not exceed 5/10 on the NPRS during or immediately after activity and should return to pre-activity levels by the following morning; Cavaggion 2024 noted that low (0–2), acceptable (2–5) and high (5–10) risk zones were based on clinical experience; Silbernagel 2007 demonstrated that continued loading with a pain-monitoring model showed no negative effects."
+  metrics: "Pain ≤ 5/10 during/after, return to baseline by following morning (Sprague 2021); Zones low 0–2, acceptable 2–5, high 5–10 from clinical experience (Cavaggion 2024); Continued loading safe (Silbernagel 2007)"
+  evidence: E
+  sources:
+    - text: Sprague 2021 Pilot Feasibility Stud
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7905015/
+      free_full_text: true
+    - text: Cavaggion 2024 Open Access J Sports Med
+      url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11616428/
+      free_full_text: true
+    - text: Silbernagel 2007 Am J Sports Med
+      url: https://doi.org/10.1177/0363546506298279
+      free_full_text: false

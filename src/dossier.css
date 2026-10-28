@@ -218,3 +218,5 @@ body{
 .bm text.s{ font-size:5px; font-weight:800; fill:#94a3b8; letter-spacing:.04em; }
 .sh .calc-badge, .sh .guide-badge{ text-transform:none; letter-spacing:.01em; }
 .t tr.sub .calc-badge, .t tr.sub .guide-badge{ text-transform:none; letter-spacing:.01em; }
+
+#p9-flowsheet .p { font-size: 4.9pt; letter-spacing: -0.15px; }

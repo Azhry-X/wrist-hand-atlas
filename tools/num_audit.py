@@ -16,7 +16,10 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-EVIDENCE_PATH = pathlib.Path(r"C:\Users\ahmed\OneDrive\Desktop\wrist_hand_evidence_verified.md")
+EVIDENCE_PATHS = [
+    pathlib.Path(r"C:\Users\ahmed\OneDrive\Desktop\wrist_hand_evidence_verified.md"),
+    pathlib.Path(r"C:\Users\ahmed\OneDrive\Desktop\upgrade_evidence_verified.md"),
+]
 PAGES_DIR = ROOT / "src" / "pages"
 YAML_PATH = ROOT / "atlas" / "data" / "tests.yaml"
 
@@ -123,7 +126,9 @@ def collect_yaml_strings(obj) -> list[str]:
 
 
 def main() -> int:
-    verified_nums = load_verified_numbers(EVIDENCE_PATH)
+    verified_nums = set()
+    for ep in EVIDENCE_PATHS:
+        verified_nums.update(load_verified_numbers(ep))
     whitelist_counts: dict[str, int] = {label: 0 for label, _ in WHITELIST_RULES}
     unverified: list[tuple[str, str, str]] = []
 
@@ -172,8 +177,10 @@ def main() -> int:
     print("=" * 72)
     print("WRIST & HAND DOSSIER + ATLAS NUMBER AUDIT (Rule 2.10 & Section 6.3)")
     print("=" * 72)
-    print(f"Evidence source : {EVIDENCE_PATH}")
-    print(f"Verified tokens : {len(verified_nums)} distinct numeric values in wrist_hand_evidence_verified.md")
+    print("Evidence sources:")
+    for ep in EVIDENCE_PATHS:
+        print(f"  - {ep}")
+    print(f"Verified tokens : {len(verified_nums)} distinct numeric values across 2 evidence files")
     print(f"Pages audited   : {len(page_files)} files ({total_html_nums} numeric tokens extracted incl. SVG <text>)")
     print(f"YAML audited    : {len(cards)} cards across {list(target_fields)} ({total_yaml_nums} numeric tokens)")
     print("-" * 72)
